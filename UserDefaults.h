@@ -11,6 +11,7 @@
 
 @interface UserDefaults : NSObject {
 	//something
+	//edited by ming
 }
 
 @end
