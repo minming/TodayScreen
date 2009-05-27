@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "WidgetComponent_LongButton.h"
+#import "AppShortcut.h"
 
-typedef struct  {
+/*typedef struct AppShortcut {
 	NSString *title;
 	NSString *url;
 	NSString *image;
-} AppShortcut;
+} AppShortcut;*/
 
 @interface WidgetAppLauncher : UIViewController {
 	WidgetComponent_LongButton *longButton;
@@ -22,7 +23,7 @@ typedef struct  {
 	NSMutableArray *AppShortcuts;
 	
 	NSInteger numRows;
-	AppShortcut AppShortcuts[8];
+	//AppShortcut AppShortcuts[8];
 	
 }
 

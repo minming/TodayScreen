@@ -23,22 +23,21 @@
 		longButtonArray = [[NSMutableArray alloc] init];
 		AppShortcuts = [[NSMutableArray alloc] init];
 		
-		AppShortcuts[0].title = @"Google";
-		AppShortcuts[0].url = @"http://www.google.com";
-		AppShortcuts[0].image = @"http://www.google.com/favicon.ico";
-		AppShortcuts[1].title = @"Yahoo";
-		AppShortcuts[1].url = @"http://www.yahoo.com";
-		AppShortcuts[2].title = @"Facebook";
-		AppShortcuts[2].url = @"http://www.facebook.com";
-		AppShortcuts[3].title = @"Twitter";
-		AppShortcuts[3].url = @"http://www.twitter.com";
-		AppShortcuts[4].title = @"ebay";
-		AppShortcuts[4].url = @"http://www.ebay.com";
-		AppShortcuts[5].title = @"Live";
-		AppShortcuts[5].url = @"http://www.live.com";
-		AppShortcuts[6].title = @"Reader";
-		AppShortcuts[6].url = @"http://www.google.com/reader";
+		AppShortcut* shortcut1 = [[AppShortcut alloc] initWithTitle:@"Google" url:@"http://www.google.com" image:@"http://www.google.com/favicon.ico"];
+		AppShortcut* shortcut2 = [[AppShortcut alloc] initWithTitle:@"Yahoo" url:@"http://www.yahoo.com" image:@""];
+		AppShortcut* shortcut3 = [[AppShortcut alloc] initWithTitle:@"Facebook" url:@"http://www.facebook.com" image:@""];
+		AppShortcut* shortcut4 = [[AppShortcut alloc] initWithTitle:@"Twitter" url:@"http://www.twitter.com" image:@""];
+		AppShortcut* shortcut5 = [[AppShortcut alloc] initWithTitle:@"eBay" url:@"http://www.ebay.com" image:@""];
+		AppShortcut* shortcut6 = [[AppShortcut alloc] initWithTitle:@"Live" url:@"http://www.live.com" image:@""];
+		AppShortcut* shortcut7 = [[AppShortcut alloc] initWithTitle:@"Reader" url:@"http://www.google.com/reader" image: @""];
 		
+		[AppShortcuts addObject:shortcut1];
+		[AppShortcuts addObject:shortcut2];
+		[AppShortcuts addObject:shortcut3];
+		[AppShortcuts addObject:shortcut4];
+		[AppShortcuts addObject:shortcut5];
+		[AppShortcuts addObject:shortcut6];
+		[AppShortcuts addObject:shortcut7];
 		//[AppShortcuts addObject:as];
     }
     return self;
@@ -65,9 +64,9 @@
 		[self.view addSubview:longButton.view]; 
 		longButton.view.frame = CGRectMake(rowFactor*75.0+10.0, heightFactor*30.0+10.0, 60.0, 40.0);
 		longButton.button.tag = i;
-		[longButton.button setTitle:AppShortcuts[i].title forState:UIControlStateNormal];
-		if (AppShortcuts[i].image != nil) {
-			[longButton.button setImage:[GlobalFunctions getImageFromUrl:AppShortcuts[i].image] forState:UIControlStateNormal];
+		[longButton.button setTitle:[[AppShortcuts objectAtIndex:i] title] forState:UIControlStateNormal];
+		if ([[AppShortcuts objectAtIndex:i] image] != nil) {
+			[longButton.button setImage:[GlobalFunctions getImageFromUrl:[[AppShortcuts objectAtIndex:i] image] forState:UIControlStateNormal]];
 		}
 		//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
 		//NSURL *url = [NSURL URLWithString:path];
@@ -94,7 +93,7 @@
 - (void)buttonAction:(id)sender {
 	UIButton *b = (UIButton*)sender;
 	//NSLog(@"clickwed");
-	NSURL *url = [NSURL URLWithString:AppShortcuts[b.tag].url];
+	NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
 	[[UIApplication sharedApplication] openURL:url];
 	//[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://email@minming.net"]];
 }
