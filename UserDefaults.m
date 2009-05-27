@@ -89,7 +89,7 @@
 	NSMutableArray* appLauncherArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	NSInteger numRows = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
 	
-	[appLauncherWidget setSingleRSSArray:rssArray];
+	[appLauncherWidget setAppShortcuts:appLauncherArray];
 	[appLauncherWidget setNumRows:numRows];
 }
 

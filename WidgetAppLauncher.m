@@ -21,7 +21,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
 		longButtonArray = [[NSMutableArray alloc] init];
-		//AppShortcuts = [[NSMutableArray alloc] init];
+		AppShortcuts = [[NSMutableArray alloc] init];
 		
 		AppShortcuts[0].title = @"Google";
 		AppShortcuts[0].url = @"http://www.google.com";

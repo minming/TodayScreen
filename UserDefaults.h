@@ -17,6 +17,4 @@
 	NSUserDefaults *userDefaults;
 }
 
-//edit
-
 @end

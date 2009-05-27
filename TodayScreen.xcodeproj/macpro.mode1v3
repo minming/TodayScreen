@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8E6B3E790FCBB48D00EB77B2</string>
+										<string>8E6B3E5D0FCBB24E00EB77B2</string>
 										<key>history</key>
 										<array>
 											<string>8E6B35580FC5272900EB77B2</string>
@@ -366,7 +366,7 @@
 											<string>8E6B3E380FCBB1AB00EB77B2</string>
 											<string>8E6B3E570FCBB24E00EB77B2</string>
 											<string>8E6B3E580FCBB24E00EB77B2</string>
-											<string>8E6B3E5D0FCBB24E00EB77B2</string>
+											<string>8E6B3E590FCBB24E00EB77B2</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -402,6 +402,7 @@
 											<string>8E6B3DD60FCB9C1800EB77B2</string>
 											<string>8E6B3E060FCBA0ED00EB77B2</string>
 											<string>8E6B3E100FCBA18F00EB77B2</string>
+											<string>8E6B3E5A0FCBB24E00EB77B2</string>
 											<string>8E6B3E5B0FCBB24E00EB77B2</string>
 											<string>8E6B3E5C0FCBB24E00EB77B2</string>
 										</array>
@@ -461,9 +462,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>8E6B3E7A0FCBB48D00EB77B2</string>
+				<string>8E6B3E5E0FCBB24E00EB77B2</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>8E6B3E7B0FCBB48D00EB77B2</string>
+				<string>8E6B3E5F0FCBB24E00EB77B2</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -597,7 +598,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/macpro/Desktop/iPhone Development/TodayScreen/TodayScreen/TodayScreen.xcodeproj</string>
+		<string>/Users/macpro/Desktop/iPhone Development/TodayScreen/TodayScreen.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>135 125 1009 891 0 0 1680 1028 </string>
