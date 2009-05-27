@@ -24,11 +24,11 @@
 		AppShortcuts = [[NSMutableArray alloc] init];
 		
 		AppShortcut* shortcut1 = [[AppShortcut alloc] initWithTitle:@"Google" url:@"http://www.google.com" image:@"http://www.google.com/favicon.ico"];
-		AppShortcut* shortcut2 = [[AppShortcut alloc] initWithTitle:@"Yahoo" url:@"http://www.yahoo.com" image:@""];
-		AppShortcut* shortcut3 = [[AppShortcut alloc] initWithTitle:@"Facebook" url:@"http://www.facebook.com" image:@""];
-		AppShortcut* shortcut4 = [[AppShortcut alloc] initWithTitle:@"Twitter" url:@"http://www.twitter.com" image:@""];
-		AppShortcut* shortcut5 = [[AppShortcut alloc] initWithTitle:@"eBay" url:@"http://www.ebay.com" image:@""];
-		AppShortcut* shortcut6 = [[AppShortcut alloc] initWithTitle:@"Live" url:@"http://www.live.com" image:@""];
+		AppShortcut* shortcut2 = [[AppShortcut alloc] initWithTitle:@"Yahoo" url:@"http://www.yahoo.com" image:@"http://www.yahoo.com/favicon.ico"];
+		AppShortcut* shortcut3 = [[AppShortcut alloc] initWithTitle:@"Facebook" url:@"http://www.facebook.com" image:@"http://www.facebook.com/favicon.ico"];
+		AppShortcut* shortcut4 = [[AppShortcut alloc] initWithTitle:@"Twitter" url:@"http://www.twitter.com" image:@"http://www.twitter.com/favicon.ico"];
+		AppShortcut* shortcut5 = [[AppShortcut alloc] initWithTitle:@"eBay" url:@"http://www.ebay.com" image:@"http://www.ebay.com/favicon.ico"];
+		AppShortcut* shortcut6 = [[AppShortcut alloc] initWithTitle:@"Live" url:@"http://www.live.com" image:@"http://www.live.com/favicon.ico"];
 		AppShortcut* shortcut7 = [[AppShortcut alloc] initWithTitle:@"Reader" url:@"http://www.google.com/reader" image: @""];
 		
 		[AppShortcuts addObject:shortcut1];
@@ -92,7 +92,7 @@
 
 - (void)buttonAction:(id)sender {
 	UIButton *b = (UIButton*)sender;
-	//NSLog(@"clickwed");
+	//NSLog(@"clicked");
 	NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
 	[[UIApplication sharedApplication] openURL:url];
 	//[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://email@minming.net"]];
