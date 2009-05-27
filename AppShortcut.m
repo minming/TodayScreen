@@ -15,7 +15,6 @@
 @synthesize url;
 @synthesize image;
 
-
 - (id)initWithTitle:(NSString *)newTitle url:(NSString*)newUrl image:(NSString*)newImage {
     if (self = [super init]) {
 		[self setTitle:newTitle];

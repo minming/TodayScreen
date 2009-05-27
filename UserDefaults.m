@@ -86,14 +86,14 @@
 -(void)loadAppLauncherWidgetFromPrefs:(NSString*)widgetName widget:(WidgetAppLauncher*)appLauncherWidget {
 	[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
-	NSMutableArray* appLauncherArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
+	NSMutableArray* appShortcuts = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	NSInteger numRows = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
 	
-	[appLauncherWidget setAppShortcuts:appLauncherArray];
+	[appLauncherWidget setAppShortcuts:appShortcuts];
 	[appLauncherWidget setNumRows:numRows];
 }
 
--(void)loadContactWidgetPref:(NSString*)widgetName widget:(WidgetContact*)contactWidget {
+-(void)loadContactWidgetFromPrefs:(NSString*)widgetName widget:(WidgetContact*)contactWidget {
 	[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSMutableArray* contactsArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_CONTACTS_ARRAY_CONSTANT]];
@@ -118,21 +118,21 @@
 	[userDefaults synchronize];
 }
 
--(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds  {
+-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds {
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:rssArray forKey:[widgetName stringByAppendingString: WIDGET_RSS_ARRAY_CONSTANT]];
 	[userDefaults setInteger:numFeeds forKey:[widgetName stringByAppendingString: WIDGET_RSS_NUM_FEEDS_CONSTANT]];
 	[userDefaults synchronize];
 }
 
--(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appArray appNumRows:(NSInteger)appNumRows{
+-(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows {
 	userDefaults = [NSUserDefaults standardUserDefaults];
-	[userDefaults setObject:appArray forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
+	[userDefaults setObject:appShortcuts forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	[userDefaults setInteger:appNumRows forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
 	[userDefaults synchronize];
 }
 
--(void)writeContactWidgetPrefs:(NSString*)widgetName contacts:(NSArray*)contacts{
+-(void)writeContactWidgetPrefs:(NSString*)widgetName contacts:(NSArray*)contacts {
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:contacts forKey:[widgetName stringByAppendingString: WIDGET_CONTACTS_ARRAY_CONSTANT]];
 	[userDefaults synchronize];

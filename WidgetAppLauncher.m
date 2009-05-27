@@ -59,14 +59,14 @@
 	int rowFactor = 0;
 	int heightFactor = 0;
 	int buttonsPerRow = 4;
-	for (int i=0; i<8; i++) {
+	for (int i=0; i<7; i++) {
 		longButton = [[WidgetComponent_LongButton alloc] init];
 		[self.view addSubview:longButton.view]; 
 		longButton.view.frame = CGRectMake(rowFactor*75.0+10.0, heightFactor*30.0+10.0, 60.0, 40.0);
 		longButton.button.tag = i;
 		[longButton.button setTitle:[[AppShortcuts objectAtIndex:i] title] forState:UIControlStateNormal];
 		if ([[AppShortcuts objectAtIndex:i] image] != nil) {
-			[longButton.button setImage:[GlobalFunctions getImageFromUrl:[[AppShortcuts objectAtIndex:i] image] forState:UIControlStateNormal]];
+			[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
 		}
 		//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
 		//NSURL *url = [NSURL URLWithString:path];
