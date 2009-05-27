@@ -12,6 +12,7 @@
 
 @implementation WidgetWeather
 
+@synthesize zipCode;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

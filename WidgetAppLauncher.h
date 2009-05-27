@@ -19,10 +19,14 @@ typedef struct  {
 	WidgetComponent_LongButton *longButton;
 	NSMutableArray *longButtonArray;
 	
-	//NSMutableArray *AppShortcuts;
+	NSMutableArray *AppShortcuts;
+	
+	NSInteger numRows;
 	AppShortcut AppShortcuts[8];
+	
 }
 
 @property (nonatomic, copy) NSMutableArray *longButtonArray;
-
+@property (nonatomic, copy) NSMutableArray *AppShortcuts;
+@property NSInteger numRows;
 @end

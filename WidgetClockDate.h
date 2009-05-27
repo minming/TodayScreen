@@ -13,8 +13,13 @@
 	IBOutlet UILabel *timeLabel;	
 	IBOutlet UILabel *dateLabel;	
     NSTimer *myTicker;  
+	
+	NSString *dateFormat;
+	NSString *timeFormat;
 }
 
+@property (copy) NSString* dateFormat;
+@property (copy) NSString* timeFormat;
  
 - (void)runTimer;  
 - (void)showActivity; 

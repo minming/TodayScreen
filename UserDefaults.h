@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "WidgetContact.h"
+#import "WidgetClockDate.h"
+#import "WidgetWeather.h"
+#import "WidgetRSS.h"
+#import "WidgetAppLauncher.h"
 
 @interface UserDefaults : NSObject {
-	//something
-	//edited by ming
-		
-	//added by shravan
+	NSUserDefaults *userDefaults;
 }
 
 @end

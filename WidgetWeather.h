@@ -31,6 +31,9 @@
 	IBOutlet UILabel *forecast2TempLabel;
 	IBOutlet UIImageView *forecast2Image;
 	
+	NSString* zipCode;
 }
+
+@property (copy) NSString* zipCode;
 
 @end

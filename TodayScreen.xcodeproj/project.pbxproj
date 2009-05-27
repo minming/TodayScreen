@@ -164,8 +164,12 @@
 				8E6B35950FC644F400EB77B2 /* WidgetComponent_LongButton.h */,
 				8E6B35960FC644F400EB77B2 /* WidgetComponent_LongButton.m */,
 				8E6B358F0FC6444B00EB77B2 /* WidgetComponent_LongButton.xib */,
+				8E6B3DFA0FCB9F8B00EB77B2 /* WidgetFlipClockDate.h */,
+				8E6B3DFB0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m */,
 				8E6B34710FC4B69300EB77B2 /* WidgetAppLauncher.h */,
 				8E6B34720FC4B69300EB77B2 /* WidgetAppLauncher.m */,
+				4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */,
+				4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -177,10 +181,6 @@
 				8E6B39E50FC8B72F00EB77B2 /* WidgetWeather.xib */,
 				8E6B3C720FCB36AD00EB77B2 /* AddressBook.framework */,
 				8E6B3C890FCB3B3000EB77B2 /* AddressBookUI.framework */,
-				8E6B3DFA0FCB9F8B00EB77B2 /* WidgetFlipClockDate.h */,
-				8E6B3DFB0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m */,
-				4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */,
-				4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";

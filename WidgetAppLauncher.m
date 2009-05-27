@@ -13,7 +13,8 @@
 @implementation WidgetAppLauncher
 
 @synthesize longButtonArray;
-//@synthesize AppShortcuts;
+@synthesize AppShortcuts;
+@synthesize numRows;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -21,6 +22,7 @@
         // Custom initialization
 		longButtonArray = [[NSMutableArray alloc] init];
 		//AppShortcuts = [[NSMutableArray alloc] init];
+		
 		AppShortcuts[0].title = @"Google";
 		AppShortcuts[0].url = @"http://www.google.com";
 		AppShortcuts[0].image = @"http://www.google.com/favicon.ico";
