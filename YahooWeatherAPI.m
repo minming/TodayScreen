@@ -131,8 +131,8 @@
 		
 	if ([elementName isEqualToString:@"yweather:condition"]) {
 		//NSLog(@"found this weather element: %@ - %@", elementName, [attributeDict objectForKey:@"text"]);
-		if ([attributeDict objectForKey:@"text"] != "" || [attributeDict objectForKey:@"text"] != nil) {
-			weatherReports[0].day = "Now";
+		if ([attributeDict objectForKey:@"text"] != @"" || [attributeDict objectForKey:@"text"] != nil) {
+			weatherReports[0].day = @"Now";
 			weatherReports[0].text = [attributeDict objectForKey:@"text"];
 			weatherReports[0].temp = [attributeDict objectForKey:@"temp"];
 			weatherReports[0].date = [attributeDict objectForKey:@"date"];
@@ -143,9 +143,9 @@
 	}
 	if ([elementName isEqualToString:@"yweather:forecast"]) {
 		//NSLog(@"found this weather element: %@ - %@", elementName, [attributeDict objectForKey:@"text"]);
-		if ([attributeDict objectForKey:@"text"] != "" || [attributeDict objectForKey:@"text"] != nil) {
+		if ((NSString*)[attributeDict objectForKey:@"text"] != @"" || [attributeDict objectForKey:@"text"] != nil) {
 			int i = 1;
-			if (weatherReports[1].day != "" && weatherReports[1].day != nil) {
+			if (weatherReports[1].day != @"" && weatherReports[1].day != nil) {
 				i = 2;
 			}
 			weatherReports[i].day = [attributeDict objectForKey:@"day"];
@@ -223,7 +223,7 @@
 
 
 - (NSString*)getWeatherIcon:(NSString*)code type:(int)type {
-	if (code == "" || code == nil) {
+	if (code == @"" || code == nil) {
 		return @"http://l.yimg.com/a/i/us/nws/weather/gr/3200s.png";
 	}
 	if (type == 1) {

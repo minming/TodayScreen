@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YahooWeatherAPI.h"
 
 
 @interface WidgetWeather : UIViewController {
@@ -31,8 +31,14 @@
 	IBOutlet UILabel *forecast2TempLabel;
 	IBOutlet UIImageView *forecast2Image;
 	
+	NSOperationQueue *operationQueue;
+	
 	NSString* zipCode;
+	
+	YahooWeatherAPI *weatherAPI;
 }
+
+- (id)initWithZipCode:(NSString*)zip;
 
 @property (copy) NSString* zipCode;
 

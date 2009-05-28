@@ -58,7 +58,7 @@
 - (void)showActivity {  
 	
 	NSDateFormatter *hourFormatter = [[[NSDateFormatter alloc] init] autorelease];  
-    [hourFormatter setDateFormat:@"HH"];
+    [hourFormatter setDateFormat:@"h"];
 	[hour setText:[hourFormatter stringFromDate:[NSDate date]]];  
 	
 	NSDateFormatter *minFormatter = [[[NSDateFormatter alloc] init] autorelease];  

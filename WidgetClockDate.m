@@ -57,24 +57,27 @@
 	
 }  
 
+#define FONT_SIZE 25
+
 // This method is run every 0.5 seconds by the timer created  
 // in the function runTimer  
 - (void)showActivity {  
 	
 	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
     //NSDate *date = [NSDate date];  
-    [formatter setDateFormat:@"HH:mm a"];
+    [formatter setDateFormat:@"h:mm a"];
 	[formatter setAMSymbol:@"AM"];
 	[formatter setPMSymbol:@"PM"];
 	//[formatter setTimeStyle:NSDateFormatterShortStyle];  
 	[timeLabel setText:[formatter stringFromDate:[NSDate date]]];  
+	[timeLabel setFont:[UIFont systemFontOfSize:FONT_SIZE]];
 	
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
     //NSDate *dateFormatter = [NSDate date];  
     [dateFormatter setDateFormat:@"EEE dd MMM"];
 	//[formatter setTimeStyle:NSDateFormatterShortStyle];  
-	[dateLabel setText:[dateFormatter stringFromDate:[NSDate date]]];  
-	
+	[dateLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+	[dateLabel setFont:[UIFont systemFontOfSize:FONT_SIZE]];
 }  
 
 /*

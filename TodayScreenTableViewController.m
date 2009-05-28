@@ -14,6 +14,9 @@
 #import "WidgetContact.h"
 #import "WidgetFlipClockDate.h"
 
+@interface TodayScreenTableViewController (Internal)
+-(void) initWidgetsArray;
+@end
 
 @implementation TodayScreenTableViewController
 
@@ -24,10 +27,10 @@
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 	if (self = [super initWithStyle:style]) {
 		widgetsArray = [[NSMutableArray alloc] init];
+		[self initWidgetsArray];
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,7 +50,30 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
+-(void) initWidgetsArray {
+	WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:flipClockDate];
+	[flipClockDate release];
+	
+	WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:clockDate];
+	[clockDate release];
+	
+	WidgetRSS *RSS = [[WidgetRSS alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:RSS];
+	[RSS release];
+	
+	/*WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:weather];
+	[weather release];
+	
+	WidgetContact *contact = [[WidgetContact alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:contact];
+	
+	WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	[self.widgetsArray addObject:appLauncher];
+	[appLauncher release];*/
+}
 /*
  - (void)viewWillAppear:(BOOL)animated {
  [super viewWillAppear:animated];
@@ -91,7 +117,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return [widgetsArray count];
 }
 
 
@@ -105,8 +131,10 @@
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
 		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
+	
+	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
     // Set up the cell...
-	if (indexPath.row == 0) {
+	/*if (indexPath.row == 0) {
 		WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
 		[cell.contentView addSubview:flipClockDate.view];
 		[self.widgetsArray addObject:flipClockDate];
@@ -118,35 +146,35 @@
 		[cell.contentView addSubview:clockDate.view];
 		[self.widgetsArray addObject:clockDate];
 		[clockDate release];
-	} 
+	} */
 	
-	if (indexPath.row == 2) {
-		WidgetRSS *RSS = [[WidgetRSS alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:RSS.view];
-		[self.widgetsArray addObject:RSS];
-		[RSS release];
-	} 
-	
-	if (indexPath.row == 3) {
-		WidgetWeather *weather = [[WidgetWeather alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:weather.view];
-		[self.widgetsArray addObject:weather];
-		[weather release];
-	} 
-	
-	if (indexPath.row == 4) {
-		WidgetContact *contact = [[WidgetContact alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:contact.view];
-		[self.widgetsArray addObject:contact];
-		[contact release];
-	} 
-	
-	if (indexPath.row == 5) {
-		WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:appLauncher.view];
-		[self.widgetsArray addObject:appLauncher];
-		[appLauncher release];
-	} 
+	/*if (indexPath.row == 2) {
+	 WidgetRSS *RSS = [[WidgetRSS alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	 [cell.contentView addSubview:RSS.view];
+	 [self.widgetsArray addObject:RSS];
+	 [RSS release];
+	 } 
+	 
+	 if (indexPath.row == 3) {
+	 WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	 [cell.contentView addSubview:weather.view];
+	 [self.widgetsArray addObject:weather];
+	 [weather release];
+	 } 
+	 
+	 if (indexPath.row == 4) {
+	 WidgetContact *contact = [[WidgetContact alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	 [cell.contentView addSubview:contact.view];
+	 [self.widgetsArray addObject:contact];
+	 [contact release];
+	 } 
+	 
+	 if (indexPath.row == 5) {
+	 WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	 [cell.contentView addSubview:appLauncher.view];
+	 [self.widgetsArray addObject:appLauncher];
+	 [appLauncher release];
+	 }*/
     return cell;
 }
 
@@ -167,11 +195,6 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 { 
 	return nil;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canSelectRowAtIndexPath:(NSIndexPath *)indexPath 
-{ 
-	return NO;
 }
 
 // Override to support conditional editing of the table view.

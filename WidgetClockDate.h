@@ -16,6 +16,8 @@
 	
 	NSString *dateFormat;
 	NSString *timeFormat;
+	
+	NSInteger rowHeight;
 }
 
 @property (copy) NSString* dateFormat;

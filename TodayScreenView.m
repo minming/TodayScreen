@@ -32,9 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1.jpg"]];
-	todayScreenTableViewController = [[TodayScreenTableViewController alloc] init];
-	[self.view addSubview:todayScreenTableViewController.view];
-	
+	todayScreenTableViewController = [[TodayScreenTableViewController alloc] initWithStyle:UITableViewStylePlain];
+	[self.view addSubview:todayScreenTableViewController.view];	
 }
 
 

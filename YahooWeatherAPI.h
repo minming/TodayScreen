@@ -6,7 +6,7 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-typedef struct  {
+typedef struct Weather {
 	NSString *text;
 	NSString *temp;
 	NSString *high;
