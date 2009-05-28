@@ -14,7 +14,8 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
+	[application setStatusBarHidden:YES animated:NO];
+	
     // Override point for customization after application launch
 	todayScreenView = [[TodayScreenView alloc] init];
 	//UIView *uiView = [[UIView alloc] init];

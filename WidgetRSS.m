@@ -48,7 +48,7 @@
 			if (i<[stories count]) {
 				WidgetComponent_SingleRSS *singleRSS = [[[WidgetComponent_SingleRSS alloc] init] autorelease];
 				[self.view addSubview:singleRSS.view];
-				singleRSS.view.frame = CGRectMake(10.0, i*40.0+10.0, 60.0, 40.0);
+				singleRSS.view.frame = CGRectMake(0.0, i*40.0+10.0, 60.0, 40.0);
 				
 				NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
 				NSDate *date = [formatter dateFromString:[[stories objectAtIndex: i] objectForKey: @"date"]];  

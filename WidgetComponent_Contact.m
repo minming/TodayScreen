@@ -97,6 +97,7 @@
 		if(ABPersonHasImageData(person)){
 			UIImage *img = [UIImage imageWithData:(NSData *)ABPersonCopyImageData(person)];
 			[self.button setBackgroundImage:img forState:UIControlStateNormal];
+			//[self.button setImage:img forState:UIControlStateNormal];
 		}
 		
 				

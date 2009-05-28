@@ -20,6 +20,12 @@
 		contactsArray = [[NSMutableArray alloc] init];
 		contacts[0].name = @"MING";
 		contacts[0].image = @"test";
+		contacts[1].name = @"MING";
+		contacts[1].image = @"test";
+		contacts[2].name = @"MING";
+		contacts[2].image = @"test";
+		contacts[3].name = @"MING";
+		contacts[3].image = @"test";
     }
     return self;
 }
@@ -36,10 +42,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor clearColor];
-	for (int i=0; i<4; i++) {
+	for (int i=0; i<5; i++) {
 		contact = [[WidgetComponent_Contact alloc] init];
 		[self.view addSubview:contact.view]; 
-		contact.view.frame = CGRectMake(i*65.0+10.0, 10.0, 60.0, 40.0);
+		contact.view.frame = CGRectMake(i*60.0+10.0, 10.0, 60.0, 50.0);
 		contact.button.tag = i;
 		//[contact.button setTitle:contacts[i].name forState:UIControlStateNormal];
 		if (contacts[i].image != nil) {

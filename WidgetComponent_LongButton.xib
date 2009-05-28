@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="271711156">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{66, 23}</string>
+						<string key="NSFrameSize">{68, 24}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -54,7 +54,6 @@
 							<double key="NSSize">1.000000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle"/>
 						<string key="IBUIDisabledTitle"/>
 						<string key="IBUISelectedTitle"/>
@@ -67,9 +66,16 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="968645151">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">longbuttonbg.png</string>
+						</object>
+						<reference key="IBUIDisabledBackgroundImage" ref="968645151"/>
+						<reference key="IBUISelectedBackgroundImage" ref="968645151"/>
+						<reference key="IBUINormalBackgroundImage" ref="968645151"/>
 					</object>
 				</object>
-				<string key="NSFrameSize">{325, 347}</string>
+				<string key="NSFrameSize">{173, 77}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -152,7 +158,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>WidgetComponent_LongButton</string>
 					<string>UIResponder</string>
-					<string>{{675, 236}, {325, 347}}</string>
+					<string>{{1147, 142}, {173, 77}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
