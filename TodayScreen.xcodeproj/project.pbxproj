@@ -43,6 +43,21 @@
 		8E6B3DF20FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */; };
 		8E6B3DF70FCB9F3E00EB77B2 /* flipclockbgwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3DF60FCB9F3E00EB77B2 /* flipclockbgwhite.png */; };
 		8E6B3DFC0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B3DFB0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m */; };
+		8E6B3F5E0FCE539F00EB77B2 /* footertoobaricon_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F540FCE539F00EB77B2 /* footertoobaricon_add.png */; };
+		8E6B3F5F0FCE539F00EB77B2 /* footertoobaricon_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F550FCE539F00EB77B2 /* footertoobaricon_delete.png */; };
+		8E6B3F600FCE539F00EB77B2 /* footertoobaricon_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F560FCE539F00EB77B2 /* footertoobaricon_help.png */; };
+		8E6B3F610FCE539F00EB77B2 /* footertoobaricon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F570FCE539F00EB77B2 /* footertoobaricon_info.png */; };
+		8E6B3F620FCE539F00EB77B2 /* footertoobaricon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F580FCE539F00EB77B2 /* footertoobaricon_settings.png */; };
+		8E6B3F630FCE539F00EB77B2 /* footertoobaricon_sort.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F590FCE539F00EB77B2 /* footertoobaricon_sort.png */; };
+		8E6B3F640FCE539F00EB77B2 /* footertoolbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F5A0FCE539F00EB77B2 /* footertoolbarbg.png */; };
+		8E6B3F660FCE539F00EB77B2 /* longbuttonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F5C0FCE539F00EB77B2 /* longbuttonbg.png */; };
+		8E6B3F670FCE539F00EB77B2 /* longlaunchbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F5D0FCE539F00EB77B2 /* longlaunchbutton.png */; };
+		8E6B3F760FCE53BE00EB77B2 /* contactbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F750FCE53BE00EB77B2 /* contactbutton.png */; };
+		8E6B3F7A0FCE54E800EB77B2 /* blankcontact.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3F790FCE54E800EB77B2 /* blankcontact.png */; };
+		8E6B3FBD0FCE5E3300EB77B2 /* Info.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3FBC0FCE5E3300EB77B2 /* Info.xib */; };
+		8E6B3FC20FCE5E7E00EB77B2 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B3FC10FCE5E7E00EB77B2 /* Info.m */; };
+		8E6B3FC70FCE5FA300EB77B2 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3FC60FCE5FA300EB77B2 /* bg2.png */; };
+		8E6B401F0FCE61C200EB77B2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B401E0FCE61C200EB77B2 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +117,22 @@
 		8E6B3DF60FCB9F3E00EB77B2 /* flipclockbgwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flipclockbgwhite.png; sourceTree = "<group>"; };
 		8E6B3DFA0FCB9F8B00EB77B2 /* WidgetFlipClockDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetFlipClockDate.h; sourceTree = "<group>"; };
 		8E6B3DFB0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetFlipClockDate.m; sourceTree = "<group>"; };
+		8E6B3F540FCE539F00EB77B2 /* footertoobaricon_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_add.png; sourceTree = "<group>"; };
+		8E6B3F550FCE539F00EB77B2 /* footertoobaricon_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_delete.png; sourceTree = "<group>"; };
+		8E6B3F560FCE539F00EB77B2 /* footertoobaricon_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_help.png; sourceTree = "<group>"; };
+		8E6B3F570FCE539F00EB77B2 /* footertoobaricon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_info.png; sourceTree = "<group>"; };
+		8E6B3F580FCE539F00EB77B2 /* footertoobaricon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_settings.png; sourceTree = "<group>"; };
+		8E6B3F590FCE539F00EB77B2 /* footertoobaricon_sort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoobaricon_sort.png; sourceTree = "<group>"; };
+		8E6B3F5A0FCE539F00EB77B2 /* footertoolbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footertoolbarbg.png; sourceTree = "<group>"; };
+		8E6B3F5C0FCE539F00EB77B2 /* longbuttonbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longbuttonbg.png; sourceTree = "<group>"; };
+		8E6B3F5D0FCE539F00EB77B2 /* longlaunchbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longlaunchbutton.png; sourceTree = "<group>"; };
+		8E6B3F750FCE53BE00EB77B2 /* contactbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactbutton.png; sourceTree = "<group>"; };
+		8E6B3F790FCE54E800EB77B2 /* blankcontact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankcontact.png; sourceTree = "<group>"; };
+		8E6B3FBC0FCE5E3300EB77B2 /* Info.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
+		8E6B3FC00FCE5E7E00EB77B2 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		8E6B3FC10FCE5E7E00EB77B2 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
+		8E6B3FC60FCE5FA300EB77B2 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		8E6B401E0FCE61C200EB77B2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +171,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8E6B401E0FCE61C200EB77B2 /* icon.png */,
+				8E6B3FC60FCE5FA300EB77B2 /* bg2.png */,
+				8E6B3FBC0FCE5E3300EB77B2 /* Info.xib */,
 				8E6B3DF60FCB9F3E00EB77B2 /* flipclockbgwhite.png */,
 				8E6B3CD00FCB91D200EB77B2 /* bg1.jpg */,
 				4891CD190FCCCAD2007C7284 /* AppShortcut.h */,
@@ -160,6 +194,15 @@
 				8E6B35960FC644F400EB77B2 /* WidgetComponent_LongButton.m */,
 				8E6B3B140FC9526700EB77B2 /* WidgetComponent_Contact.h */,
 				8E6B3B150FC9526700EB77B2 /* WidgetComponent_Contact.m */,
+				8E6B3F540FCE539F00EB77B2 /* footertoobaricon_add.png */,
+				8E6B3F550FCE539F00EB77B2 /* footertoobaricon_delete.png */,
+				8E6B3F560FCE539F00EB77B2 /* footertoobaricon_help.png */,
+				8E6B3F570FCE539F00EB77B2 /* footertoobaricon_info.png */,
+				8E6B3F580FCE539F00EB77B2 /* footertoobaricon_settings.png */,
+				8E6B3F590FCE539F00EB77B2 /* footertoobaricon_sort.png */,
+				8E6B3F5A0FCE539F00EB77B2 /* footertoolbarbg.png */,
+				8E6B3F5C0FCE539F00EB77B2 /* longbuttonbg.png */,
+				8E6B3F5D0FCE539F00EB77B2 /* longlaunchbutton.png */,
 				8E6B3B0A0FC9523500EB77B2 /* WidgetContact.h */,
 				8E6B3B0B0FC9523500EB77B2 /* WidgetContact.m */,
 				8E6B3DFA0FCB9F8B00EB77B2 /* WidgetFlipClockDate.h */,
@@ -174,6 +217,8 @@
 				8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */,
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
 				8E6B3B100FC9525A00EB77B2 /* WidgetComponent_Contact.xib */,
+				8E6B3F790FCE54E800EB77B2 /* blankcontact.png */,
+				8E6B3F750FCE53BE00EB77B2 /* contactbutton.png */,
 				8E6B37D40FC87A9200EB77B2 /* WidgetClockDate.xib */,
 				8E6B387C0FC893E100EB77B2 /* WidgetComponent_SingleRSS.xib */,
 				8E6B358F0FC6444B00EB77B2 /* WidgetComponent_LongButton.xib */,
@@ -186,6 +231,8 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8E6B3C720FCB36AD00EB77B2 /* AddressBook.framework */,
 				8E6B3C890FCB3B3000EB77B2 /* AddressBookUI.framework */,
+				8E6B3FC00FCE5E7E00EB77B2 /* Info.h */,
+				8E6B3FC10FCE5E7E00EB77B2 /* Info.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -278,6 +325,20 @@
 				8E6B3DA20FCB9A8100EB77B2 /* TodayScreenView.xib in Resources */,
 				8E6B3DF20FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib in Resources */,
 				8E6B3DF70FCB9F3E00EB77B2 /* flipclockbgwhite.png in Resources */,
+				8E6B3F5E0FCE539F00EB77B2 /* footertoobaricon_add.png in Resources */,
+				8E6B3F5F0FCE539F00EB77B2 /* footertoobaricon_delete.png in Resources */,
+				8E6B3F600FCE539F00EB77B2 /* footertoobaricon_help.png in Resources */,
+				8E6B3F610FCE539F00EB77B2 /* footertoobaricon_info.png in Resources */,
+				8E6B3F620FCE539F00EB77B2 /* footertoobaricon_settings.png in Resources */,
+				8E6B3F630FCE539F00EB77B2 /* footertoobaricon_sort.png in Resources */,
+				8E6B3F640FCE539F00EB77B2 /* footertoolbarbg.png in Resources */,
+				8E6B3F660FCE539F00EB77B2 /* longbuttonbg.png in Resources */,
+				8E6B3F670FCE539F00EB77B2 /* longlaunchbutton.png in Resources */,
+				8E6B3F760FCE53BE00EB77B2 /* contactbutton.png in Resources */,
+				8E6B3F7A0FCE54E800EB77B2 /* blankcontact.png in Resources */,
+				8E6B3FBD0FCE5E3300EB77B2 /* Info.xib in Resources */,
+				8E6B3FC70FCE5FA300EB77B2 /* bg2.png in Resources */,
+				8E6B401F0FCE61C200EB77B2 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +367,7 @@
 				8E6B3DFC0FCB9F8B00EB77B2 /* WidgetFlipClockDate.m in Sources */,
 				4891CB1E0FCBB0D6007C7284 /* UserDefaults.m in Sources */,
 				4891CD1B0FCCCAD2007C7284 /* AppShortcut.m in Sources */,
+				8E6B3FC20FCE5E7E00EB77B2 /* Info.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

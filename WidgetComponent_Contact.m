@@ -36,9 +36,16 @@
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor clearColor];
 	//self.button
-	[self.button addTarget:self action:@selector(launchContact:) forControlEvents:UIControlEventTouchDown];
-	[self getContactInfo:@"THE"];
+
 	//[self getContactInfo:@"THE"];
+}
+
+
+- (void)setContact:(NSString*)fullName {
+	if (fullName != "" || fullName != nil) {
+		[self getContactInfo:fullName];	
+		[self.button addTarget:self action:@selector(launchContact:) forControlEvents:UIControlEventTouchDown];
+	}
 }
 
 - (void)launchContact:(id)sender {

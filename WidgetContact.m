@@ -19,13 +19,9 @@
         // Custom initialization
 		contactsArray = [[NSMutableArray alloc] init];
 		contacts[0].name = @"MING";
-		contacts[0].image = @"test";
-		contacts[1].name = @"MING";
-		contacts[1].image = @"test";
+		contacts[1].name = @"THE";
 		contacts[2].name = @"MING";
-		contacts[2].image = @"test";
 		contacts[3].name = @"MING";
-		contacts[3].image = @"test";
     }
     return self;
 }
@@ -47,10 +43,11 @@
 		[self.view addSubview:contact.view]; 
 		contact.view.frame = CGRectMake(i*60.0+10.0, 10.0, 60.0, 50.0);
 		contact.button.tag = i;
+		[contact setContact:contacts[i].name];
 		//[contact.button setTitle:contacts[i].name forState:UIControlStateNormal];
-		if (contacts[i].image != nil) {
+		//if (contacts[i].image != nil) {
 		//	[contact.button setImage:[self getImageFromUrl:contacts[i].image] forState:UIControlStateNormal];
-		}
+		//}
 		//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
 		//NSURL *url = [NSURL URLWithString:path];
 		//NSData *data = [NSData dataWithContentsOfURL:url];

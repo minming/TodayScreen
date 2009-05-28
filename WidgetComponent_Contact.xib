@@ -39,25 +39,25 @@
 					<object class="IBUIImageView" id="344915854">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 50}, {50, 20}}</string>
+						<string key="NSFrame">{{0, 49}, {50, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">longbuttonbg.png</string>
+							<string key="NSResourceName">contactbutton.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="73517223">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 48}, {50, 24}}</string>
+						<string key="NSFrame">{{0, 46}, {50, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="IBUIText">David James</string>
+						<string key="IBUIText">Contact</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">1.100000e+01</double>
@@ -86,7 +86,6 @@
 							<double key="NSSize">1.500000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle"/>
 						<string key="IBUIDisabledTitle"/>
 						<string key="IBUISelectedTitle"/>
@@ -99,9 +98,16 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="706257766">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">blankcontact.png</string>
+						</object>
+						<reference key="IBUIDisabledBackgroundImage" ref="706257766"/>
+						<reference key="IBUISelectedBackgroundImage" ref="706257766"/>
+						<reference key="IBUINormalBackgroundImage" ref="706257766"/>
 					</object>
 				</object>
-				<string key="NSFrameSize">{181, 156}</string>
+				<string key="NSFrameSize">{97, 108}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -157,8 +163,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="498386151"/>
-							<reference ref="73517223"/>
 							<reference ref="344915854"/>
+							<reference ref="73517223"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -206,7 +212,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>WidgetComponent_Contact</string>
 					<string>UIResponder</string>
-					<string>{{1159, 63}, {181, 156}}</string>
+					<string>{{1116, 111}, {97, 108}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

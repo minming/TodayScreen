@@ -24,5 +24,6 @@
 - (void)getContactInfo:(NSString*)fullName;
 //- (IBAction)launchContact:(id)sender;
 - (void)launchContact:(id)sender;
+- (void)setContact:(NSString*)fullName;
 
 @end

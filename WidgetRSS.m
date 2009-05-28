@@ -36,7 +36,7 @@
 	self.view.backgroundColor = [UIColor clearColor];
 	self.NUM_OF_FEEDS = 3; //temp set for testing
 	if ([stories count] == 0 || stories == nil) {
-		NSString * path = @"http://feeds.feedburner.com/TheAppleBlog";
+		NSString * path = @"http://www.engadget.com/rss.xml";
 		[self parseXMLFileAtURL:path];
 	}
 	
@@ -46,15 +46,17 @@
 	if ([stories count] != 0) {
 		for (int i=0; i<NUM_OF_FEEDS; i++) {
 			if (i<[stories count]) {
-				WidgetComponent_SingleRSS *singleRSS = [[[WidgetComponent_SingleRSS alloc] init] autorelease];
+				WidgetComponent_SingleRSS *singleRSS = [[WidgetComponent_SingleRSS alloc] init];
+				//singleRSS.button.tag = i;
+				//[singleRSS.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
 				[self.view addSubview:singleRSS.view];
-				singleRSS.view.frame = CGRectMake(0.0, i*40.0+10.0, 60.0, 40.0);
+				singleRSS.view.frame = CGRectMake(0.0, i*40.0+10.0, 320.0, 50.0);
 				
-				NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
-				NSDate *date = [formatter dateFromString:[[stories objectAtIndex: i] objectForKey: @"date"]];  
-				[formatter setDateFormat:@"HH:mm"];
-				NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
-				[dateFormatter setDateFormat:@"dd MMM"];
+				//NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
+				//NSDate *date = [formatter dateFromString:[[stories objectAtIndex: i] objectForKey: @"date"]];  
+				//[formatter setDateFormat:@"HH:mm"];
+				//NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
+				//[dateFormatter setDateFormat:@"dd MMM"];
 				
 				//[formatter setTimeStyle:NSDateFormatterShortStyle];  
 				//[timeLabel setText:[formatter stringFromDate:date]];  
@@ -64,13 +66,20 @@
 				//singleRSS.dateLabel.text = [dateFormatter stringFromDate:date];
 				//singleRSS.timeLabel.text = [formatter stringFromDate:date];
 				singleRSS.datetimeLabel.text = [[stories objectAtIndex: i] objectForKey: @"date"];
-				
+				singleRSS.url = [[stories objectAtIndex:i] objectForKey:@"link"];
 				
 				[singleRSS.view setNeedsLayout];
 				[singleRSSArray addObject:singleRSS];
+				[singleRSS release];
 			}
 		}
 	}
+}
+
+- (void)buttonAction:(id)sender {
+	NSLog(@"CLICKED");
+	UIButton *b = (UIButton*)sender;
+	[[UIApplication sharedApplication] openURL:[[stories objectAtIndex:b.tag] objectForKey:@"link"]];
 }
 
 /*

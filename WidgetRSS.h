@@ -25,6 +25,8 @@
 @property (nonatomic, copy) NSMutableArray *singleRSSArray;
 @property int NUM_OF_FEEDS;
 
+- (void)buttonAction:(id)sender;
+
 - (void)parseXMLFileAtURL:(NSString *)URL;
 
 @end

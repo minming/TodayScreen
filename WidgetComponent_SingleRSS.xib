@@ -39,7 +39,7 @@
 					<object class="IBUILabel" id="399985343">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{11, 1}, {305, 21}}</string>
+						<string key="NSFrame">{{11, 1}, {299, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -80,10 +80,11 @@
 					<object class="IBUIButton" id="100667053">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{276, 20}, {40, 14}}</string>
+						<string key="NSFrame">{{276, 18}, {40, 16}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<int key="IBUIContentMode">3</int>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<object class="NSFont" key="IBUIFont">
@@ -112,7 +113,7 @@
 						<reference key="IBUINormalImage" ref="1031246818"/>
 					</object>
 				</object>
-				<string key="NSFrameSize">{320, 480}</string>
+				<string key="NSFrameSize">{320, 127}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -149,6 +150,23 @@
 						<reference key="destination" ref="799317490"/>
 					</object>
 					<int key="connectionID">12</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">button</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="100667053"/>
+					</object>
+					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">launchURL:</string>
+						<reference key="source" ref="100667053"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">15</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -217,7 +235,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>WidgetComponent_SingleRSS</string>
 					<string>UIResponder</string>
-					<string>{{947, 48}, {320, 480}}</string>
+					<string>{{984, 86}, {320, 127}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -244,7 +262,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">13</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -252,10 +270,15 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">WidgetComponent_SingleRSS</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">launchURL:</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>button</string>
 							<string>dateLabel</string>
 							<string>datetimeLabel</string>
 							<string>timeLabel</string>
@@ -263,6 +286,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>

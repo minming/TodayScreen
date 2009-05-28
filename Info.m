@@ -1,23 +1,15 @@
 //
-//  WidgetComponent_SingleRSS.m
+//  Info.m
 //  TodayScreen
 //
-//  Created by Mac Pro on 5/23/09.
+//  Created by Mac Pro on 5/27/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "WidgetComponent_SingleRSS.h"
+#import "Info.h"
 
 
-@implementation WidgetComponent_SingleRSS
-
-@synthesize url;
-
-@synthesize titleLabel;
-@synthesize dateLabel;
-@synthesize timeLabel;
-@synthesize datetimeLabel;
-@synthesize button;
+@implementation Info
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -35,19 +27,12 @@
 }
 */
 
-- (void)launchURL:(id)sender {
-	//NSLog(@"CLICKED");
-	//UIButton *b = (UIButton*)sender;
-	NSURL *nsurl = [NSURL URLWithString:[self url]];
-	[[UIApplication sharedApplication] openURL:nsurl];
-}
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.view.backgroundColor = [UIColor clearColor];
 }
-
+*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
