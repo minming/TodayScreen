@@ -63,7 +63,7 @@
 	[self.widgetsArray addObject:RSS];
 	[RSS release];
 	
-	/*WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
+	WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
 	[self.widgetsArray addObject:weather];
 	[weather release];
 	
@@ -72,7 +72,7 @@
 	
 	WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
 	[self.widgetsArray addObject:appLauncher];
-	[appLauncher release];*/
+	[appLauncher release];
 }
 /*
  - (void)viewWillAppear:(BOOL)animated {
