@@ -14,8 +14,17 @@
 #import "WidgetContact.h"
 #import "WidgetFlipClockDate.h"
 
+#define WIDGET_CLOCK 500
+#define WIDGET_RSS 501
+#define WIDGET_CONTACT 502
+#define WIDGET_FLIP_CLOCK 503
+#define WIDGET_APPLAUNCHER 504
+#define WIDGET_WEATHER 505
+
 @interface TodayScreenTableViewController (Internal)
+
 -(void) initWidgetsArray;
+
 @end
 
 @implementation TodayScreenTableViewController
@@ -30,6 +39,12 @@
 		[self initWidgetsArray];
     }
     return self;
+}
+
+- (void)dealloc {
+	[widgetsArray release];
+	//[bgImageView release];// forKeyPath:<#(NSString *)keyPath#>
+    [super dealloc];
 }
 
 - (void)viewDidLoad {
@@ -51,29 +66,125 @@
 }
 
 -(void) initWidgetsArray {
-	WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:flipClockDate];
-	[flipClockDate release];
-	
-	WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:clockDate];
-	[clockDate release];
-	
-	WidgetRSS *RSS = [[WidgetRSS alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:RSS];
-	[RSS release];
-	
-	WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:weather];
-	[weather release];
-	
-	WidgetContact *contact = [[WidgetContact alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:contact];
-	
-	WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	[self.widgetsArray addObject:appLauncher];
-	[appLauncher release];
+	[self addNewWidget:WIDGET_FLIP_CLOCK];
+	[self addNewWidget:WIDGET_CLOCK];
+	[self addNewWidget:WIDGET_WEATHER];
+	[self addNewWidget:WIDGET_RSS];
+	[self addNewWidget:WIDGET_APPLAUNCHER];
+	//addNewWidget:WIDGET_CONTACT;
 }
+
+
+-(void) addNewWidget:(NSInteger)widgetType {
+	switch (widgetType) {
+		case WIDGET_FLIP_CLOCK: {
+			NSLog(@"Add flip clock");
+			WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];
+			[self.widgetsArray addObject:flipClockDate];
+			[flipClockDate release];
+			break; 
+		}
+		case WIDGET_CLOCK: {
+			NSLog(@"Add widget clock");
+			WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];
+			[self.widgetsArray addObject:clockDate];
+			[clockDate release];
+			break;
+		}
+		case WIDGET_RSS: {
+			NSLog(@"Add rss");
+			WidgetRSS *RSS = [[WidgetRSS alloc] init];
+			[self.widgetsArray addObject:RSS];
+			[RSS release];
+			break;
+		}
+		case WIDGET_WEATHER: {
+			NSLog(@"Add weather");
+			WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:DEFAULT_ZIP_CODE];
+			[self.widgetsArray addObject:weather];
+			[weather release];
+			break;
+		}
+		case WIDGET_APPLAUNCHER: {
+			NSLog(@"Add app launcher");
+			WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];
+			[self.widgetsArray addObject:appLauncher];
+			[appLauncher release];
+			break;
+		}
+		case WIDGET_CONTACT: {
+			NSLog(@"Add contact");
+			WidgetContact *contact = [[WidgetContact alloc] init];
+			[self.widgetsArray addObject:contact];
+			break;
+		}
+		default:
+			break;
+	}
+	[self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
+    // Release anything that's not essential, such as cached data
+}
+
+
+#pragma mark Table view methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [widgetsArray count];
+}
+
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+		[cell setBackgroundView:UITableViewStylePlain];
+    }
+	
+	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
+{  
+    return 150.0; //returns floating point which will be used for a cell row height at specified row index  
+}  
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	//return nil;
+    // Navigation logic may go here. Create and push another view controller.
+	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
+	// [self.navigationController pushViewController:anotherViewController];
+	// [anotherViewController release];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{ 
+	return nil;
+}
+
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+	// Return NO if you do not want the specified item to be editable.
+	return NO;
+}
+
+
 /*
  - (void)viewWillAppear:(BOOL)animated {
  [super viewWillAppear:animated];
@@ -103,107 +214,6 @@
  }
  */
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
-}
-
-#pragma mark Table view methods
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [widgetsArray count];
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    }
-	
-	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
-    // Set up the cell...
-	/*if (indexPath.row == 0) {
-		WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:flipClockDate.view];
-		[self.widgetsArray addObject:flipClockDate];
-		[flipClockDate release];
-	} 
-	
-	if (indexPath.row == 1) {
-		WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-		[cell.contentView addSubview:clockDate.view];
-		[self.widgetsArray addObject:clockDate];
-		[clockDate release];
-	} */
-	
-	/*if (indexPath.row == 2) {
-	 WidgetRSS *RSS = [[WidgetRSS alloc] init];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	 [cell.contentView addSubview:RSS.view];
-	 [self.widgetsArray addObject:RSS];
-	 [RSS release];
-	 } 
-	 
-	 if (indexPath.row == 3) {
-	 WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:@"94305"];	//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	 [cell.contentView addSubview:weather.view];
-	 [self.widgetsArray addObject:weather];
-	 [weather release];
-	 } 
-	 
-	 if (indexPath.row == 4) {
-	 WidgetContact *contact = [[WidgetContact alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	 [cell.contentView addSubview:contact.view];
-	 [self.widgetsArray addObject:contact];
-	 [contact release];
-	 } 
-	 
-	 if (indexPath.row == 5) {
-	 WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];//WithNibName:@"WidgetAppLauncher.xib" bundle:nil] autorelease];
-	 [cell.contentView addSubview:appLauncher.view];
-	 [self.widgetsArray addObject:appLauncher];
-	 [appLauncher release];
-	 }*/
-    return cell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
-{  
-    return 100.0; //returns floating point which will be used for a cell row height at specified row index  
-}  
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//return nil;
-    // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath 
-{ 
-	return nil;
-}
-
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-	// Return NO if you do not want the specified item to be editable.
-	return NO;
-}
-
-
 /*
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -232,12 +242,6 @@
  return YES;
  }
  */
-
-
-- (void)dealloc {
-	//[bgImageView release];// forKeyPath:<#(NSString *)keyPath#>
-    [super dealloc];
-}
 
 
 @end

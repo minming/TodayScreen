@@ -20,26 +20,13 @@
 
 @synthesize zipCode;
 
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-		/*weatherAPI = [[YahooWeatherAPI alloc] init];
-		 [self setZipCode:zip];
-		 
-		 operationQueue = [[NSOperationQueue alloc] init];
-		 [operationQueue setMaxConcurrentOperationCount:1];*/
-    }
-    return self;
-}
-
 -(id) initWithZipCode:(NSString*)zip {
 	if (self = [super init]) {
 		weatherAPI = [[YahooWeatherAPI alloc] init];
+		operationQueue = [[NSOperationQueue alloc] init];
+        [operationQueue setMaxConcurrentOperationCount:1];
 		
 		[self setZipCode:zip];
-		
-        operationQueue = [[NSOperationQueue alloc] init];
-        [operationQueue setMaxConcurrentOperationCount:1];
     }
     return self;
 }
@@ -56,10 +43,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[weatherAPI release];
-	weatherAPI = [[YahooWeatherAPI alloc] init];
-	self.view.backgroundColor = [UIColor clearColor];
-	
 	NSLog(@"Zip code: %@", zipCode);
 	[self getWeatherForZipCode:zipCode];
 }
@@ -71,17 +54,15 @@
 }
 
 - (void)synchronousLoadYahooWeatherData:(NSString*)zip {
-	[weatherAPI getWeatherNSXMLForZipCode:zip];
-	[self performSelectorOnMainThread:@selector(didFinishLoadingYahooWeatherData) withObject:nil waitUntilDone:NO];
-}
-
--(void)didFinishLoadingYahooWeatherData {
+	[weatherAPI getWeatherNSXMLForZipCode:zipCode];
+	self.view.backgroundColor = [UIColor clearColor];
+	
 	Weather now = [weatherAPI getWeather:0];
 	Weather forecast1 = [weatherAPI getWeather:1];
 	Weather forecast2 = [weatherAPI getWeather:2];
 	
-	//NSLog(@"Weather api %@", now);
-	/*nowTextLabel.text = now.text;
+	NSLog(@"Weather api %@", now.text);
+	nowTextLabel.text = now.text;
 	nowTempLabel.text = [NSString stringWithFormat:@"%@˚",now.temp];
 	nowFeelsLikeLabel.text = [NSString stringWithFormat:@"%@˚",now.windChill];
 	
@@ -99,7 +80,7 @@
 	forecast2TextLabel.text = forecast2.text;
 	forecast2DayLabel.text = forecast2.day;
 	forecast2TempLabel.text = [NSString stringWithFormat:@"%@˚ - %@˚",forecast2.low,forecast2.high];
-	forecast2Image.image = [GlobalFunctions getImageFromUrl:forecast2.smallImage];*/
+	forecast2Image.image = [GlobalFunctions getImageFromUrl:forecast2.smallImage];
 }
 
 /*
@@ -117,6 +98,7 @@
 
 
 - (void)dealloc {
+	[weatherAPI release];
 	[operationQueue release];
     [super dealloc];
 }

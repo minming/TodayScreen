@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddNewWidgetViewController.h"
 
 
 @interface TodayScreenTableViewController : UITableViewController {
@@ -16,4 +17,5 @@
 @property (nonatomic, copy) NSMutableArray *widgetsArray;
 //@property (nonatomic, copy) UIImageView *bgImageView;
 
+-(void) addNewWidget:(NSInteger)widgetType;
 @end

@@ -33,7 +33,7 @@
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
 	todayScreenTableViewController = [[TodayScreenTableViewController alloc] initWithStyle:UITableViewStylePlain];
-	[self.view addSubview:todayScreenTableViewController.view];	
+	[tableView addSubview:todayScreenTableViewController.view];	
 }
 
 
@@ -50,6 +50,29 @@
     // Release anything that's not essential, such as cached data
 }
 
+#pragma mark -
+#pragma mark Add New Widget Modal Status Window
+
+- (void)AddNewWidgetViewController:(AddNewWidgetViewController *)controller widgetType:(NSInteger) widgetType
+{
+	[todayScreenTableViewController addNewWidget:widgetType];
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)showModalAddWindow:(id)sender
+{
+	AddNewWidgetViewController *addNewWidgetViewController = [[AddNewWidgetViewController alloc] init];
+    addNewWidgetViewController.delegate = self;
+    
+    [self presentModalViewController:addNewWidgetViewController animated:YES];
+    [addNewWidgetViewController release];    
+}
+
+
+- (void)cancelAddWidget
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 - (void)dealloc {
 	[todayScreenTableViewController release];

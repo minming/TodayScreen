@@ -23,8 +23,6 @@
 	NSMutableArray *AppShortcuts;
 	
 	NSInteger numRows;
-	
-	NSInteger rowHeight;
 	//AppShortcut AppShortcuts[8];
 	
 }
@@ -32,6 +30,5 @@
 @property (nonatomic, copy) NSMutableArray *longButtonArray;
 @property (nonatomic, copy) NSMutableArray *AppShortcuts;
 @property NSInteger numRows;
-@property NSInteger rowHeight;
 
 @end

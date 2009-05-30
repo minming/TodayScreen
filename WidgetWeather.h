@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YahooWeatherAPI.h"
 
+#define DEFAULT_ZIP_CODE @"94305"
 
 @interface WidgetWeather : UIViewController {
 	

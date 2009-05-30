@@ -25,10 +25,10 @@
 }
 
 - (void)getWeatherNSXMLForZipCode:(NSString*)zipCode {
-	NSError *error;
+	/*NSError *error;
 	NSURLResponse *response;
 	NSData *dataReply;
-	NSString *stringReply;
+	NSString *stringReply;*/
 	
 	NSURL *xmlURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://weather.yahooapis.com/forecastrss?p=%@", zipCode]];
 	NSXMLParser *weatherXML = [[NSXMLParser alloc] initWithContentsOfURL:xmlURL];

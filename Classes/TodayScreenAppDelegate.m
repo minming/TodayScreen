@@ -20,6 +20,7 @@
 	todayScreenView = [[TodayScreenView alloc] init];
 	//UIView *uiView = [[UIView alloc] init];
 	//[uiView addSubview:todayScreenTableViewController];
+	todayScreenView.view.opaque = NO;
 	[window addSubview:todayScreenView.view];
 	
     [window makeKeyAndVisible];
