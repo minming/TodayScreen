@@ -176,7 +176,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				48FD48DB0FCE7662004045B2 /* Images */,
 				48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */,
 				48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */,
 				4891CD190FCCCAD2007C7284 /* AppShortcut.h */,
@@ -209,6 +208,7 @@
 				8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */,
 				8E6B3FC00FCE5E7E00EB77B2 /* Info.h */,
 				8E6B3FC10FCE5E7E00EB77B2 /* Info.m */,
+				48FD48DB0FCE7662004045B2 /* Images */,
 				48CEB6DC0FD1015100F42624 /* Interface Files */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,

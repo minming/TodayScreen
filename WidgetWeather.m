@@ -81,6 +81,8 @@
 	forecast2DayLabel.text = forecast2.day;
 	forecast2TempLabel.text = [NSString stringWithFormat:@"%@˚ - %@˚",forecast2.low,forecast2.high];
 	forecast2Image.image = [GlobalFunctions getImageFromUrl:forecast2.smallImage];
+	
+	//[self.view reloadData];
 }
 
 /*

@@ -122,6 +122,8 @@
 			break;
 	}
 	[self.tableView reloadData];
+	
+	NSLog(@"Number of widgets: %d", [self.widgetsArray count]);
 }
 
 - (void)didReceiveMemoryWarning {
