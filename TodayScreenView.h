@@ -22,4 +22,8 @@
 -(IBAction) controlEditingTable:(id)sender;
 - (void) startEditingTable:(id)sender;
 - (void) stopEditingTable:(id)sender;
+
+- (void)showModalAboutView:(id)sender;
+- (void)showModalGeneralSettingsView:(id)sender;
+
 @end

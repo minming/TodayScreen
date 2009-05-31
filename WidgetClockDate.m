@@ -13,7 +13,7 @@
 
 @implementation WidgetClockDate
 
-@synthesize dateFormat;
+//@synthesize dateFormat;
 @synthesize timeFormat;
 
 /*
@@ -26,8 +26,16 @@
 }
 */
 
+- (id)initWithTimeFormat:(NSString *)value {
+    if (self = [super init]) {
+        // Custom initialization
+		[self setTimeFormat:value];
+    }
+    return self;
+}
+
 - (int)getHeight {
-	return 50;
+	return 40;
 }
 
 - (void)infoButtonAction:(id)sender {
@@ -98,19 +106,20 @@
 	
 	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
     //NSDate *date = [NSDate date];  
-    [formatter setDateFormat:@"h:mm a"];
+    [formatter setDateFormat:[self timeFormat]];
 	[formatter setAMSymbol:@"AM"];
 	[formatter setPMSymbol:@"PM"];
 	//[formatter setTimeStyle:NSDateFormatterShortStyle];  
 	[timeLabel setText:[formatter stringFromDate:[NSDate date]]];  
 	[timeLabel setFont:[UIFont systemFontOfSize:FONT_SIZE]];
-	
+	/*
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
     //NSDate *dateFormatter = [NSDate date];  
     [dateFormatter setDateFormat:@"EEE dd MMM"];
 	//[formatter setTimeStyle:NSDateFormatterShortStyle];  
 	[dateLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
 	[dateLabel setFont:[UIFont systemFontOfSize:FONT_SIZE]];
+	 */
 }  
 
 /*

@@ -88,7 +88,7 @@
 		}
 		case WIDGET_CLOCK: {
 			NSLog(@"Add widget clock");
-			WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];
+			WidgetClockDate *clockDate = [[WidgetClockDate alloc] initWithTimeFormat:@"h:mm a   EEE dd MMM"];
 			self.view.tag = 1;
 			[self.widgetsArray addObject:clockDate];
 			[clockDate release];
@@ -159,27 +159,29 @@
 		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 		//[cell setBackgroundView:UITableViewStylePlain];
 		[cell setShouldIndentWhileEditing:NO];
+		cell.clipsToBounds = YES;
+		cell.contentView.clipsToBounds = YES;
     }
 	
 	if (cell.editing == YES) {
 		NSLog(@"EDITING MODE");
-		//cell.backgroundColor = [UIColor blueColor];
-		//[cell setBackgroundColor:[UIColor blackColor]];
-		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:20.0];
-		while( [cell.contentView.subviews count] ){
-			id subview = [cell.contentView.subviews objectAtIndex:0];
-			[subview removeFromSuperview];	
-		}//while
-		cell.text = @"EDIT MODE FOR...";
+		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+		cell.contentView.alpha = 0.5;
+		//while( [cell.contentView.subviews count] ){
+		//	id subview = [cell.contentView.subviews objectAtIndex:0];
+		//	[subview removeFromSuperview];	
+		//}//while
+		//cell.text = @"EDIT MODE FOR...";
+		//tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 	}
-	
 	//if (cell.tag != 10) {
 	else {
-		cell.text = @"";
-		cell.contentView.backgroundColor  = [UIColor clearColor];
+		//cell.text = @"";
+		//cell.contentView.backgroundColor  = [UIColor clearColor];
+		cell.contentView.alpha = 1.0;
 		NSLog(@"ADDING MODE");
 		[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
-		[cell setTag:10];
+		//[cell setTag:10];
 	}
 	
     return cell;

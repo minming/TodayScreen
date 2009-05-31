@@ -354,7 +354,7 @@
 					<object class="IBUIImageView" id="844783917">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{189, 5}, {2, 85}}</string>
+						<string key="NSFrame">{{191, 5}, {2, 85}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -368,7 +368,7 @@
 					<object class="IBUIImageView" id="741107588">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{253, 5}, {2, 85}}</string>
+						<string key="NSFrame">{{255, 5}, {2, 85}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -380,7 +380,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 					</object>
 				</object>
-				<string key="NSFrameSize">{320, 480}</string>
+				<string key="NSFrameSize">{320, 168}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -715,7 +715,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>WidgetWeather</string>
 					<string>UIResponder</string>
-					<string>{{904, 247}, {320, 480}}</string>
+					<string>{{871, 559}, {320, 168}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

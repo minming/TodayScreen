@@ -23,6 +23,12 @@
 		8E5DBF350FD28747003E0584 /* addicon_urllauncher.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */; };
 		8E5DBF360FD28747003E0584 /* addicon_weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF300FD28747003E0584 /* addicon_weather.png */; };
 		8E5DBF3C0FD28874003E0584 /* addicon_rss.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF3B0FD28874003E0584 /* addicon_rss.png */; };
+		8E5DC0450FD34167003E0584 /* AboutTodayScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */; };
+		8E5DC04B0FD345E7003E0584 /* todayscreenlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */; };
+		8E5DC04C0FD345E7003E0584 /* visittodayscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */; };
+		8E5DC0520FD346F7003E0584 /* AboutTodayScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */; };
+		8E5DC0970FD348DF003E0584 /* TodayScreenGeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */; };
+		8E5DC09E0FD34C6A003E0584 /* TodayScreenGeneralSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */; };
 		8E6B34690FC4B5F600EB77B2 /* TodayScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */; };
 		8E6B346D0FC4B63E00EB77B2 /* WidgetAppLauncher.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */; };
 		8E6B34730FC4B69300EB77B2 /* WidgetAppLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B34720FC4B69300EB77B2 /* WidgetAppLauncher.m */; };
@@ -103,6 +109,14 @@
 		8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_urllauncher.png; sourceTree = "<group>"; };
 		8E5DBF300FD28747003E0584 /* addicon_weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_weather.png; sourceTree = "<group>"; };
 		8E5DBF3B0FD28874003E0584 /* addicon_rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_rss.png; sourceTree = "<group>"; };
+		8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTodayScreen.xib; sourceTree = "<group>"; };
+		8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todayscreenlogo.png; sourceTree = "<group>"; };
+		8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visittodayscreen.png; sourceTree = "<group>"; };
+		8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTodayScreen.h; sourceTree = "<group>"; };
+		8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTodayScreen.m; sourceTree = "<group>"; };
+		8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayScreenGeneralSettings.xib; sourceTree = "<group>"; };
+		8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenGeneralSettings.h; sourceTree = "<group>"; };
+		8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenGeneralSettings.m; sourceTree = "<group>"; };
 		8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenTableViewController.h; sourceTree = "<group>"; };
 		8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenTableViewController.m; sourceTree = "<group>"; };
 		8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetAppLauncher.xib; sourceTree = "<group>"; };
@@ -214,6 +228,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
+				8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */,
 				8E5DBF2B0FD28747003E0584 /* addicon_contact.png */,
 				8E5DBF2C0FD28747003E0584 /* addicon_digitalclock.png */,
 				8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */,
@@ -284,6 +300,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */,
+				8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */,
+				8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */,
+				8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */,
 				8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */,
 				8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */,
 				8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */,
@@ -306,6 +326,8 @@
 		48CEB6DC0FD1015100F42624 /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
+				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
 				8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */,
 				8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */,
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
@@ -436,6 +458,10 @@
 				8E5DBF350FD28747003E0584 /* addicon_urllauncher.png in Resources */,
 				8E5DBF360FD28747003E0584 /* addicon_weather.png in Resources */,
 				8E5DBF3C0FD28874003E0584 /* addicon_rss.png in Resources */,
+				8E5DC0450FD34167003E0584 /* AboutTodayScreen.xib in Resources */,
+				8E5DC04B0FD345E7003E0584 /* todayscreenlogo.png in Resources */,
+				8E5DC04C0FD345E7003E0584 /* visittodayscreen.png in Resources */,
+				8E5DC0970FD348DF003E0584 /* TodayScreenGeneralSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +496,8 @@
 				8E6B414F0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m in Sources */,
 				8E6B41590FD2391A00EB77B2 /* WidgetClockDateSettings.m in Sources */,
 				8E6B42250FD242DC00EB77B2 /* WidgetSettingsNavigationController.m in Sources */,
+				8E5DC0520FD346F7003E0584 /* AboutTodayScreen.m in Sources */,
+				8E5DC09E0FD34C6A003E0584 /* TodayScreenGeneralSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

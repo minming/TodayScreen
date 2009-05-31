@@ -23,7 +23,7 @@
 */
 
 - (int)getHeight {
-	return 110;
+	return 130;
 }
 
 /*

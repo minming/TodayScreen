@@ -8,6 +8,8 @@
 
 #import "TodayScreenView.h"
 #import "WidgetViewControllerSuperClass.h"
+#import "AboutTodayScreen.h"
+#import "TodayScreenGeneralSettings.h"
 
 
 @implementation TodayScreenView
@@ -27,6 +29,21 @@
 - (void)loadView {
 }
 */
+
+- (void)showModalGeneralSettingsView:(id)sender {
+	TodayScreenGeneralSettings *todayScreenGeneralSettings = [[TodayScreenGeneralSettings alloc] init];
+    //aboutTodayScreen.delegate = self;
+    
+    [self presentModalViewController:todayScreenGeneralSettings animated:YES];
+    [todayScreenGeneralSettings release];   	
+}
+
+
+- (void)showModalAboutView:(id)sender {
+	AboutTodayScreen *aboutTodayScreen = [[AboutTodayScreen alloc] init];
+    [self presentModalViewController:aboutTodayScreen animated:YES];
+    [aboutTodayScreen release];   	
+}
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
