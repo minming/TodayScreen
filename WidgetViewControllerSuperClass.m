@@ -21,12 +21,14 @@
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+		self.view.tag = 1;
         // Custom initialization
     }
     return self;
 }
 */
+
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -48,6 +50,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void)startEditMode {
+	[self.view setBackgroundColor:[UIColor blackColor]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview

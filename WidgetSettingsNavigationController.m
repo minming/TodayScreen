@@ -13,6 +13,8 @@
 
 - (void)viewDidLoad {
 	self.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
 	/*
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
 									 initWithTitle:@"Update Status" 

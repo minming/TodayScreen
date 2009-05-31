@@ -26,6 +26,6 @@
 - (void)runTimer;  
 - (void)showActivity; 
 
-- (void)tempButtonAction:(id)sender;
+- (void)infoButtonAction:(id)sender;
 
 @end

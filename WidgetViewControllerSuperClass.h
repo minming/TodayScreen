@@ -14,7 +14,7 @@
 }
 
 //@property int widgetHeight;
-
+- (void)startEditMode;
 - (int)getHeight;
 
 @end

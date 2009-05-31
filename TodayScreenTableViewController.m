@@ -81,6 +81,7 @@
 		case WIDGET_FLIP_CLOCK: {
 			NSLog(@"Add flip clock");
 			WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];
+			self.view.tag = 1;
 			[self.widgetsArray addObject:flipClockDate];
 			[flipClockDate release];
 			break; 
@@ -88,6 +89,7 @@
 		case WIDGET_CLOCK: {
 			NSLog(@"Add widget clock");
 			WidgetClockDate *clockDate = [[WidgetClockDate alloc] init];
+			self.view.tag = 1;
 			[self.widgetsArray addObject:clockDate];
 			[clockDate release];
 			break;
@@ -155,10 +157,31 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
 		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-		[cell setBackgroundView:UITableViewStylePlain];
+		//[cell setBackgroundView:UITableViewStylePlain];
+		[cell setShouldIndentWhileEditing:NO];
     }
 	
-	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
+	if (cell.editing == YES) {
+		NSLog(@"EDITING MODE");
+		//cell.backgroundColor = [UIColor blueColor];
+		//[cell setBackgroundColor:[UIColor blackColor]];
+		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:20.0];
+		while( [cell.contentView.subviews count] ){
+			id subview = [cell.contentView.subviews objectAtIndex:0];
+			[subview removeFromSuperview];	
+		}//while
+		cell.text = @"EDIT MODE FOR...";
+	}
+	
+	//if (cell.tag != 10) {
+	else {
+		cell.text = @"";
+		cell.contentView.backgroundColor  = [UIColor clearColor];
+		NSLog(@"ADDING MODE");
+		[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
+		[cell setTag:10];
+	}
+	
     return cell;
 }
 
@@ -170,6 +193,15 @@
 	//return 150.0; //returns floating point which will be used for a cell row height at specified row index  
 	
 }  
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+}
+
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor blueColor];
+}
+
 
 #pragma mark -
 #pragma mark edit, delete cells methods

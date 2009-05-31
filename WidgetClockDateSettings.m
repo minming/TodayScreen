@@ -32,12 +32,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"Clock Date Settings";
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
+	/*UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
 									 initWithTitle:@"Save" 
 									 style:UIBarButtonItemStyleBordered 
 									 target:self 
-									 action:@selector(showStatusComposeView)];
-	self.navigationItem.rightBarButtonItem = saveButton;
+									 action:@selector(showStatusComposeView)];*/
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
+								   target:self 
+								   action:@selector(saveAction:)];
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] 
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+								   target:self 
+								   action:@selector(cancelAction:)];	
+	self.navigationItem.rightBarButtonItem = saveButton;	
+	self.navigationItem.leftBarButtonItem = cancelButton;
 	[saveButton release];	
 }
 

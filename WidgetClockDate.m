@@ -49,7 +49,7 @@
 	//s.mainContentScrollView = c.view;
 	[self presentModalViewController:s animated:YES];
 	*/
-	
+	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] init];

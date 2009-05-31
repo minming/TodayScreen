@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">528</int>
-		<string key="IBDocument.SystemVersion">9J61</string>
+		<string key="IBDocument.SystemVersion">9G55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.46</string>
+		<string key="IBDocument.AppKitVersion">949.43</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -39,10 +39,11 @@
 					<object class="IBUIButton" id="590995045">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 65}, {117, 89}}</string>
+						<string key="NSFrame">{{21, 137}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<int key="IBUIContentMode">6</int>
 						<int key="IBUITag">505</int>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -51,7 +52,6 @@
 							<double key="NSSize">1.500000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">Weather</string>
 						<string key="IBUIDisabledTitle">Weather</string>
 						<string key="IBUISelectedTitle">Weather</string>
@@ -64,11 +64,18 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="764301314">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_weather.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="764301314"/>
+						<reference key="IBUISelectedImage" ref="764301314"/>
+						<reference key="IBUINormalImage" ref="764301314"/>
 					</object>
 					<object class="IBUIButton" id="768795011">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{183, 65}, {117, 89}}</string>
+						<string key="NSFrame">{{161, 55}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -76,7 +83,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="384589616"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">Flip Clock</string>
 						<string key="IBUIDisabledTitle">Flip Clock</string>
 						<string key="IBUISelectedTitle">Flip Clock</string>
@@ -86,11 +92,18 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="874449919">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_flipclock.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="874449919"/>
+						<reference key="IBUISelectedImage" ref="874449919"/>
+						<reference key="IBUINormalImage" ref="874449919"/>
 					</object>
 					<object class="IBUIButton" id="201058226">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 207}, {117, 89}}</string>
+						<string key="NSFrame">{{21, 55}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -98,7 +111,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="384589616"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">Clock</string>
 						<string key="IBUIDisabledTitle">Clock</string>
 						<string key="IBUISelectedTitle">Clock</string>
@@ -108,11 +120,18 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="934022973">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_digitalclock.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="934022973"/>
+						<reference key="IBUISelectedImage" ref="934022973"/>
+						<reference key="IBUINormalImage" ref="934022973"/>
 					</object>
 					<object class="IBUIButton" id="353171855">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{183, 207}, {117, 89}}</string>
+						<string key="NSFrame">{{161, 215}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -120,7 +139,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="384589616"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">RSS</string>
 						<string key="IBUIDisabledTitle">RSS</string>
 						<string key="IBUISelectedTitle">RSS</string>
@@ -130,11 +148,18 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="861595131">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_rss.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="861595131"/>
+						<reference key="IBUISelectedImage" ref="861595131"/>
+						<reference key="IBUINormalImage" ref="861595131"/>
 					</object>
 					<object class="IBUIButton" id="804738813">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 347}, {117, 89}}</string>
+						<string key="NSFrame">{{21, 215}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -142,7 +167,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="384589616"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">Contacts</string>
 						<string key="IBUIDisabledTitle">Contacts</string>
 						<string key="IBUISelectedTitle">Contacts</string>
@@ -152,11 +176,18 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="364624468">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_contact.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="364624468"/>
+						<reference key="IBUISelectedImage" ref="364624468"/>
+						<reference key="IBUINormalImage" ref="364624468"/>
 					</object>
 					<object class="IBUIButton" id="710791855">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{179, 347}, {125, 89}}</string>
+						<string key="NSFrame">{{161, 137}, {132, 74}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -164,7 +195,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="384589616"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUIHighlightedTitle">App Launcher</string>
 						<string key="IBUIDisabledTitle">App Launcher</string>
 						<string key="IBUISelectedTitle">App Launcher</string>
@@ -174,6 +204,13 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="995040082">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_urllauncher.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="995040082"/>
+						<reference key="IBUISelectedImage" ref="995040082"/>
+						<reference key="IBUINormalImage" ref="995040082"/>
 					</object>
 					<object class="IBUINavigationBar" id="22942087">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -182,10 +219,7 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						<object class="NSColor" key="IBUITintColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC40MDAwMDAwMSAwLjQwMDAwMDAxIDAuNDAwMDAwMDEAA</bytes>
-						</object>
+						<int key="IBUIBarStyle">1</int>
 						<object class="NSArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUINavigationItem" id="651043276">
@@ -297,13 +331,13 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="768795011"/>
-							<reference ref="353171855"/>
-							<reference ref="710791855"/>
 							<reference ref="22942087"/>
+							<reference ref="201058226"/>
+							<reference ref="768795011"/>
 							<reference ref="590995045"/>
 							<reference ref="804738813"/>
-							<reference ref="201058226"/>
+							<reference ref="710791855"/>
+							<reference ref="353171855"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -428,7 +462,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">33</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

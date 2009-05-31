@@ -11,6 +11,10 @@
     }
 }
 
+- (void)viewDidLoad {
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
+}
 
 - (IBAction)cancelAddWidget:(id)sender
 {

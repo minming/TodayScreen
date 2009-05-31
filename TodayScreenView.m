@@ -7,6 +7,7 @@
 //
 
 #import "TodayScreenView.h"
+#import "WidgetViewControllerSuperClass.h"
 
 
 @implementation TodayScreenView
@@ -86,11 +87,23 @@
 	}
 }
 - (void) startEditingTable:(id)sender {
+	//UITableViewCell *test = [todayScreenTableViewController.tableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:1]];
+	//test.backgroundColor = [UIColor blackColor];
 	[todayScreenTableViewController setEditing:YES animated:YES];
+	[todayScreenTableViewController.tableView reloadData];
+	//UITableViewCell *test = [todayScreenTableViewController.tableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:1]];
+	//test.backgroundColor = [UIColor blackColor];
+	//[test setNeedsLayout];
+	//WidgetViewControllerSuperClass *t = [[WidgetViewControllerSuperClass alloc] init];
+	//t.view = [test viewWithTag:1];
+	//[t startEditMode];
+	tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
 }
 
 - (void) stopEditingTable:(id)sender {
 	[todayScreenTableViewController setEditing:NO animated:YES];
+	[todayScreenTableViewController.tableView reloadData];
+	tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
 }
 
 - (void)dealloc {
