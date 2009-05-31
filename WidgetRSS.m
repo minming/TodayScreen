@@ -23,6 +23,18 @@
     return self;
 }
 
+- (id)initWithNumOfFeeds:(int)num {
+	if (self = [super init]) {
+		singleRSSArray = [[NSMutableArray alloc] init];
+		[self setNUM_OF_FEEDS:num];
+    }
+    return self;
+}
+
+- (int)getHeight {
+	return [self NUM_OF_FEEDS]*40+20;
+}
+
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WidgetViewControllerSuperClass.h"
 
 
-@interface WidgetFlipClockDate : UIViewController {
+@interface WidgetFlipClockDate : WidgetViewControllerSuperClass {
 	IBOutlet UILabel *hour;
 	IBOutlet UILabel *min;
 	IBOutlet UILabel *ampm;

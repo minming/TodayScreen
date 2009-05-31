@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WidgetComponent_LongButton.h"
 #import "AppShortcut.h"
+#import "WidgetViewControllerSuperClass.h"
 
 /*typedef struct AppShortcut {
 	NSString *title;
@@ -16,7 +17,7 @@
 	NSString *image;
 } AppShortcut;*/
 
-@interface WidgetAppLauncher : UIViewController {
+@interface WidgetAppLauncher : WidgetViewControllerSuperClass {
 	WidgetComponent_LongButton *longButton;
 	NSMutableArray *longButtonArray;
 	

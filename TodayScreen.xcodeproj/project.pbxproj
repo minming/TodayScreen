@@ -60,6 +60,17 @@
 		8E6B3FC20FCE5E7E00EB77B2 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B3FC10FCE5E7E00EB77B2 /* Info.m */; };
 		8E6B3FC70FCE5FA300EB77B2 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B3FC60FCE5FA300EB77B2 /* bg2.png */; };
 		8E6B401F0FCE61C200EB77B2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B401E0FCE61C200EB77B2 /* icon.png */; };
+		8E6B40650FD2252E00EB77B2 /* WidgetViewControllerSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B40640FD2252E00EB77B2 /* WidgetViewControllerSuperClass.m */; };
+		8E6B41430FD2303100EB77B2 /* WidgetClockDateSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B41420FD2303100EB77B2 /* WidgetClockDateSettings.xib */; };
+		8E6B41480FD236B100EB77B2 /* settingsbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B41470FD236B100EB77B2 /* settingsbg.png */; };
+		8E6B414F0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */; };
+		8E6B41530FD2389700EB77B2 /* WidgetSettingsSuperClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B41520FD2389700EB77B2 /* WidgetSettingsSuperClass.xib */; };
+		8E6B41590FD2391A00EB77B2 /* WidgetClockDateSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B41580FD2391A00EB77B2 /* WidgetClockDateSettings.m */; };
+		8E6B420E0FD240B500EB77B2 /* WidgetFlipClockSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B420D0FD240B500EB77B2 /* WidgetFlipClockSettings.xib */; };
+		8E6B42130FD240E600EB77B2 /* WidgetRSSSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B42120FD240E600EB77B2 /* WidgetRSSSettings.xib */; };
+		8E6B421A0FD2418200EB77B2 /* WidgetWeatherSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B42190FD2418200EB77B2 /* WidgetWeatherSettings.xib */; };
+		8E6B421F0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */; };
+		8E6B42250FD242DC00EB77B2 /* WidgetSettingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +149,21 @@
 		8E6B3FC10FCE5E7E00EB77B2 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
 		8E6B3FC60FCE5FA300EB77B2 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		8E6B401E0FCE61C200EB77B2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8E6B40630FD2252E00EB77B2 /* WidgetViewControllerSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewControllerSuperClass.h; sourceTree = "<group>"; };
+		8E6B40640FD2252E00EB77B2 /* WidgetViewControllerSuperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewControllerSuperClass.m; sourceTree = "<group>"; };
+		8E6B41420FD2303100EB77B2 /* WidgetClockDateSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetClockDateSettings.xib; sourceTree = "<group>"; };
+		8E6B41470FD236B100EB77B2 /* settingsbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsbg.png; sourceTree = "<group>"; };
+		8E6B414D0FD2378C00EB77B2 /* WidgetSettingsSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSettingsSuperClass.h; sourceTree = "<group>"; };
+		8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSettingsSuperClass.m; sourceTree = "<group>"; };
+		8E6B41520FD2389700EB77B2 /* WidgetSettingsSuperClass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetSettingsSuperClass.xib; sourceTree = "<group>"; };
+		8E6B41570FD2391A00EB77B2 /* WidgetClockDateSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetClockDateSettings.h; sourceTree = "<group>"; };
+		8E6B41580FD2391A00EB77B2 /* WidgetClockDateSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetClockDateSettings.m; sourceTree = "<group>"; };
+		8E6B420D0FD240B500EB77B2 /* WidgetFlipClockSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetFlipClockSettings.xib; sourceTree = "<group>"; };
+		8E6B42120FD240E600EB77B2 /* WidgetRSSSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetRSSSettings.xib; sourceTree = "<group>"; };
+		8E6B42190FD2418200EB77B2 /* WidgetWeatherSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetWeatherSettings.xib; sourceTree = "<group>"; };
+		8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetAppLauncherSettings.xib; sourceTree = "<group>"; };
+		8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSettingsNavigationController.h; sourceTree = "<group>"; };
+		8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSettingsNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +202,17 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */,
+				8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */,
+				8E6B42190FD2418200EB77B2 /* WidgetWeatherSettings.xib */,
+				8E6B420D0FD240B500EB77B2 /* WidgetFlipClockSettings.xib */,
+				8E6B41570FD2391A00EB77B2 /* WidgetClockDateSettings.h */,
+				8E6B41580FD2391A00EB77B2 /* WidgetClockDateSettings.m */,
+				8E6B41520FD2389700EB77B2 /* WidgetSettingsSuperClass.xib */,
+				8E6B41470FD236B100EB77B2 /* settingsbg.png */,
+				8E6B41420FD2303100EB77B2 /* WidgetClockDateSettings.xib */,
+				8E6B40630FD2252E00EB77B2 /* WidgetViewControllerSuperClass.h */,
+				8E6B40640FD2252E00EB77B2 /* WidgetViewControllerSuperClass.m */,
 				48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */,
 				48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */,
 				4891CD190FCCCAD2007C7284 /* AppShortcut.h */,
@@ -217,6 +254,9 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8E6B3C720FCB36AD00EB77B2 /* AddressBook.framework */,
 				8E6B3C890FCB3B3000EB77B2 /* AddressBookUI.framework */,
+				8E6B414D0FD2378C00EB77B2 /* WidgetSettingsSuperClass.h */,
+				8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */,
+				8E6B42120FD240E600EB77B2 /* WidgetRSSSettings.xib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -255,6 +295,7 @@
 		48CEB6DC0FD1015100F42624 /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */,
 				8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */,
 				8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */,
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
@@ -364,6 +405,13 @@
 				8E6B3FC70FCE5FA300EB77B2 /* bg2.png in Resources */,
 				8E6B401F0FCE61C200EB77B2 /* icon.png in Resources */,
 				48CEB68D0FD0FF7A00F42624 /* AddNewWidgetView.xib in Resources */,
+				8E6B41430FD2303100EB77B2 /* WidgetClockDateSettings.xib in Resources */,
+				8E6B41480FD236B100EB77B2 /* settingsbg.png in Resources */,
+				8E6B41530FD2389700EB77B2 /* WidgetSettingsSuperClass.xib in Resources */,
+				8E6B420E0FD240B500EB77B2 /* WidgetFlipClockSettings.xib in Resources */,
+				8E6B42130FD240E600EB77B2 /* WidgetRSSSettings.xib in Resources */,
+				8E6B421A0FD2418200EB77B2 /* WidgetWeatherSettings.xib in Resources */,
+				8E6B421F0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +442,10 @@
 				4891CD1B0FCCCAD2007C7284 /* AppShortcut.m in Sources */,
 				8E6B3FC20FCE5E7E00EB77B2 /* Info.m in Sources */,
 				48CEB64C0FD0ED3600F42624 /* AddNewWidgetViewController.m in Sources */,
+				8E6B40650FD2252E00EB77B2 /* WidgetViewControllerSuperClass.m in Sources */,
+				8E6B414F0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m in Sources */,
+				8E6B41590FD2391A00EB77B2 /* WidgetClockDateSettings.m in Sources */,
+				8E6B42250FD242DC00EB77B2 /* WidgetSettingsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WidgetViewControllerSuperClass.h"
 
 
-@interface WidgetRSS : UIViewController {
+@interface WidgetRSS : WidgetViewControllerSuperClass {
 	UIActivityIndicatorView * activityIndicator;
 	NSXMLParser * rssParser;	
 	NSMutableArray * stories;
@@ -28,5 +29,7 @@
 - (void)buttonAction:(id)sender;
 
 - (void)parseXMLFileAtURL:(NSString *)URL;
+
+- (id)initWithNumOfFeeds:(int)num;
 
 @end

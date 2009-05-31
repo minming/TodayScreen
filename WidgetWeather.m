@@ -31,6 +31,9 @@
     return self;
 }
 
+- (int)getHeight {
+	return 90;
+}
 
 /*
  // Implement loadView to create a view hierarchy programmatically, without using a nib.

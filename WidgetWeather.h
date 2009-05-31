@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WidgetViewControllerSuperClass.h"
 #import "YahooWeatherAPI.h"
 
 #define DEFAULT_ZIP_CODE @"94305"
 
-@interface WidgetWeather : UIViewController {
+@interface WidgetWeather : WidgetViewControllerSuperClass {
 	
 	IBOutlet UILabel *nowTextLabel;
 	IBOutlet UILabel *nowTempLabel;

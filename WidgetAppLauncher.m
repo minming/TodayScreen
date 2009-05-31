@@ -43,6 +43,16 @@
     return self;
 }
 
+- (int)getHeight {
+	int rowsNeeded = 1;
+	if ([AppShortcuts count]%4 == 0) {
+		rowsNeeded = [AppShortcuts count]/4;
+	} else {
+		rowsNeeded = [AppShortcuts count]/4 + 1;
+	}
+	return rowsNeeded*30+20;
+	//return [AppShortcuts count]*30;
+}
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.

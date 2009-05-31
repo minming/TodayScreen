@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WidgetViewControllerSuperClass.h"
 
-
-@interface WidgetClockDate : UIViewController {
+@interface WidgetClockDate : WidgetViewControllerSuperClass {
 	IBOutlet UILabel *timeLabel;	
 	IBOutlet UILabel *dateLabel;	
     NSTimer *myTicker;  
@@ -25,5 +25,7 @@
  
 - (void)runTimer;  
 - (void)showActivity; 
+
+- (void)tempButtonAction:(id)sender;
 
 @end

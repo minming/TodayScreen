@@ -13,6 +13,7 @@
 #import "WidgetWeather.h"
 #import "WidgetContact.h"
 #import "WidgetFlipClockDate.h"
+#import "WidgetViewControllerSuperClass.h"
 
 #define WIDGET_CLOCK 500
 #define WIDGET_RSS 501
@@ -93,7 +94,7 @@
 		}
 		case WIDGET_RSS: {
 			NSLog(@"Add rss");
-			WidgetRSS *RSS = [[WidgetRSS alloc] init];
+			WidgetRSS *RSS = [[WidgetRSS alloc] initWithNumOfFeeds:3];
 			[self.widgetsArray addObject:RSS];
 			[RSS release];
 			break;
@@ -164,7 +165,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
 {  
-    return 150.0; //returns floating point which will be used for a cell row height at specified row index  
+    WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
+	return [temp getHeight];
+	//return 150.0; //returns floating point which will be used for a cell row height at specified row index  
+	
 }  
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

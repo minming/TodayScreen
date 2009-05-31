@@ -7,7 +7,9 @@
 //
 
 #import "WidgetClockDate.h"
-
+#import "WidgetClockDateSettings.h"
+//#import "WidgetSettingsSuperClass.h"
+#import "WidgetSettingsNavigationController.h"
 
 @implementation WidgetClockDate
 
@@ -23,6 +25,39 @@
     return self;
 }
 */
+
+- (int)getHeight {
+	return 50;
+}
+
+- (void)tempButtonAction:(id)sender {
+	/*
+	WidgetClockDateSettings *c = [[WidgetClockDateSettings alloc] init];
+	c.view.frame = CGRectMake(0,30,100,100);
+	//[self presentModalViewController:s animated:YES];
+	WidgetSettingsSuperClass *s = [[WidgetSettingsSuperClass alloc] init];
+	//[s.mainContentScrollView addSubview:c.view];
+	//[s.mainContentScrollView setNeedsLayout];
+	//[s.view setNeedsLayout];
+	
+	[s.mainContentView addSubview:c.view];
+	[s.mainContentView setNeedsLayout];
+	[s.view setNeedsLayout];
+	
+	//[s.view addSubview:c.view];
+	
+	//s.mainContentScrollView = c.view;
+	[self presentModalViewController:s animated:YES];
+	*/
+	
+	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
+	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] init];
+	[navController pushViewController:widgetClockDateSettings animated:YES];
+	[self presentModalViewController:navController animated:YES];
+	
+	
+}
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.

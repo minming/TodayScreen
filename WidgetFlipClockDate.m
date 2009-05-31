@@ -16,10 +16,15 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
+		//[self setWidgetHeight:100];
     }
     return self;
 }
 */
+
+- (int)getHeight {
+	return 110;
+}
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
