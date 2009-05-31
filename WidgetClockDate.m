@@ -30,7 +30,7 @@
 	return 50;
 }
 
-- (void)tempButtonAction:(id)sender {
+- (void)infoButtonAction:(id)sender {
 	/*
 	WidgetClockDateSettings *c = [[WidgetClockDateSettings alloc] init];
 	c.view.frame = CGRectMake(0,30,100,100);
@@ -55,8 +55,6 @@
 	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] init];
 	[navController pushViewController:widgetClockDateSettings animated:YES];
 	[self presentModalViewController:navController animated:YES];
-	
-	
 }
 
 /*

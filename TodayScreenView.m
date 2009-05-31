@@ -77,6 +77,22 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+
+-(IBAction) controlEditingTable:(id)sender {
+	if([todayScreenTableViewController isEditing] == NO) {
+		[self startEditingTable:sender];
+	} else {
+		[self stopEditingTable:sender];
+	}
+}
+- (void) startEditingTable:(id)sender {
+	[todayScreenTableViewController setEditing:YES animated:YES];
+}
+
+- (void) stopEditingTable:(id)sender {
+	[todayScreenTableViewController setEditing:NO animated:YES];
+}
+
 - (void)dealloc {
 	[todayScreenTableViewController release];
     [super dealloc];

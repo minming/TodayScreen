@@ -19,4 +19,7 @@
 - (void)showModalAddWindow:(id)sender;
 - (void)cancelAddWidget;
 
+-(IBAction) controlEditingTable:(id)sender;
+- (void) startEditingTable:(id)sender;
+- (void) stopEditingTable:(id)sender;
 @end

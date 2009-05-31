@@ -82,6 +82,32 @@
 	
 }  
 
+- (void)infoButtonAction:(id)sender {
+	/*
+	 WidgetClockDateSettings *c = [[WidgetClockDateSettings alloc] init];
+	 c.view.frame = CGRectMake(0,30,100,100);
+	 //[self presentModalViewController:s animated:YES];
+	 WidgetSettingsSuperClass *s = [[WidgetSettingsSuperClass alloc] init];
+	 //[s.mainContentScrollView addSubview:c.view];
+	 //[s.mainContentScrollView setNeedsLayout];
+	 //[s.view setNeedsLayout];
+	 
+	 [s.mainContentView addSubview:c.view];
+	 [s.mainContentView setNeedsLayout];
+	 [s.view setNeedsLayout];
+	 
+	 //[s.view addSubview:c.view];
+	 
+	 //s.mainContentScrollView = c.view;
+	 [self presentModalViewController:s animated:YES];
+	
+	
+	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
+	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	WidgetFlipClockDateSettings *widgetFlipClockDateSettings = [[WidgetFlipClockDateSettings alloc] init];
+	[navController pushViewController:widgetFlipClockDateSettings animated:YES];
+	[self presentModalViewController:navController animated:YES]; */
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

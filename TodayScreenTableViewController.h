@@ -14,8 +14,10 @@
 	NSMutableArray *widgetsArray;
 	//UIImageView *bgImageView;
 }
+
 @property (nonatomic, copy) NSMutableArray *widgetsArray;
 //@property (nonatomic, copy) UIImageView *bgImageView;
 
 -(void) addNewWidget:(NSInteger)widgetType;
+
 @end

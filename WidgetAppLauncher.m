@@ -125,9 +125,9 @@
 
 - (void)dealloc {
     for(WidgetComponent_LongButton *WidgetComponent_LongButton in longButtonArray) {
-        [WidgetComponent_LongButton removeFromSuperview];
+        //[WidgetComponent_LongButton removeFromSuperview];
     }
-    [longButtonArray removeAllObjects];	
+    [longButtonArray release];	
     [super dealloc];
 }
 
