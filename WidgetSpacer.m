@@ -1,18 +1,21 @@
 //
-//  WidgetSettingsSuperClass.m
+//  WidgetSpacer.m
 //  TodayScreen
 //
-//  Created by Mac Pro on 5/30/09.
+//  Created by Mac Pro on 6/1/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "WidgetSettingsSuperClass.h"
+#import "WidgetSpacer.h"
 
 
-@implementation WidgetSettingsSuperClass
+@implementation WidgetSpacer
 
-@synthesize mainContentScrollView;
-@synthesize mainContentView;
+@synthesize spacingHeight;
+
+- (int)getHeight {
+	return spacingHeight;
+}
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -30,19 +33,12 @@
 }
 */
 
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	UINavigationBar *b = [[UINavigationBar alloc] init];
-	[self.view addSubview:b];
-	
-	UIButton *aa = [[UIButton alloc] init];
-	[self.parentViewController.view addSubview:aa];
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
-	
 }
-
+*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.

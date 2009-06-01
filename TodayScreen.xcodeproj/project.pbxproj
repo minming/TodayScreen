@@ -18,7 +18,6 @@
 		48CEB64C0FD0ED3600F42624 /* AddNewWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */; };
 		48CEB68D0FD0FF7A00F42624 /* AddNewWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CEB68C0FD0FF7A00F42624 /* AddNewWidgetView.xib */; };
 		8E5DBF310FD28747003E0584 /* addicon_contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF2B0FD28747003E0584 /* addicon_contact.png */; };
-		8E5DBF320FD28747003E0584 /* addicon_digitalclock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF2C0FD28747003E0584 /* addicon_digitalclock.png */; };
 		8E5DBF340FD28747003E0584 /* addicon_flipclock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */; };
 		8E5DBF350FD28747003E0584 /* addicon_urllauncher.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */; };
 		8E5DBF360FD28747003E0584 /* addicon_weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DBF300FD28747003E0584 /* addicon_weather.png */; };
@@ -29,6 +28,9 @@
 		8E5DC0520FD346F7003E0584 /* AboutTodayScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */; };
 		8E5DC0970FD348DF003E0584 /* TodayScreenGeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */; };
 		8E5DC09E0FD34C6A003E0584 /* TodayScreenGeneralSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */; };
+		8E5DC0DE0FD3B999003E0584 /* WidgetSpacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */; };
+		8E5DC0E60FD3BE62003E0584 /* addicon_spacer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */; };
+		8E5DC0EE0FD3BF22003E0584 /* addicon_digitaltimedate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */; };
 		8E6B34690FC4B5F600EB77B2 /* TodayScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */; };
 		8E6B346D0FC4B63E00EB77B2 /* WidgetAppLauncher.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */; };
 		8E6B34730FC4B69300EB77B2 /* WidgetAppLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B34720FC4B69300EB77B2 /* WidgetAppLauncher.m */; };
@@ -104,7 +106,6 @@
 		48CEB68C0FD0FF7A00F42624 /* AddNewWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewWidgetView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5DBF2B0FD28747003E0584 /* addicon_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_contact.png; sourceTree = "<group>"; };
-		8E5DBF2C0FD28747003E0584 /* addicon_digitalclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_digitalclock.png; sourceTree = "<group>"; };
 		8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_flipclock.png; sourceTree = "<group>"; };
 		8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_urllauncher.png; sourceTree = "<group>"; };
 		8E5DBF300FD28747003E0584 /* addicon_weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_weather.png; sourceTree = "<group>"; };
@@ -117,6 +118,10 @@
 		8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayScreenGeneralSettings.xib; sourceTree = "<group>"; };
 		8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenGeneralSettings.h; sourceTree = "<group>"; };
 		8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenGeneralSettings.m; sourceTree = "<group>"; };
+		8E5DC0DC0FD3B999003E0584 /* WidgetSpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSpacer.h; sourceTree = "<group>"; };
+		8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSpacer.m; sourceTree = "<group>"; };
+		8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_spacer.png; sourceTree = "<group>"; };
+		8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_digitaltimedate.png; sourceTree = "<group>"; };
 		8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenTableViewController.h; sourceTree = "<group>"; };
 		8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenTableViewController.m; sourceTree = "<group>"; };
 		8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetAppLauncher.xib; sourceTree = "<group>"; };
@@ -228,10 +233,10 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */,
 				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
 				8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */,
 				8E5DBF2B0FD28747003E0584 /* addicon_contact.png */,
-				8E5DBF2C0FD28747003E0584 /* addicon_digitalclock.png */,
 				8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */,
 				8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */,
 				8E5DBF300FD28747003E0584 /* addicon_weather.png */,
@@ -326,6 +331,8 @@
 		48CEB6DC0FD1015100F42624 /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC0DC0FD3B999003E0584 /* WidgetSpacer.h */,
+				8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */,
 				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
 				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
 				8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */,
@@ -333,6 +340,7 @@
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
 				8E6B3B100FC9525A00EB77B2 /* WidgetComponent_Contact.xib */,
 				8E6B37D40FC87A9200EB77B2 /* WidgetClockDate.xib */,
+				8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */,
 				8E6B387C0FC893E100EB77B2 /* WidgetComponent_SingleRSS.xib */,
 				8E6B358F0FC6444B00EB77B2 /* WidgetComponent_LongButton.xib */,
 				8E6B38720FC889AD00EB77B2 /* WidgetRSS.xib */,
@@ -453,7 +461,6 @@
 				8E6B421A0FD2418200EB77B2 /* WidgetWeatherSettings.xib in Resources */,
 				8E6B421F0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib in Resources */,
 				8E5DBF310FD28747003E0584 /* addicon_contact.png in Resources */,
-				8E5DBF320FD28747003E0584 /* addicon_digitalclock.png in Resources */,
 				8E5DBF340FD28747003E0584 /* addicon_flipclock.png in Resources */,
 				8E5DBF350FD28747003E0584 /* addicon_urllauncher.png in Resources */,
 				8E5DBF360FD28747003E0584 /* addicon_weather.png in Resources */,
@@ -462,6 +469,8 @@
 				8E5DC04B0FD345E7003E0584 /* todayscreenlogo.png in Resources */,
 				8E5DC04C0FD345E7003E0584 /* visittodayscreen.png in Resources */,
 				8E5DC0970FD348DF003E0584 /* TodayScreenGeneralSettings.xib in Resources */,
+				8E5DC0E60FD3BE62003E0584 /* addicon_spacer.png in Resources */,
+				8E5DC0EE0FD3BF22003E0584 /* addicon_digitaltimedate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +507,7 @@
 				8E6B42250FD242DC00EB77B2 /* WidgetSettingsNavigationController.m in Sources */,
 				8E5DC0520FD346F7003E0584 /* AboutTodayScreen.m in Sources */,
 				8E5DC09E0FD34C6A003E0584 /* TodayScreenGeneralSettings.m in Sources */,
+				8E5DC0DE0FD3B999003E0584 /* WidgetSpacer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

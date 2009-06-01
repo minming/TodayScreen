@@ -120,13 +120,13 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="934022973">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="48042352">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">addicon_digitalclock.png</string>
+							<string key="NSResourceName">addicon_digitaltimedate.png</string>
 						</object>
-						<reference key="IBUIDisabledImage" ref="934022973"/>
-						<reference key="IBUISelectedImage" ref="934022973"/>
-						<reference key="IBUINormalImage" ref="934022973"/>
+						<reference key="IBUIDisabledImage" ref="48042352"/>
+						<reference key="IBUISelectedImage" ref="48042352"/>
+						<reference key="IBUINormalImage" ref="48042352"/>
 					</object>
 					<object class="IBUIButton" id="353171855">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -230,6 +230,57 @@
 									<int key="IBUISystemItemIdentifier">1</int>
 								</object>
 							</object>
+						</object>
+					</object>
+					<object class="IBUIButton" id="792097695">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{21, 386}, {132, 74}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<int key="IBUITag">501</int>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="384589616"/>
+						<string key="IBUIHighlightedTitle">Spacer</string>
+						<string key="IBUIDisabledTitle">Spacer</string>
+						<string key="IBUISelectedTitle">Spacer</string>
+						<string key="IBUINormalTitle">Spacer</string>
+						<reference key="IBUIHighlightedTitleColor" ref="182979995"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="475075829">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">addicon_spacer.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="475075829"/>
+						<reference key="IBUISelectedImage" ref="475075829"/>
+						<reference key="IBUINormalImage" ref="475075829"/>
+					</object>
+					<object class="IBUITextView" id="880097857">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{161, 376}, {139, 83}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
+						<bool key="IBUIDelaysContentTouches">NO</bool>
+						<bool key="IBUICanCancelContentTouches">NO</bool>
+						<bool key="IBUIBouncesZoom">NO</bool>
+						<string key="IBUIText">Spacer allows you to add spacing between widgets. Ideal for customizing a docking screen.</string>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC45MDE5NjA3OSAwLjkwMTk2MDc5IDAuOTAxOTYwNzkAA</bytes>
+						</object>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">1.200000e+01</double>
+							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 				</object>
@@ -338,6 +389,8 @@
 							<reference ref="804738813"/>
 							<reference ref="710791855"/>
 							<reference ref="353171855"/>
+							<reference ref="792097695"/>
+							<reference ref="880097857"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -405,6 +458,16 @@
 						<reference key="object" ref="314794646"/>
 						<reference key="parent" ref="651043276"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">34</int>
+						<reference key="object" ref="792097695"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">35</int>
+						<reference key="object" ref="880097857"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -418,6 +481,8 @@
 					<string>10.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
+					<string>34.IBPluginDependency</string>
+					<string>35.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
@@ -430,6 +495,8 @@
 					<string>AddNewWidgetViewController</string>
 					<string>UIResponder</string>
 					<string>{{450, 376}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -462,7 +529,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">33</int>
+			<int key="maxID">35</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

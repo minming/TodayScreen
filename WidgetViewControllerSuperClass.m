@@ -51,8 +51,16 @@
 }
 */
 
+- (void)enableBackground:(BOOL)bg {
+	if (bg == YES) {
+		[self.view setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.2]];
+	} else {
+		[self.view setBackgroundColor:[UIColor clearColor]];
+	}
+}
+
 - (void)startEditMode {
-	[self.view setBackgroundColor:[UIColor blackColor]];
+	//[self.view setBackgroundColor:[UIColor blackColor]];
 }
 
 - (void)didReceiveMemoryWarning {

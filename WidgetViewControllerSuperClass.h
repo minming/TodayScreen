@@ -17,4 +17,6 @@
 - (void)startEditMode;
 - (int)getHeight;
 
+- (void)enableBackground:(BOOL)bg;
+
 @end
