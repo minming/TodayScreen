@@ -70,7 +70,7 @@
 	NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
 	
 	[clockWidget setTimeFormat:timeFormat];
-	[clockWidget setDateFormat:dateFormat];
+	//[clockWidget setDateFormat:dateFormat];
 }
 
 -(void)loadRSSWidgetFromPrefs:(NSString*)widgetName widget:(WidgetRSS*)rssWidget {

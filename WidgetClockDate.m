@@ -62,14 +62,6 @@
 	[self runTimer];  
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 - (void)runTimer {  
 	// This starts the timer which fires the showActivity  
 	// method every 0.5 seconds  

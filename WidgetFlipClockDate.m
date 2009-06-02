@@ -11,26 +11,9 @@
 
 @implementation WidgetFlipClockDate
 
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		//[self setWidgetHeight:100];
-    }
-    return self;
-}
-*/
-
 - (int)getHeight {
 	return 130;
 }
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -38,14 +21,6 @@
     [super viewDidLoad];
 	[self runTimer];  
 }
-
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
 
 - (void)runTimer {  
 	// This starts the timer which fires the showActivity  
@@ -81,40 +56,6 @@
 	[date setText:[dateFormatter stringFromDate:[NSDate date]]];
 }  
 
-- (void)infoButtonAction:(id)sender {
-	/*
-	 WidgetClockDateSettings *c = [[WidgetClockDateSettings alloc] init];
-	 c.view.frame = CGRectMake(0,30,100,100);
-	 //[self presentModalViewController:s animated:YES];
-	 WidgetSettingsSuperClass *s = [[WidgetSettingsSuperClass alloc] init];
-	 //[s.mainContentScrollView addSubview:c.view];
-	 //[s.mainContentScrollView setNeedsLayout];
-	 //[s.view setNeedsLayout];
-	 
-	 [s.mainContentView addSubview:c.view];
-	 [s.mainContentView setNeedsLayout];
-	 [s.view setNeedsLayout];
-	 
-	 //[s.view addSubview:c.view];
-	 
-	 //s.mainContentScrollView = c.view;
-	 [self presentModalViewController:s animated:YES];
-	
-	
-	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
-	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-	WidgetFlipClockDateSettings *widgetFlipClockDateSettings = [[WidgetFlipClockDateSettings alloc] init];
-	[navController pushViewController:widgetFlipClockDateSettings animated:YES];
-	[self presentModalViewController:navController animated:YES]; */
-}
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview

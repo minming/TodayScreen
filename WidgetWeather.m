@@ -41,13 +41,6 @@
 	return 90;
 }
 
-/*
- // Implement loadView to create a view hierarchy programmatically, without using a nib.
- - (void)loadView {
- }
- */
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -96,14 +89,6 @@
 	//[self.view reloadData];
 }
 
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
-
 - (void)editSettingsAction:(id)sender {
 	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
@@ -111,8 +96,8 @@
 	WidgetWeatherSettings *widgetWeatherSettings = [[WidgetWeatherSettings alloc] initWithWidget:self];
 	[navController pushViewController:widgetWeatherSettings animated:YES];
 	[tableViewController presentModalViewController:navController animated:YES];
-	//[navController release];
-	//[widgetWeatherSettings release];
+	[navController release];
+	[widgetWeatherSettings release];
 }
 
 - (void)didReceiveMemoryWarning {

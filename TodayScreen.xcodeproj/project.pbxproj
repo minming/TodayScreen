@@ -104,12 +104,12 @@
 		488564040FD4D864003D9B53 /* WidgetWeather.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetWeather.xib; sourceTree = "<group>"; };
 		4885653A0FD4F630003D9B53 /* WidgetWeatherSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetWeatherSettings.h; sourceTree = "<group>"; };
 		4885653B0FD4F630003D9B53 /* WidgetWeatherSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetWeatherSettings.m; sourceTree = "<group>"; };
-		4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
-		4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
-		4891CD190FCCCAD2007C7284 /* AppShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppShortcut.h; sourceTree = "<group>"; };
-		4891CD1A0FCCCAD2007C7284 /* AppShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppShortcut.m; sourceTree = "<group>"; };
-		48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewWidgetViewController.h; sourceTree = "<group>"; };
-		48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewWidgetViewController.m; sourceTree = "<group>"; };
+		4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaults.h; path = ../UserDefaults.h; sourceTree = "<group>"; };
+		4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaults.m; path = ../UserDefaults.m; sourceTree = "<group>"; };
+		4891CD190FCCCAD2007C7284 /* AppShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppShortcut.h; path = ../AppShortcut.h; sourceTree = "<group>"; };
+		4891CD1A0FCCCAD2007C7284 /* AppShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppShortcut.m; path = ../AppShortcut.m; sourceTree = "<group>"; };
+		48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewWidgetViewController.h; path = ../AddNewWidgetViewController.h; sourceTree = "<group>"; };
+		48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewWidgetViewController.m; path = ../AddNewWidgetViewController.m; sourceTree = "<group>"; };
 		48CEB68C0FD0FF7A00F42624 /* AddNewWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewWidgetView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5DBF2B0FD28747003E0584 /* addicon_contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_contact.png; sourceTree = "<group>"; };
@@ -120,17 +120,17 @@
 		8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTodayScreen.xib; sourceTree = "<group>"; };
 		8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todayscreenlogo.png; sourceTree = "<group>"; };
 		8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visittodayscreen.png; sourceTree = "<group>"; };
-		8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTodayScreen.h; sourceTree = "<group>"; };
-		8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTodayScreen.m; sourceTree = "<group>"; };
+		8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutTodayScreen.h; path = ../AboutTodayScreen.h; sourceTree = "<group>"; };
+		8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTodayScreen.m; path = ../AboutTodayScreen.m; sourceTree = "<group>"; };
 		8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayScreenGeneralSettings.xib; sourceTree = "<group>"; };
-		8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenGeneralSettings.h; sourceTree = "<group>"; };
-		8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenGeneralSettings.m; sourceTree = "<group>"; };
+		8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayScreenGeneralSettings.h; path = ../TodayScreenGeneralSettings.h; sourceTree = "<group>"; };
+		8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayScreenGeneralSettings.m; path = ../TodayScreenGeneralSettings.m; sourceTree = "<group>"; };
 		8E5DC0DC0FD3B999003E0584 /* WidgetSpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSpacer.h; sourceTree = "<group>"; };
 		8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSpacer.m; sourceTree = "<group>"; };
 		8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_spacer.png; sourceTree = "<group>"; };
 		8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addicon_digitaltimedate.png; sourceTree = "<group>"; };
-		8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenTableViewController.h; sourceTree = "<group>"; };
-		8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenTableViewController.m; sourceTree = "<group>"; };
+		8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayScreenTableViewController.h; path = ../TodayScreenTableViewController.h; sourceTree = "<group>"; };
+		8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayScreenTableViewController.m; path = ../TodayScreenTableViewController.m; sourceTree = "<group>"; };
 		8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetAppLauncher.xib; sourceTree = "<group>"; };
 		8E6B34710FC4B69300EB77B2 /* WidgetAppLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetAppLauncher.h; sourceTree = "<group>"; };
 		8E6B34720FC4B69300EB77B2 /* WidgetAppLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetAppLauncher.m; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		8E6B387C0FC893E100EB77B2 /* WidgetComponent_SingleRSS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetComponent_SingleRSS.xib; sourceTree = "<group>"; };
 		8E6B38810FC8940E00EB77B2 /* WidgetComponent_SingleRSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetComponent_SingleRSS.h; sourceTree = "<group>"; };
 		8E6B38820FC8940E00EB77B2 /* WidgetComponent_SingleRSS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetComponent_SingleRSS.m; sourceTree = "<group>"; };
-		8E6B397F0FC8A8FE00EB77B2 /* YahooWeatherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YahooWeatherAPI.h; sourceTree = "<group>"; };
-		8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YahooWeatherAPI.m; sourceTree = "<group>"; };
+		8E6B397F0FC8A8FE00EB77B2 /* YahooWeatherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YahooWeatherAPI.h; path = ../YahooWeatherAPI.h; sourceTree = "<group>"; };
+		8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YahooWeatherAPI.m; path = ../YahooWeatherAPI.m; sourceTree = "<group>"; };
 		8E6B39E00FC8B70700EB77B2 /* WidgetWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetWeather.h; sourceTree = "<group>"; };
 		8E6B39E10FC8B70700EB77B2 /* WidgetWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetWeather.m; sourceTree = "<group>"; };
 		8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetContact.xib; sourceTree = "<group>"; };
@@ -156,16 +156,16 @@
 		8E6B3B100FC9525A00EB77B2 /* WidgetComponent_Contact.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetComponent_Contact.xib; sourceTree = "<group>"; };
 		8E6B3B140FC9526700EB77B2 /* WidgetComponent_Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetComponent_Contact.h; sourceTree = "<group>"; };
 		8E6B3B150FC9526700EB77B2 /* WidgetComponent_Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetComponent_Contact.m; sourceTree = "<group>"; };
-		8E6B3BAC0FCA0BA400EB77B2 /* GlobalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFunctions.h; sourceTree = "<group>"; };
-		8E6B3BAD0FCA0BA400EB77B2 /* GlobalFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFunctions.m; sourceTree = "<group>"; };
-		8E6B3C6F0FCB364700EB77B2 /* iPhoneAddressBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneAddressBookAPI.h; sourceTree = "<group>"; };
-		8E6B3C700FCB364700EB77B2 /* iPhoneAddressBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneAddressBookAPI.m; sourceTree = "<group>"; };
+		8E6B3BAC0FCA0BA400EB77B2 /* GlobalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalFunctions.h; path = ../GlobalFunctions.h; sourceTree = "<group>"; };
+		8E6B3BAD0FCA0BA400EB77B2 /* GlobalFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalFunctions.m; path = ../GlobalFunctions.m; sourceTree = "<group>"; };
+		8E6B3C6F0FCB364700EB77B2 /* iPhoneAddressBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhoneAddressBookAPI.h; path = ../iPhoneAddressBookAPI.h; sourceTree = "<group>"; };
+		8E6B3C700FCB364700EB77B2 /* iPhoneAddressBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iPhoneAddressBookAPI.m; path = ../iPhoneAddressBookAPI.m; sourceTree = "<group>"; };
 		8E6B3C720FCB36AD00EB77B2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8E6B3C890FCB3B3000EB77B2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		8E6B3CD00FCB91D200EB77B2 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
 		8E6B3DA10FCB9A8100EB77B2 /* TodayScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayScreenView.xib; sourceTree = "<group>"; };
-		8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreenView.h; sourceTree = "<group>"; };
-		8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayScreenView.m; sourceTree = "<group>"; };
+		8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayScreenView.h; path = ../TodayScreenView.h; sourceTree = "<group>"; };
+		8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayScreenView.m; path = ../TodayScreenView.m; sourceTree = "<group>"; };
 		8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetFlipClockDate.xib; sourceTree = "<group>"; };
 		8E6B3DF60FCB9F3E00EB77B2 /* flipclockbgwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flipclockbgwhite.png; sourceTree = "<group>"; };
 		8E6B3DFA0FCB9F8B00EB77B2 /* WidgetFlipClockDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetFlipClockDate.h; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 		8E6B3F750FCE53BE00EB77B2 /* contactbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactbutton.png; sourceTree = "<group>"; };
 		8E6B3F790FCE54E800EB77B2 /* blankcontact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankcontact.png; sourceTree = "<group>"; };
 		8E6B3FBC0FCE5E3300EB77B2 /* Info.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
-		8E6B3FC00FCE5E7E00EB77B2 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
-		8E6B3FC10FCE5E7E00EB77B2 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
+		8E6B3FC00FCE5E7E00EB77B2 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Info.h; path = ../Info.h; sourceTree = "<group>"; };
+		8E6B3FC10FCE5E7E00EB77B2 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Info.m; path = ../Info.m; sourceTree = "<group>"; };
 		8E6B3FC60FCE5FA300EB77B2 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		8E6B401E0FCE61C200EB77B2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8E6B40630FD2252E00EB77B2 /* WidgetViewControllerSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewControllerSuperClass.h; sourceTree = "<group>"; };
@@ -222,8 +222,30 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
+				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
+				8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */,
+				8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */,
+				8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */,
+				8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */,
+				8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */,
+				8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */,
 				1D3623240D0F684500981E51 /* TodayScreenAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TodayScreenAppDelegate.m */,
+				48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */,
+				48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */,
+				4891CD190FCCCAD2007C7284 /* AppShortcut.h */,
+				4891CD1A0FCCCAD2007C7284 /* AppShortcut.m */,
+				8E6B3BAC0FCA0BA400EB77B2 /* GlobalFunctions.h */,
+				8E6B3BAD0FCA0BA400EB77B2 /* GlobalFunctions.m */,
+				8E6B3C6F0FCB364700EB77B2 /* iPhoneAddressBookAPI.h */,
+				8E6B3C700FCB364700EB77B2 /* iPhoneAddressBookAPI.m */,
+				4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */,
+				4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */,
+				8E6B397F0FC8A8FE00EB77B2 /* YahooWeatherAPI.h */,
+				8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */,
+				8E6B3FC00FCE5E7E00EB77B2 /* Info.h */,
+				8E6B3FC10FCE5E7E00EB77B2 /* Info.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -241,23 +263,9 @@
 			children = (
 				488563D00FD4D6F2003D9B53 /* Settings */,
 				488563D10FD4D70D003D9B53 /* Widgets */,
-				48CEB64A0FD0ED3600F42624 /* AddNewWidgetViewController.h */,
-				48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */,
-				4891CD190FCCCAD2007C7284 /* AppShortcut.h */,
-				4891CD1A0FCCCAD2007C7284 /* AppShortcut.m */,
-				8E6B3BAC0FCA0BA400EB77B2 /* GlobalFunctions.h */,
-				8E6B3BAD0FCA0BA400EB77B2 /* GlobalFunctions.m */,
-				8E6B3C6F0FCB364700EB77B2 /* iPhoneAddressBookAPI.h */,
-				8E6B3C700FCB364700EB77B2 /* iPhoneAddressBookAPI.m */,
-				4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */,
-				4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */,
-				8E6B397F0FC8A8FE00EB77B2 /* YahooWeatherAPI.h */,
-				8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */,
-				8E6B3FC00FCE5E7E00EB77B2 /* Info.h */,
-				8E6B3FC10FCE5E7E00EB77B2 /* Info.m */,
+				080E96DDFE201D6D7F000001 /* Classes */,
 				48FD48DB0FCE7662004045B2 /* Images */,
 				48CEB6DC0FD1015100F42624 /* Interface Files */,
-				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -280,14 +288,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
-				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
-				8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */,
-				8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */,
-				8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */,
-				8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */,
-				8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */,
-				8E6B34680FC4B5F600EB77B2 /* TodayScreenTableViewController.m */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;

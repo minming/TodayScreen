@@ -27,27 +27,6 @@
     return self;
 }
 
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		contactsArray = [[NSMutableArray alloc] init];
-		contacts[0].name = @"MING";
-		contacts[1].name = @"THE";
-		contacts[2].name = @"MING";
-		contacts[3].name = @"MING";
-    }
-    return self;
-}*/
-
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,15 +55,6 @@
 	}
 		
 }
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
