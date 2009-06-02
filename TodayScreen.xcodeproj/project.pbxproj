@@ -233,13 +233,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */,
-				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
-				8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */,
-				8E5DBF2B0FD28747003E0584 /* addicon_contact.png */,
-				8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */,
-				8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */,
-				8E5DBF300FD28747003E0584 /* addicon_weather.png */,
 				8E6B414D0FD2378C00EB77B2 /* WidgetSettingsSuperClass.h */,
 				8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */,
 				8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */,
@@ -280,6 +273,10 @@
 				8E6B39800FC8A8FE00EB77B2 /* YahooWeatherAPI.m */,
 				8E6B3FC00FCE5E7E00EB77B2 /* Info.h */,
 				8E6B3FC10FCE5E7E00EB77B2 /* Info.m */,
+				8E5DC0DC0FD3B999003E0584 /* WidgetSpacer.h */,
+				8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */,
+				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
+				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
 				48FD48DB0FCE7662004045B2 /* Images */,
 				48CEB6DC0FD1015100F42624 /* Interface Files */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -305,10 +302,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */,
 				8E5DC0500FD346F7003E0584 /* AboutTodayScreen.h */,
 				8E5DC0510FD346F7003E0584 /* AboutTodayScreen.m */,
-				8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */,
 				8E6B3DA50FCB9A9400EB77B2 /* TodayScreenView.h */,
 				8E6B3DA60FCB9A9400EB77B2 /* TodayScreenView.m */,
 				8E6B34670FC4B5F600EB77B2 /* TodayScreenTableViewController.h */,
@@ -331,16 +326,13 @@
 		48CEB6DC0FD1015100F42624 /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E5DC0DC0FD3B999003E0584 /* WidgetSpacer.h */,
-				8E5DC0DD0FD3B999003E0584 /* WidgetSpacer.m */,
-				8E5DC09C0FD34C6A003E0584 /* TodayScreenGeneralSettings.h */,
-				8E5DC09D0FD34C6A003E0584 /* TodayScreenGeneralSettings.m */,
+				8E5DC0440FD34167003E0584 /* AboutTodayScreen.xib */,
+				8E5DC0960FD348DF003E0584 /* TodayScreenGeneralSettings.xib */,
 				8E6B3DF10FCB9F1E00EB77B2 /* WidgetFlipClockDate.xib */,
 				8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */,
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
 				8E6B3B100FC9525A00EB77B2 /* WidgetComponent_Contact.xib */,
 				8E6B37D40FC87A9200EB77B2 /* WidgetClockDate.xib */,
-				8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */,
 				8E6B387C0FC893E100EB77B2 /* WidgetComponent_SingleRSS.xib */,
 				8E6B358F0FC6444B00EB77B2 /* WidgetComponent_LongButton.xib */,
 				8E6B38720FC889AD00EB77B2 /* WidgetRSS.xib */,
@@ -353,7 +345,6 @@
 				8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */,
 				8E6B3FBC0FCE5E3300EB77B2 /* Info.xib */,
 				48CEB68C0FD0FF7A00F42624 /* AddNewWidgetView.xib */,
-				8E5DBF3B0FD28874003E0584 /* addicon_rss.png */,
 				8E6B3DA10FCB9A8100EB77B2 /* TodayScreenView.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
@@ -363,6 +354,13 @@
 		48FD48DB0FCE7662004045B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */,
+				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
+				8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */,
+				8E5DBF2B0FD28747003E0584 /* addicon_contact.png */,
+				8E5DBF2E0FD28747003E0584 /* addicon_flipclock.png */,
+				8E5DBF2F0FD28747003E0584 /* addicon_urllauncher.png */,
+				8E5DBF300FD28747003E0584 /* addicon_weather.png */,
 				8E6B41470FD236B100EB77B2 /* settingsbg.png */,
 				8E6B3F540FCE539F00EB77B2 /* footertoobaricon_add.png */,
 				8E6B3F550FCE539F00EB77B2 /* footertoobaricon_delete.png */,
@@ -379,6 +377,8 @@
 				8E6B3FC60FCE5FA300EB77B2 /* bg2.png */,
 				8E6B3F790FCE54E800EB77B2 /* blankcontact.png */,
 				8E6B3F750FCE53BE00EB77B2 /* contactbutton.png */,
+				8E5DC0E50FD3BE62003E0584 /* addicon_spacer.png */,
+				8E5DBF3B0FD28874003E0584 /* addicon_rss.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
