@@ -9,6 +9,8 @@
 #import "WidgetWeather.h"
 #import "YahooWeatherAPI.h"
 #import "GlobalFunctions.h"
+#import "WidgetSettingsNavigationController.h"
+#include "WidgetWeatherSettings.h"
 
 @interface WidgetWeather (Internal)
 - (void)getWeatherForZipCode:(NSString*)zip;
@@ -98,6 +100,15 @@
  return (interfaceOrientation == UIInterfaceOrientationPortrait);
  }
  */
+
+- (void)editSettingsAction:(id)sender {
+	NSLog(@"SETTINGS");
+	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
+	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	WidgetWeatherSettings *widgetWeatherSettings = [[WidgetWeatherSettings alloc] initWithWidget:self];
+	[navController pushViewController:widgetWeatherSettings animated:YES];
+	[tableViewController presentModalViewController:navController animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview

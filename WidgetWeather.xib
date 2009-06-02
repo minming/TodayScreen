@@ -379,7 +379,7 @@
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 					</object>
-					<object class="IBUIButton" id="204617494">
+					<object class="IBUIButton" id="582620862">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{282, 76}, {18, 19}}</string>
@@ -547,6 +547,15 @@
 					</object>
 					<int key="connectionID">44</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editSettingsAction:</string>
+						<reference key="source" ref="582620862"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -585,7 +594,7 @@
 							<reference ref="920184898"/>
 							<reference ref="844783917"/>
 							<reference ref="741107588"/>
-							<reference ref="204617494"/>
+							<reference ref="582620862"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -707,7 +716,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
-						<reference key="object" ref="204617494"/>
+						<reference key="object" ref="582620862"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
@@ -793,7 +802,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">49</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -809,6 +818,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">WidgetWeather</string>
 					<string key="superclassName">WidgetViewControllerSuperClass</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">editSettingsAction:</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">

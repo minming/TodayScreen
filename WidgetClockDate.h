@@ -22,8 +22,6 @@
 
 //@property (copy) NSString* dateFormat;
 @property (copy) NSString* timeFormat;
- 
-- (id)initWithTimeFormat:(NSString *)value;
 
 - (void)runTimer;  
 - (void)showActivity; 
