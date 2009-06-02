@@ -96,7 +96,7 @@
 }
 
 
--(IBAction) controlEditingTable:(id)sender {
+-(void) controlEditingTable:(id)sender {
 	if([todayScreenTableViewController isEditing] == NO) {
 		[self startEditingTable:sender];
 	} else {
@@ -121,6 +121,25 @@
 	[todayScreenTableViewController setEditing:NO animated:YES];
 	[todayScreenTableViewController.tableView reloadData];
 	tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+}
+
+-(void) controlSettingsMode:(id)sender {
+	if([todayScreenTableViewController settingsMode] == NO) {
+		[self startSettingsMode:sender];
+	} else {
+		[self stopSettingsMode:sender];
+	}
+}
+- (void) startSettingsMode:(id)sender {
+	[todayScreenTableViewController setSettingsMode:YES];
+	[todayScreenTableViewController.tableView reloadData];
+	//tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
+}
+
+- (void) stopSettingsMode:(id)sender {
+	[todayScreenTableViewController setSettingsMode:NO];
+	[todayScreenTableViewController.tableView reloadData];
+	//tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
 }
 
 - (void)dealloc {

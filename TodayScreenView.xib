@@ -311,6 +311,15 @@
 					</object>
 					<int key="connectionID">31</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">controlSettingsMode:</string>
+						<reference key="source" ref="149863339"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -424,7 +433,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TodayScreenView</string>
 					<string>UIResponder</string>
-					<string>{{758, 174}, {320, 480}}</string>
+					<string>{{756, 313}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -458,7 +467,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">31</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -471,14 +480,20 @@
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>controlEditingTable:</string>
+							<string>controlSettingsMode:</string>
 							<string>showModalAboutView:</string>
 							<string>showModalAddWindow:</string>
 							<string>showModalGeneralSettingsView:</string>
 							<string>startEditingTable:</string>
+							<string>startSettingsMode:</string>
 							<string>stopEditingTable:</string>
+							<string>stopSettingsMode:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

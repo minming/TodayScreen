@@ -16,6 +16,9 @@
 	[self presentModalViewController:imgPicker animated:YES];
 }
 
+-(void)cancel:(id)sender {
+	[self dismissModalViewControllerAnimated:YES];
+}
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

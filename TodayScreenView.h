@@ -19,9 +19,13 @@
 - (void)showModalAddWindow:(id)sender;
 - (void)cancelAddWidget;
 
--(IBAction) controlEditingTable:(id)sender;
-- (void) startEditingTable:(id)sender;
-- (void) stopEditingTable:(id)sender;
+-(void)controlEditingTable:(id)sender;
+- (void)startEditingTable:(id)sender;
+- (void)stopEditingTable:(id)sender;
+
+-(void)controlSettingsMode:(id)sender;
+-(void)startSettingsMode:(id)sender;
+-(void)stopSettingsMode:(id)sender;
 
 - (void)showModalAboutView:(id)sender;
 - (void)showModalGeneralSettingsView:(id)sender;

@@ -34,6 +34,9 @@
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
 }
 
+-(void)okButtonClick:(id)sender {
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

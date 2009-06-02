@@ -14,6 +14,6 @@
 }
 
 -(void)test:(id)sender;
-
+-(void)cancel:(id)sender;
 
 @end

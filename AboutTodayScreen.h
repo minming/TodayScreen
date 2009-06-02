@@ -13,4 +13,6 @@
 
 }
 
+-(void)okButtonClick:(id)sender;
+
 @end

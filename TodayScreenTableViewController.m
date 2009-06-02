@@ -31,11 +31,13 @@
 @implementation TodayScreenTableViewController
 
 @synthesize widgetsArray;
+@synthesize settingsMode;
 //@synthesize bgImageView;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 	if (self = [super initWithStyle:style]) {
+		settingsMode = NO;
 		widgetsArray = [[NSMutableArray alloc] init];
 		[self initWidgetsArray];
     }
@@ -163,7 +165,11 @@
 		cell.contentView.clipsToBounds = YES;
     }
 	
-	if (cell.editing == YES) {
+	cell.accessoryType = UITableViewCellAccessoryNone;
+	if(settingsMode == YES) {
+		NSLog(@"SETTINGS MODE");
+		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	} else if (cell.editing == YES) {
 		NSLog(@"EDITING MODE");
 		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:0.5];
 		cell.contentView.alpha = 0.5;
