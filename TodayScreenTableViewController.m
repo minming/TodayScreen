@@ -183,7 +183,6 @@
 		[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
 		//[cell setTag:10];
 	}
-	
     return cell;
 }
 
@@ -192,8 +191,6 @@
 {  
     WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
 	return [temp getHeight];
-	//return 150.0; //returns floating point which will be used for a cell row height at specified row index  
-	
 }  
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -201,7 +198,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor blueColor];
+	//[tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor blueColor];
 }
 
 
