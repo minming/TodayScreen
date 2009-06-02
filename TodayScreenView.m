@@ -133,13 +133,13 @@
 - (void) startSettingsMode:(id)sender {
 	[todayScreenTableViewController setSettingsMode:YES];
 	[todayScreenTableViewController.tableView reloadData];
-	//tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
+	tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"settingsbg.png"]];
 }
 
 - (void) stopSettingsMode:(id)sender {
 	[todayScreenTableViewController setSettingsMode:NO];
 	[todayScreenTableViewController.tableView reloadData];
-	//tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+	tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
 }
 
 - (void)dealloc {

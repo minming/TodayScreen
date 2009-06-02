@@ -104,7 +104,7 @@
 - (void)editSettingsAction:(id)sender {
 	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
-	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetWeatherSettings *widgetWeatherSettings = [[WidgetWeatherSettings alloc] initWithWidget:self];
 	[navController pushViewController:widgetWeatherSettings animated:YES];
 	[tableViewController presentModalViewController:navController animated:YES];

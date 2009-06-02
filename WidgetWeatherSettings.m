@@ -22,11 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"Weather Settings";
-	/*UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
-	 initWithTitle:@"Save" 
-	 style:UIBarButtonItemStyleBordered 
-	 target:self 
-	 action:@selector(showStatusComposeView)];*/
+
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveAction:)];
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];	
 	self.navigationItem.rightBarButtonItem = saveButton;	

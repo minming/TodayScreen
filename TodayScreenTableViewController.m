@@ -192,6 +192,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	WidgetViewControllerSuperClass* temp = [[self widgetsArray] objectAtIndex:[indexPath row]];
+	[temp editSettingsAction:nil];
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
 {  

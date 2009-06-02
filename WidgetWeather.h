@@ -41,7 +41,6 @@
 }
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController  zipCode:(NSString*)zip;
-- (void)editSettingsAction:(id)sender;
 
 @property (copy) NSString* zipCode;
 

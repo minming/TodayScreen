@@ -21,4 +21,5 @@
 - (void)enableBackground:(BOOL)bg;
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController;
+- (void)editSettingsAction:(id)sender;
 @end
