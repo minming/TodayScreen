@@ -21,4 +21,6 @@
 
 - (void)runTimer;  
 - (void)showActivity; 
+
+-(id) initWithSuperTableController:(UITableViewController*)superViewController;
 @end

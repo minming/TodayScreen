@@ -11,6 +11,7 @@
 
 @interface WidgetViewControllerSuperClass : UIViewController {
 	//int widgetHeight;
+	UITableViewController *tableViewController;	// Pointer to the table controller that this widget is contained in
 }
 
 //@property int widgetHeight;
@@ -19,4 +20,5 @@
 
 - (void)enableBackground:(BOOL)bg;
 
+-(id) initWithSuperTableController:(UITableViewController*)superViewController;
 @end

@@ -98,7 +98,7 @@
 		NSString *lastName = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
 		//NSString *email = ABRecordCopyValue(person, kABPersonEmailProperty);
 		ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
-		NSString *email = ABMultiValueCopyValueAtIndex(emails, 0);
+		NSString *email = (NSString*) ABMultiValueCopyValueAtIndex(emails, 0);
 		name.text = fullName;
 		
 		if(ABPersonHasImageData(person)){

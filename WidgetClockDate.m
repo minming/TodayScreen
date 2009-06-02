@@ -26,11 +26,12 @@
 }
 */
 
-- (id)initWithTimeFormat:(NSString *)value {
-    if (self = [super init]) {
-        // Custom initialization
+-(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value {
+	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
 		[self setTimeFormat:value];
-    }
+	}
     return self;
 }
 
@@ -38,25 +39,7 @@
 	return 40;
 }
 
-- (void)infoButtonAction:(id)sender {
-	/*
-	WidgetClockDateSettings *c = [[WidgetClockDateSettings alloc] init];
-	c.view.frame = CGRectMake(0,30,100,100);
-	//[self presentModalViewController:s animated:YES];
-	WidgetSettingsSuperClass *s = [[WidgetSettingsSuperClass alloc] init];
-	//[s.mainContentScrollView addSubview:c.view];
-	//[s.mainContentScrollView setNeedsLayout];
-	//[s.view setNeedsLayout];
-	
-	[s.mainContentView addSubview:c.view];
-	[s.mainContentView setNeedsLayout];
-	[s.view setNeedsLayout];
-	
-	//[s.view addSubview:c.view];
-	
-	//s.mainContentScrollView = c.view;
-	[self presentModalViewController:s animated:YES];
-	*/
+- (void)editSettingsAction:(id)sender {
 	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;

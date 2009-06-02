@@ -18,6 +18,13 @@
 	//return widgetHeight;
 }
 
+-(id) initWithSuperTableController:(UITableViewController*)superViewController {
+	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
+	}
+    return self;
+}
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -70,6 +77,7 @@
 
 
 - (void)dealloc {
+	[tableViewController release];
     [super dealloc];
 }
 

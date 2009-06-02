@@ -28,6 +28,6 @@
 - (void)runTimer;  
 - (void)showActivity; 
 
-- (void)infoButtonAction:(id)sender;
-
+- (void)editSettingsAction:(id)sender;
+-(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value;
 @end

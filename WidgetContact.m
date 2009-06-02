@@ -13,8 +13,22 @@
 
 @synthesize contactsArray;
 
+-(id) initWithSuperTableController:(UITableViewController*)superViewController {
+	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
+		
+		contactsArray = [[NSMutableArray alloc] init];
+		contacts[0].name = @"MING";
+		contacts[1].name = @"THE";
+		contacts[2].name = @"MING";
+		contacts[3].name = @"MING";
+	}
+    return self;
+}
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
 		contactsArray = [[NSMutableArray alloc] init];
@@ -24,7 +38,7 @@
 		contacts[3].name = @"MING";
     }
     return self;
-}
+}*/
 
 
 /*
@@ -79,6 +93,8 @@
 
 
 - (void)dealloc {
+	[tableViewController release];
+	[contactsArray release];
     [super dealloc];
 }
 

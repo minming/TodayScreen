@@ -124,6 +124,7 @@
 
 
 - (void)dealloc {
+	[tableViewController release];
     [super dealloc];
 }
 

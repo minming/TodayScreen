@@ -16,10 +16,11 @@
 @synthesize AppShortcuts;
 @synthesize numRows;
 
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
+-(id) initWithSuperTableController:(UITableViewController*)superViewController {
+	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
+		
 		longButtonArray = [[NSMutableArray alloc] init];
 		AppShortcuts = [[NSMutableArray alloc] init];
 		
@@ -38,11 +39,9 @@
 		[AppShortcuts addObject:shortcut5];
 		[AppShortcuts addObject:shortcut6];
 		[AppShortcuts addObject:shortcut7];
-		//[AppShortcuts addObject:as];
-    }
+	}
     return self;
 }
-
 - (int)getHeight {
 	int rowsNeeded = 1;
 	if ([AppShortcuts count]%4 == 0) {

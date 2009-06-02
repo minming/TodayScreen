@@ -88,7 +88,7 @@
 		}
 		case WIDGET_CLOCK: {
 			NSLog(@"Add widget clock");
-			WidgetClockDate *clockDate = [[WidgetClockDate alloc] initWithTimeFormat:@"h:mm a   EEE dd MMM"];
+			WidgetClockDate *clockDate = [[WidgetClockDate alloc] initWithSuperTableController:self timeFormat:@"h:mm a   EEE dd MMM"];
 			self.view.tag = 1;
 			[self.widgetsArray addObject:clockDate];
 			[clockDate release];
@@ -96,28 +96,28 @@
 		}
 		case WIDGET_RSS: {
 			NSLog(@"Add rss");
-			WidgetRSS *RSS = [[WidgetRSS alloc] initWithNumOfFeeds:3];
+			WidgetRSS *RSS = [[WidgetRSS alloc] initWithSuperTableController:self numFeeds:3];
 			[self.widgetsArray addObject:RSS];
 			[RSS release];
 			break;
 		}
 		case WIDGET_WEATHER: {
 			NSLog(@"Add weather");
-			WidgetWeather *weather = [[WidgetWeather alloc] initWithZipCode:DEFAULT_ZIP_CODE];
+			WidgetWeather *weather = [[WidgetWeather alloc] initWithSuperTableController:self zipCode:DEFAULT_ZIP_CODE];
 			[self.widgetsArray addObject:weather];
 			[weather release];
 			break;
 		}
 		case WIDGET_APPLAUNCHER: {
 			NSLog(@"Add app launcher");
-			WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] init];
+			WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] initWithSuperTableController:self];
 			[self.widgetsArray addObject:appLauncher];
 			[appLauncher release];
 			break;
 		}
 		case WIDGET_CONTACT: {
 			NSLog(@"Add contact");
-			WidgetContact *contact = [[WidgetContact alloc] init];
+			WidgetContact *contact = [[WidgetContact alloc] initWithSuperTableController:self];
 			[self.widgetsArray addObject:contact];
 			break;
 		}

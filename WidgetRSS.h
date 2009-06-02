@@ -21,15 +21,11 @@
 	
 	NSMutableArray *singleRSSArray;
 	int NUM_OF_FEEDS;
-	
 }
 @property (nonatomic, copy) NSMutableArray *singleRSSArray;
 @property int NUM_OF_FEEDS;
 
 - (void)buttonAction:(id)sender;
-
 - (void)parseXMLFileAtURL:(NSString *)URL;
-
-- (id)initWithNumOfFeeds:(int)num;
-
+-(id) initWithSuperTableController:(UITableViewController*)superViewController numFeeds:(NSInteger)num;
 @end

@@ -40,7 +40,7 @@
 	YahooWeatherAPI *weatherAPI;
 }
 
-- (id)initWithZipCode:(NSString*)zip;
+-(id) initWithSuperTableController:(UITableViewController*)superViewController  zipCode:(NSString*)zip;
 
 @property (copy) NSString* zipCode;
 

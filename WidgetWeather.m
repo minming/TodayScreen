@@ -20,8 +20,11 @@
 
 @synthesize zipCode;
 
--(id) initWithZipCode:(NSString*)zip {
+-(id) initWithSuperTableController:(UITableViewController*)superViewController  zipCode:(NSString*)zip {
 	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
+		
 		weatherAPI = [[YahooWeatherAPI alloc] init];
 		operationQueue = [[NSOperationQueue alloc] init];
         [operationQueue setMaxConcurrentOperationCount:1];

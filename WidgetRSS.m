@@ -15,16 +15,19 @@
 @synthesize NUM_OF_FEEDS;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		singleRSSArray = [[NSMutableArray alloc] init];
         // Custom initialization
     }
     return self;
-}
+}*/
 
-- (id)initWithNumOfFeeds:(int)num {
+-(id) initWithSuperTableController:(UITableViewController*)superViewController  numFeeds:(NSInteger)num {
 	if (self = [super init]) {
+		tableViewController = superViewController;
+		[tableViewController retain];
+		
 		singleRSSArray = [[NSMutableArray alloc] init];
 		[self setNUM_OF_FEEDS:num];
     }
