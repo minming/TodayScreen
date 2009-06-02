@@ -14,6 +14,7 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		488564050FD4D864003D9B53 /* WidgetWeather.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488564040FD4D864003D9B53 /* WidgetWeather.xib */; };
+		4885653C0FD4F630003D9B53 /* WidgetWeatherSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4885653B0FD4F630003D9B53 /* WidgetWeatherSettings.m */; };
 		4891CB1E0FCBB0D6007C7284 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */; };
 		4891CD1B0FCCCAD2007C7284 /* AppShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 4891CD1A0FCCCAD2007C7284 /* AppShortcut.m */; };
 		48CEB64C0FD0ED3600F42624 /* AddNewWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CEB64B0FD0ED3600F42624 /* AddNewWidgetViewController.m */; };
@@ -98,6 +99,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TodayScreen_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayScreen_Prefix.pch; sourceTree = "<group>"; };
 		488564040FD4D864003D9B53 /* WidgetWeather.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetWeather.xib; sourceTree = "<group>"; };
+		4885653A0FD4F630003D9B53 /* WidgetWeatherSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetWeatherSettings.h; sourceTree = "<group>"; };
+		4885653B0FD4F630003D9B53 /* WidgetWeatherSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetWeatherSettings.m; sourceTree = "<group>"; };
 		4891CB1C0FCBB0D6007C7284 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
 		4891CB1D0FCBB0D6007C7284 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		4891CD190FCCCAD2007C7284 /* AppShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppShortcut.h; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 		488563D00FD4D6F2003D9B53 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4885653A0FD4F630003D9B53 /* WidgetWeatherSettings.h */,
+				4885653B0FD4F630003D9B53 /* WidgetWeatherSettings.m */,
 				8E6B414D0FD2378C00EB77B2 /* WidgetSettingsSuperClass.h */,
 				8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */,
 				8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */,
@@ -524,6 +529,7 @@
 				8E5DC0520FD346F7003E0584 /* AboutTodayScreen.m in Sources */,
 				8E5DC09E0FD34C6A003E0584 /* TodayScreenGeneralSettings.m in Sources */,
 				8E5DC0DE0FD3B999003E0584 /* WidgetSpacer.m in Sources */,
+				4885653C0FD4F630003D9B53 /* WidgetWeatherSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
