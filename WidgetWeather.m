@@ -9,6 +9,7 @@
 #import "WidgetWeather.h"
 #import "YahooWeatherAPI.h"
 #import "GlobalFunctions.h"
+
 #import "WidgetSettingsNavigationController.h"
 #include "WidgetWeatherSettings.h"
 
@@ -69,7 +70,8 @@
 	Weather forecast1 = [weatherAPI getWeather:1];
 	Weather forecast2 = [weatherAPI getWeather:2];
 	
-	NSLog(@"Weather api %@", now.text);
+	NSLog(@"City %@", now.city);
+	cityTextLabel.text = now.city;
 	nowTextLabel.text = now.text;
 	nowTempLabel.text = [NSString stringWithFormat:@"%@˚",now.temp];
 	nowFeelsLikeLabel.text = [NSString stringWithFormat:@"%@˚",now.windChill];
@@ -79,16 +81,17 @@
 	nowSunriseLabel.text = now.sunrise;
 	nowSunsetLabel.text = now.sunset;
 	
+	//NSLog(forecast1.text);
 	forecast1TextLabel.text = forecast1.text;
 	forecast1DayLabel.text = forecast1.day;
 	forecast1TempLabel.text = [NSString stringWithFormat:@"%@˚ - %@˚",forecast1.low,forecast1.high];
 	forecast1Image.image = [GlobalFunctions getImageFromUrl:forecast1.smallImage];
 	
-	
 	forecast2TextLabel.text = forecast2.text;
 	forecast2DayLabel.text = forecast2.day;
 	forecast2TempLabel.text = [NSString stringWithFormat:@"%@˚ - %@˚",forecast2.low,forecast2.high];
 	forecast2Image.image = [GlobalFunctions getImageFromUrl:forecast2.smallImage];
+	
 	
 	//[self.view reloadData];
 }
@@ -108,6 +111,8 @@
 	WidgetWeatherSettings *widgetWeatherSettings = [[WidgetWeatherSettings alloc] initWithWidget:self];
 	[navController pushViewController:widgetWeatherSettings animated:YES];
 	[tableViewController presentModalViewController:navController animated:YES];
+	//[navController release];
+	//[widgetWeatherSettings release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,9 +122,29 @@
 
 
 - (void)dealloc {
+	[nowTextLabel release];
+	[nowTempLabel release];
+	[nowImage release];
+	[nowFeelsLikeLabel release];
+	
+	[nowWindLabel release];
+	[nowSunriseLabel release];
+	[nowSunsetLabel release];
+	
+	[forecast1DayLabel release];
+	[forecast1TextLabel release];
+	[forecast1TempLabel release];
+	[forecast1Image release];
+	
+	[forecast2DayLabel release];
+	[forecast2TextLabel release];
+	[forecast2TempLabel release];
+	[forecast2Image release];
+	
 	[weatherAPI release];
 	[operationQueue release];
-    [super dealloc];
+    
+	[super dealloc];
 }
 
 

@@ -11,6 +11,8 @@
 
 @implementation WidgetViewControllerSuperClass
 
+@synthesize tableViewController;
+
 //@synthesize widgetHeight;
 
 - (int)getHeight {

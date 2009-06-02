@@ -78,8 +78,7 @@
 	
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
     [dateFormatter setDateFormat:@"EEE dd MMM YYYY"];
-	[date setText:[dateFormatter stringFromDate:[NSDate date]]];  
-	
+	[date setText:[dateFormatter stringFromDate:[NSDate date]]];
 }  
 
 - (void)infoButtonAction:(id)sender {

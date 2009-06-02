@@ -13,6 +13,7 @@
 #define DEFAULT_ZIP_CODE @"94305"
 
 @interface WidgetWeather : WidgetViewControllerSuperClass {
+	IBOutlet UILabel *cityTextLabel;
 	
 	IBOutlet UILabel *nowTextLabel;
 	IBOutlet UILabel *nowTempLabel;

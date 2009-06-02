@@ -2,17 +2,23 @@
 //  WidgetRSS.m
 //  TodayScreen
 //
-//  Created by Mac Pro on 5/23/09.
+//  Created by Shravan Reddy on 6/2/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "WidgetRSS.h"
 #import "WidgetComponent_SingleRSS.h"
 
+#import "WidgetSettingsNavigationController.h"
+#include "WidgetRSSSettings.h"
+
+#define DEFAULT_FEED @"http://www.engadget.com/rss.xml"
+ 
 @implementation WidgetRSS
 
 @synthesize singleRSSArray;
 @synthesize NUM_OF_FEEDS;
+@synthesize rssFeed;
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 /*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -30,6 +36,7 @@
 		
 		singleRSSArray = [[NSMutableArray alloc] init];
 		[self setNUM_OF_FEEDS:num];
+		[self setRssFeed:DEFAULT_FEED];
     }
     return self;
 }
@@ -49,10 +56,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor clearColor];
-	self.NUM_OF_FEEDS = 3; //temp set for testing
+	//self.NUM_OF_FEEDS = 3; //temp set for testing
 	if ([stories count] == 0 || stories == nil) {
-		NSString * path = @"http://www.engadget.com/rss.xml";
-		[self parseXMLFileAtURL:path];
+		//NSString * path = @"http://www.engadget.com/rss.xml";
+		[self parseXMLFileAtURL:rssFeed];
 	}
 	
 }
@@ -112,12 +119,21 @@
 
 
 - (void)dealloc {
+	[singleRSSArray release];
     [super dealloc];
 }
 
 
-
-
+- (void)editSettingsAction:(id)sender {
+	NSLog(@"SETTINGS");
+	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
+	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	WidgetRSSSettings *widgetRSSSettings = [[WidgetRSSSettings alloc] initWithWidget:self];
+	[navController pushViewController:widgetRSSSettings animated:YES];
+	[tableViewController presentModalViewController:navController animated:YES];
+	//[navController release];
+	//[widgetRSSSettings release];
+}
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser{	
 	//NSLog(@"found file and started parsing");

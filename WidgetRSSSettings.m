@@ -1,19 +1,19 @@
 //
-//  WidgetWeatherSettings.m
+//  WidgetRSSSettings.m
 //  TodayScreen
 //
-//  Created by Mac Pro on 5/30/09.
+//  Created by Shravan Reddy on 5/30/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "WidgetWeatherSettings.h"
+#import "WidgetRSSSettings.h"
 
-@implementation WidgetWeatherSettings
+@implementation WidgetRSSSettings
 
-- (id)initWithWidget:(WidgetWeather*)widget {
+- (id)initWithWidget:(WidgetRSS*)widget {
     if (self = [super init]) {
-		weatherWidget = widget;
-		[weatherWidget retain];
+		rssWidget = widget;
+		[rssWidget retain];
     }
     return self;
 }
@@ -21,8 +21,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"Weather Settings";
-
+	self.title = @"RSS Settings";
+	
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveAction:)];
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];	
 	self.navigationItem.rightBarButtonItem = saveButton;	
@@ -36,9 +36,9 @@
 }
 
 - (void)saveAction:(id)sender {
-	[weatherWidget setZipCode: zipCodeField.text];
-	[weatherWidget viewDidLoad];
-	//[weatherWidget.tableViewController.tableView reloadData];
+	[rssWidget setRssFeed:rssField.text];
+	[rssWidget setNUM_OF_FEEDS:numFeedsField.text.integerValue];
+	[rssWidget viewDidLoad];
 	[self dismissModalViewControllerAnimated:YES];
 }
 
@@ -57,7 +57,7 @@
 
 
 - (void)dealloc {
-	[weatherWidget release];
+	[rssWidget release];
     [super dealloc];
 }
 

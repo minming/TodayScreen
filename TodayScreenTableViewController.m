@@ -169,6 +169,7 @@
 	if(settingsMode == YES) {
 		NSLog(@"SETTINGS MODE");
 		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+		cell.contentView.alpha = 0.5;
 	} else if (cell.editing == YES) {
 		NSLog(@"EDITING MODE");
 		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:0.5];

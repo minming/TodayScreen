@@ -14,6 +14,7 @@
 	UITableViewController *tableViewController;	// Pointer to the table controller that this widget is contained in
 }
 
+@property (assign) UITableViewController* tableViewController;
 //@property int widgetHeight;
 - (void)startEditMode;
 - (int)getHeight;

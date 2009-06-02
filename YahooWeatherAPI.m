@@ -12,6 +12,8 @@
 @implementation YahooWeatherAPI
 
 - (NSString*)getWeatherXmlForZipCode: (NSString*)zipCode {
+	weatherReports[1].day = nil;
+	
 	NSError *error;
 	NSURLResponse *response;
 	NSData *dataReply;
@@ -29,6 +31,9 @@
 	NSURLResponse *response;
 	NSData *dataReply;
 	NSString *stringReply;*/
+	
+	// ** IMPORTANT Reset weather reports **  
+	weatherReports[1].day = nil;
 	
 	NSURL *xmlURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://weather.yahooapis.com/forecastrss?p=%@", zipCode]];
 	NSXMLParser *weatherXML = [[NSXMLParser alloc] initWithContentsOfURL:xmlURL];
@@ -131,7 +136,7 @@
 		
 	if ([elementName isEqualToString:@"yweather:condition"]) {
 		//NSLog(@"found this weather element: %@ - %@", elementName, [attributeDict objectForKey:@"text"]);
-		if ([attributeDict objectForKey:@"text"] != @"" || [attributeDict objectForKey:@"text"] != nil) {
+		if ([attributeDict objectForKey:@"text"] != nil && [attributeDict objectForKey:@"text"] != @"") {
 			weatherReports[0].day = @"Now";
 			weatherReports[0].text = [attributeDict objectForKey:@"text"];
 			weatherReports[0].temp = [attributeDict objectForKey:@"temp"];
@@ -143,11 +148,12 @@
 	}
 	if ([elementName isEqualToString:@"yweather:forecast"]) {
 		//NSLog(@"found this weather element: %@ - %@", elementName, [attributeDict objectForKey:@"text"]);
-		if ((NSString*)[attributeDict objectForKey:@"text"] != @"" || [attributeDict objectForKey:@"text"] != nil) {
+		if ([attributeDict objectForKey:@"text"] != nil && [attributeDict objectForKey:@"text"] != @"") {
 			int i = 1;
-			if (weatherReports[1].day != @"" && weatherReports[1].day != nil) {
+			if (weatherReports[1].day != nil && weatherReports[1].day != @"") {
 				i = 2;
 			}
+			NSLog(@"Weather report for %d is %@", i, attributeDict);
 			weatherReports[i].day = [attributeDict objectForKey:@"day"];
 			weatherReports[i].text = [attributeDict objectForKey:@"text"];
 			weatherReports[i].high = [attributeDict objectForKey:@"high"];
