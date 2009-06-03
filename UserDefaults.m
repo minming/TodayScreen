@@ -17,6 +17,7 @@
 #define WIDGET_CLOCK_DATE_FORMAT_CONSTANT @"dateFormat"
 
 #define WIDGET_RSS_ARRAY_CONSTANT @"rssArray"
+#define WIDGET_RSS_FEED_CONSTANT @"rssFeed"
 #define WIDGET_RSS_NUM_FEEDS_CONSTANT @"rssNumFeeds"
 
 #define WIDGET_APPLAUNCHER_ARRAY_CONSTANT @"appArray"
@@ -76,19 +77,24 @@
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSString* timeFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
 	//NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
-	
+	NSLog(@"TIME FORMAT: %@", timeFormat);
 	[clockWidget setTimeFormat:timeFormat];
+	[clockWidget reloadClock];
 	//[clockWidget setDateFormat:dateFormat];
 }
 
 -(void)loadRSSWidgetFromPrefs:(NSString*)widgetName widget:(WidgetRSS*)rssWidget {
 	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
-	NSMutableArray* rssArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_RSS_ARRAY_CONSTANT]];
+	//NSMutableArray* rssArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_RSS_ARRAY_CONSTANT]];
+	NSString* rssFeed = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_RSS_FEED_CONSTANT]];
+	
 	NSInteger numFeeds = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_RSS_NUM_FEEDS_CONSTANT]];
 	
-	[rssWidget setSingleRSSArray:rssArray];
+	//[rssWidget setSingleRSSArray:rssArray];
+	[rssWidget setRssFeed:rssFeed];
 	[rssWidget setNUM_OF_FEEDS:numFeeds];
+	[rssWidget reloadRSS];
 }
 
 -(void)loadAppLauncherWidgetFromPrefs:(NSString*)widgetName widget:(WidgetAppLauncher*)appLauncherWidget {
@@ -151,9 +157,11 @@
 	//[userDefaults synchronize];
 }
 
--(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds {
+//-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds {
+-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssFeed:(NSString*)rssFeed numFeeds:(NSInteger)numFeeds {
 	//userDefaults = [NSUserDefaults standardUserDefaults];
-	[userDefaults setObject:rssArray forKey:[widgetName stringByAppendingString: WIDGET_RSS_ARRAY_CONSTANT]];
+	//[userDefaults setObject:rssArray forKey:[widgetName stringByAppendingString: WIDGET_RSS_ARRAY_CONSTANT]];
+	[userDefaults setObject:rssFeed forKey:[widgetName stringByAppendingString: WIDGET_RSS_FEED_CONSTANT]];
 	[userDefaults setInteger:numFeeds forKey:[widgetName stringByAppendingString: WIDGET_RSS_NUM_FEEDS_CONSTANT]];
 	//[userDefaults synchronize];
 }

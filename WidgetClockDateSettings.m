@@ -26,7 +26,7 @@
 
 - (void)saveAction:(id)sender {
 	[clockDateWidget setTimeFormat:timeFormatTextField.text];
-	[clockDateWidget viewDidLoad];
+	[clockDateWidget reloadClock];
 	[super saveAction:sender];
 }
 

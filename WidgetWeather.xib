@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">528</int>
-		<string key="IBDocument.SystemVersion">9J61</string>
+		<string key="IBDocument.SystemVersion">9G55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.46</string>
+		<string key="IBDocument.AppKitVersion">949.43</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -80,9 +80,9 @@
 							<double key="NSSize">1.300000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="835233670">
+						<object class="NSColor" key="IBUITextColor" id="1041870738">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
+							<bytes key="NSRGB">MSAxIDEAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -103,7 +103,7 @@
 							<double key="NSSize">1.000000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -119,7 +119,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Sunrise:</string>
 						<reference key="IBUIFont" ref="119103801"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -135,7 +135,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Sunset:</string>
 						<reference key="IBUIFont" ref="119103801"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -155,7 +155,7 @@
 							<double key="NSSize">1.000000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -171,7 +171,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">N/A</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -187,7 +187,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">N/A</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -207,7 +207,7 @@
 							<double key="NSSize">3.600000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -227,7 +227,7 @@
 							<double key="NSSize">1.200000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -243,7 +243,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Partly Cloudy</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -260,7 +260,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">0-0</string>
 						<reference key="IBUIFont" ref="707468309"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -276,7 +276,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Partly Cloudy</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -293,7 +293,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Fri</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -309,7 +309,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Sat</string>
 						<reference key="IBUIFont" ref="115242148"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -325,7 +325,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Like:</string>
 						<reference key="IBUIFont" ref="119103801"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -345,7 +345,7 @@
 							<double key="NSSize">1.100000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -382,14 +382,14 @@
 					<object class="IBUILabel" id="613597568">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{7, 5}, {89, 19}}</string>
+						<string key="NSFrame">{{12, 5}, {89, 19}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Stanford, CA</string>
 						<reference key="IBUIFont" ref="303405737"/>
-						<reference key="IBUITextColor" ref="835233670"/>
+						<reference key="IBUITextColor" ref="1041870738"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>

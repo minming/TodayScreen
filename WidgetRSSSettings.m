@@ -26,9 +26,10 @@
 
 - (void)saveAction:(id)sender {
 	[rssWidget setRssFeed:rssField.text];
-	[rssWidget setNUM_OF_FEEDS:(NSInteger)numFeedsField.text];
+	[rssWidget setNUM_OF_FEEDS:(int)numFeedsField.text];
 	[rssWidget resetStories];
-	[rssWidget viewDidLoad];
+	[rssWidget reloadRSS];
+	//[rssWidget viewDidLoad];
 	
 	[super saveAction:sender];
 }

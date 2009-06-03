@@ -34,4 +34,7 @@
 - (void)buttonAction:(id)sender;
 - (void)parseXMLFileAtURL:(NSString *)URL;
 -(id)initWithSuperTableController:(UITableViewController*)superViewController numFeeds:(NSInteger)num;
+
+
+- (void)reloadRSS;
 @end

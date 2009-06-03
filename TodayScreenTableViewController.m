@@ -284,7 +284,7 @@
 		} else if ([widget class] == [WidgetClockDate class]) {
 			[userDefaults writeClockWidgetPrefs:[@"clockDateWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] timeFormat:[(WidgetClockDate*) widget timeFormat] dateFormat:[(WidgetClockDate*) widget dateFormat]];
 		} else if ([widget class] == [WidgetRSS class]) {
-			[userDefaults writeRSSWidgetPrefs:[@"rssWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] rssArray:[(WidgetRSS*) widget singleRSSArray] numFeeds:[(WidgetRSS*)widget NUM_OF_FEEDS]];
+			[userDefaults writeRSSWidgetPrefs:[@"rssWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] rssFeed:[(WidgetRSS*)widget rssFeed] numFeeds:[(WidgetRSS*)widget NUM_OF_FEEDS]];
 		} else if ([widget class] == [WidgetAppLauncher class]) {
 			[userDefaults writeAppLauncherWidgetPrefs:[@"appLauncherWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] appArray:[(WidgetAppLauncher*)widget AppShortcuts] appNumRows:[(WidgetAppLauncher*)widget numRows]];
 		} else if ([widget class] == [WidgetContact class]) {

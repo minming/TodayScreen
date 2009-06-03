@@ -28,7 +28,8 @@
 -(void)writeWidgetArrayPrefs:(NSArray*)widgetsArray;
 -(void)writeWeatherWidgetPrefs:(NSString*)widgetName zipCode:(NSString*)zipCode;
 -(void)writeClockWidgetPrefs:(NSString*)widgetName timeFormat:(NSString*)timeFormat dateFormat:(NSString*)dateFormat;
--(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds;
+//-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds;
+-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssFeed:(NSString*)rssFeed numFeeds:(NSInteger)numFeeds;
 -(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows;
 -(void)writeContactWidgetPrefs:(NSString*)widgetName contacts:(NSArray*)contacts;
 

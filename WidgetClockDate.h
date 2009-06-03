@@ -28,4 +28,7 @@
 
 - (void)editSettingsAction:(id)sender;
 -(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value;
+
+-(void)reloadClock;
+
 @end

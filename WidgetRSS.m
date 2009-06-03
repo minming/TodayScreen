@@ -24,7 +24,6 @@
 	if (self = [super init]) {
 		tableViewController = superViewController;
 		[tableViewController retain];
-		
 		singleRSSArray = [[NSMutableArray alloc] init];
 		[self setNUM_OF_FEEDS:num];
 		[self setRssFeed:DEFAULT_FEED];
@@ -39,12 +38,18 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	NSLog(@"NUM FEEDS: %d", NUM_OF_FEEDS);
 	self.view.backgroundColor = [UIColor clearColor];
 	//self.NUM_OF_FEEDS = 3; //temp set for testing
 	if ([stories count] == 0 || stories == nil) {
 		[self parseXMLFileAtURL:rssFeed];
 	}
 	
+}
+
+- (void)reloadRSS {
+	[self.view setNeedsLayout];
+	[tableViewController.tableView reloadData];
 }
 
 -(void)resetStories {
@@ -121,7 +126,12 @@
 
 - (void)parseXMLFileAtURL:(NSString *)URL
 {	
+	if (URL == "" || URL == nil) {
+		return;
+	}
+	
 	stories = [[NSMutableArray alloc] init];
+	
 	
     //you must then convert the path to a proper NSURL or it won't work
     NSURL *xmlURL = [NSURL URLWithString:URL];

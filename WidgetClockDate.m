@@ -80,6 +80,11 @@
 	 */
 }  
 
+-(void)reloadClock {
+	[myTicker release];
+	[self runTimer]; 
+}
+
 /*
  a:	AM/PM
  A:	0~86399999 (Millisecond of Day)
