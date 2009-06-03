@@ -26,6 +26,9 @@
     [window makeKeyAndVisible];
 }
 
+- (void)applicationWillTerminate:(UIApplication *)application {
+	[[todayScreenView todayScreenTableViewController] saveUserPrefs];
+}
 
 - (void)dealloc {
 	[todayScreenView release];

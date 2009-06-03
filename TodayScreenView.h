@@ -15,6 +15,8 @@
 	IBOutlet UIView* tableView;
 }
 
+@property (assign) TodayScreenTableViewController* todayScreenTableViewController;
+
 - (void)AddNewWidgetViewController:(AddNewWidgetViewController *)controller widgetType:(NSInteger) widgetType;
 - (void)showModalAddWindow:(id)sender;
 - (void)cancelAddWidget;

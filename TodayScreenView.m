@@ -14,6 +14,8 @@
 
 @implementation TodayScreenView
 
+@synthesize todayScreenTableViewController;
+
 - (void)showModalGeneralSettingsView:(id)sender {
 	TodayScreenGeneralSettings *todayScreenGeneralSettings = [[TodayScreenGeneralSettings alloc] init];
     //aboutTodayScreen.delegate = self;

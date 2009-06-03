@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AddNewWidgetViewController.h"
-
+#import "UserDefaults.h"
 
 @interface TodayScreenTableViewController : UITableViewController {
 	NSMutableArray *widgetsArray;
 	
 	bool settingsMode;
+	
+	UserDefaults* userDefaults;
 	//UIImageView *bgImageView;
 }
 
@@ -22,5 +24,6 @@
 //@property (nonatomic, copy) UIImageView *bgImageView;
 
 -(void) addNewWidget:(NSInteger)widgetType;
+-(void)saveUserPrefs;
 
 @end

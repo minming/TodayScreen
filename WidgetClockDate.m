@@ -12,7 +12,7 @@
 
 @implementation WidgetClockDate
 
-//@synthesize dateFormat;
+@synthesize dateFormat;
 @synthesize timeFormat;
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value {

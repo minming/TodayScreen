@@ -55,8 +55,16 @@
 /*
  * Methods to load user preferences
  */
--(void)loadWeatherWidgetFromPrefs:(NSString*)widgetName widget:(WidgetWeather*)weatherWidget {
+-(NSMutableArray*)getWidgetsArrayFromPrefs {
 	[NSUserDefaults resetStandardUserDefaults];
+	userDefaults = [NSUserDefaults standardUserDefaults];
+	NSMutableArray* widgetsNameArray = [userDefaults objectForKey:@"widgetsNameArray"];
+	
+	return widgetsNameArray;
+}
+
+-(void)loadWeatherWidgetFromPrefs:(NSString*)widgetName widget:(WidgetWeather*)weatherWidget {
+	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSString* zipCode = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_WEATHER_ZIP_CODE_CONSTANT]];
 	
@@ -64,7 +72,7 @@
 }
 
 -(void)loadClockWidgetFromPrefs:(NSString*)widgetName widget:(WidgetClockDate*)clockWidget {
-	[NSUserDefaults resetStandardUserDefaults];
+	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSString* timeFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
 	//NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
@@ -74,7 +82,7 @@
 }
 
 -(void)loadRSSWidgetFromPrefs:(NSString*)widgetName widget:(WidgetRSS*)rssWidget {
-	[NSUserDefaults resetStandardUserDefaults];
+	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSMutableArray* rssArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_RSS_ARRAY_CONSTANT]];
 	NSInteger numFeeds = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_RSS_NUM_FEEDS_CONSTANT]];
@@ -84,7 +92,7 @@
 }
 
 -(void)loadAppLauncherWidgetFromPrefs:(NSString*)widgetName widget:(WidgetAppLauncher*)appLauncherWidget {
-	[NSUserDefaults resetStandardUserDefaults];
+	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSMutableArray* appShortcuts = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	NSInteger numRows = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
@@ -94,7 +102,7 @@
 }
 
 -(void)loadContactWidgetFromPrefs:(NSString*)widgetName widget:(WidgetContact*)contactWidget {
-	[NSUserDefaults resetStandardUserDefaults];
+	//[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSMutableArray* contactsArray = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_CONTACTS_ARRAY_CONSTANT]];
 	
@@ -104,38 +112,63 @@
 /*
  * Begin writing user prefs
  */
+-(void)writeWidgetArrayPrefs:(NSArray*)widgetsArray {
+	userDefaults = [NSUserDefaults standardUserDefaults];
+	NSInteger i = 0;
+	NSMutableArray* widgetsNameArray = [[NSMutableArray alloc] init];
+	for(WidgetViewControllerSuperClass* widget in widgetsArray) {
+		if([widget class] == [WidgetWeather class]) {
+			[widgetsNameArray addObject:[@"weatherWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		} else if ([widget class] == [WidgetClockDate class]) {
+			[widgetsNameArray addObject:[@"clockDateWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		} else if ([widget class] == [WidgetRSS class]) {
+			[widgetsNameArray addObject:[@"rssWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		} else if ([widget class] == [WidgetAppLauncher class]) {
+			[widgetsNameArray addObject:[@"appLauncherWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		} else if ([widget class] == [WidgetContact class]) {
+			[widgetsNameArray addObject:[@"contactWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		} else if ([widget class] == [WidgetFlipClockDate class]) {
+			[widgetsNameArray addObject:[@"flipClockDateWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]]];
+		}
+		i++;
+	}
+	NSLog(@"Widgets Name Array: %@", widgetsNameArray);
+	[userDefaults setObject:widgetsNameArray forKey:@"widgetsNameArray"];
+	[userDefaults synchronize];
+	[widgetsNameArray release];
+}
 
 -(void)writeWeatherWidgetPrefs:(NSString*)widgetName zipCode:(NSString*)zipCode {
-	userDefaults = [NSUserDefaults standardUserDefaults];
+	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:zipCode forKey:[widgetName stringByAppendingString: WIDGET_WEATHER_ZIP_CODE_CONSTANT]];
-	[userDefaults synchronize];
+	//[userDefaults synchronize];
 }
 
 -(void)writeClockWidgetPrefs:(NSString*)widgetName timeFormat:(NSString*)timeFormat dateFormat:(NSString*)dateFormat {
-	userDefaults = [NSUserDefaults standardUserDefaults];
+	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:timeFormat forKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
 	[userDefaults setObject:dateFormat forKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
-	[userDefaults synchronize];
+	//[userDefaults synchronize];
 }
 
 -(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds {
-	userDefaults = [NSUserDefaults standardUserDefaults];
+	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:rssArray forKey:[widgetName stringByAppendingString: WIDGET_RSS_ARRAY_CONSTANT]];
 	[userDefaults setInteger:numFeeds forKey:[widgetName stringByAppendingString: WIDGET_RSS_NUM_FEEDS_CONSTANT]];
-	[userDefaults synchronize];
+	//[userDefaults synchronize];
 }
 
 -(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows {
-	userDefaults = [NSUserDefaults standardUserDefaults];
+	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:appShortcuts forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	[userDefaults setInteger:appNumRows forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
-	[userDefaults synchronize];
+	//[userDefaults synchronize];
 }
 
 -(void)writeContactWidgetPrefs:(NSString*)widgetName contacts:(NSArray*)contacts {
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:contacts forKey:[widgetName stringByAppendingString: WIDGET_CONTACTS_ARRAY_CONSTANT]];
-	[userDefaults synchronize];
+	//[userDefaults synchronize];
 }
 
 - (void) dealloc {

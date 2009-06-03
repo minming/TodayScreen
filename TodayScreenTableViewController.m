@@ -39,6 +39,8 @@
 	if (self = [super initWithStyle:style]) {
 		settingsMode = NO;
 		widgetsArray = [[NSMutableArray alloc] init];
+		
+		userDefaults = [[UserDefaults alloc] init];
 		[self initWidgetsArray];
     }
     return self;
@@ -46,7 +48,7 @@
 
 - (void)dealloc {
 	[widgetsArray release];
-	//[bgImageView release];// forKeyPath:<#(NSString *)keyPath#>
+	//[bgImageView release];
     [super dealloc];
 }
 
@@ -69,11 +71,39 @@
 }
 
 -(void) initWidgetsArray {
-	[self addNewWidget:WIDGET_FLIP_CLOCK];
-	[self addNewWidget:WIDGET_CLOCK];
-	[self addNewWidget:WIDGET_WEATHER];
-	[self addNewWidget:WIDGET_RSS];
-	[self addNewWidget:WIDGET_APPLAUNCHER];
+	NSMutableArray* widgetsNameArray = [userDefaults getWidgetsArrayFromPrefs];
+	if([widgetsNameArray count] > 0) {
+		for(NSString* widgetName in widgetsNameArray) {
+			NSLog(@"Widget name: %@", widgetName);
+			
+			if([widgetName rangeOfString:@"weatherWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_WEATHER];
+				[userDefaults loadWeatherWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} else if ([widgetName rangeOfString:@"clockDateWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_CLOCK];
+				[userDefaults loadClockWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} else if ([widgetName rangeOfString:@"rssWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_RSS];
+				[userDefaults loadRSSWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} else if ([widgetName rangeOfString:@"appLauncherWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_APPLAUNCHER];
+				[userDefaults loadAppLauncherWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} else if ([widgetName rangeOfString:@"contactWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_CONTACT];
+				[userDefaults loadContactWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} else if ([widgetName rangeOfString:@"flipClockDateWidget"].location != NSNotFound) {
+				[self addNewWidget:WIDGET_FLIP_CLOCK];
+				//[userDefaults loadFlipClockWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+			} 
+		}
+	} else {	
+		[self addNewWidget:WIDGET_FLIP_CLOCK];
+		[self addNewWidget:WIDGET_CLOCK];
+		[self addNewWidget:WIDGET_WEATHER];
+		[self addNewWidget:WIDGET_RSS];
+		[self addNewWidget:WIDGET_APPLAUNCHER];
+	}
+	[self.tableView reloadData];
 	//addNewWidget:WIDGET_CONTACT;
 }
 
@@ -199,21 +229,6 @@
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
-{  
-    WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
-	return [temp getHeight];
-}  
-
-- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-	//[tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor blueColor];
-}
-
-
 #pragma mark -
 #pragma mark edit, delete cells methods
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath 
@@ -240,6 +255,46 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
+{  
+    WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
+	return [temp getHeight];
+}  
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+}
+
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+	//[tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor blueColor];
+}
+
+#pragma mark -
+#pragma mark user defaults methods
+
+-(void)saveUserPrefs {
+	NSLog(@"called save");
+	
+	NSInteger i = 0;
+	for(WidgetViewControllerSuperClass* widget in widgetsArray) {
+		if([widget class] == [WidgetWeather class]) {
+			[userDefaults writeWeatherWidgetPrefs:[@"weatherWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] zipCode:[(WidgetWeather*)widget zipCode]];
+		} else if ([widget class] == [WidgetClockDate class]) {
+			[userDefaults writeClockWidgetPrefs:[@"clockDateWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] timeFormat:[(WidgetClockDate*) widget timeFormat] dateFormat:[(WidgetClockDate*) widget dateFormat]];
+		} else if ([widget class] == [WidgetRSS class]) {
+			[userDefaults writeRSSWidgetPrefs:[@"rssWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] rssArray:[(WidgetRSS*) widget singleRSSArray] numFeeds:[(WidgetRSS*)widget NUM_OF_FEEDS]];
+		} else if ([widget class] == [WidgetAppLauncher class]) {
+			[userDefaults writeAppLauncherWidgetPrefs:[@"appLauncherWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] appArray:[(WidgetAppLauncher*)widget AppShortcuts] appNumRows:[(WidgetAppLauncher*)widget numRows]];
+		} else if ([widget class] == [WidgetContact class]) {
+			[userDefaults writeContactWidgetPrefs:[@"contactWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] contacts:[(WidgetContact*) widget contactsArray]];
+		}
+		
+		i++;
+	}
+	[userDefaults writeWidgetArrayPrefs:widgetsArray];
+	NSLog(@"User defaults: %@", userDefaults);
 }
 
 @end

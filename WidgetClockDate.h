@@ -14,13 +14,13 @@
 	IBOutlet UILabel *dateLabel;	
     NSTimer *myTicker;  
 	
-	//NSString *dateFormat;
+	NSString *dateFormat;
 	NSString *timeFormat;
 	
 	NSInteger rowHeight;
 }
 
-//@property (copy) NSString* dateFormat;
+@property (copy) NSString* dateFormat;
 @property (copy) NSString* timeFormat;
 
 - (void)runTimer;  
