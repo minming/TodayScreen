@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "WidgetSettingsSuperClass.h"
+#import "WidgetClockDate.h"
 
-
-@interface WidgetClockDateSettings : UIViewController {
-
+@interface WidgetClockDateSettings : WidgetSettingsSuperClass {
+	IBOutlet UITextField* timeFormatTextField;
+	WidgetClockDate* clockDateWidget;
 }
 
 @end

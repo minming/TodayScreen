@@ -18,4 +18,7 @@
 @property (nonatomic, retain) UIScrollView *mainContentScrollView;
 @property (nonatomic, retain) UIView *mainContentView;
 
+- (void)cancelAction:(id)sender;
+- (void)saveAction:(id)sender;
+
 @end

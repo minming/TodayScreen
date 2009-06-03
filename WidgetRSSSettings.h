@@ -10,7 +10,7 @@
 #import "WidgetSettingsSuperClass.h"
 #import "WidgetRSS.h"
 
-@interface WidgetRSSSettings : UIViewController {
+@interface WidgetRSSSettings : WidgetSettingsSuperClass {
 	IBOutlet UITextField* rssField;
 	IBOutlet UITextField* numFeedsField;
 	

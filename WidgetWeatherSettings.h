@@ -10,7 +10,7 @@
 #import "WidgetSettingsSuperClass.h"
 #import "WidgetWeather.h"
 
-@interface WidgetWeatherSettings : UIViewController {
+@interface WidgetWeatherSettings : WidgetSettingsSuperClass {
 	IBOutlet UITextField* zipCodeField;
 	WidgetWeather* weatherWidget;
 }

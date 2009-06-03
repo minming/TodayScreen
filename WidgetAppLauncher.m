@@ -9,6 +9,8 @@
 #import "WidgetAppLauncher.h"
 #import "GlobalFunctions.h"
 
+#import "WidgetSettingsNavigationController.h"
+#import "WidgetAppLauncherSettings.h"
 
 @implementation WidgetAppLauncher
 
@@ -59,7 +61,7 @@
 	int rowFactor = 0;
 	int heightFactor = 0;
 	int buttonsPerRow = 4;
-	for (int i=0; i<7; i++) {
+	for (int i=0; i<[AppShortcuts count]; i++) {
 		longButton = [[WidgetComponent_LongButton alloc] init];
 		[self.view addSubview:longButton.view]; 
 		longButton.view.frame = CGRectMake(rowFactor*75.0+10.0, heightFactor*30.0+10.0, 60.0, 40.0);
@@ -103,6 +105,21 @@
     // Release anything that's not essential, such as cached data
 }
 
+-(void)addURL:(NSString*)url name:(NSString*)name {
+	AppShortcut* newShortcut = [[AppShortcut alloc] initWithTitle:name url:url image: [url stringByAppendingString:@"/favicon.ico"]];
+	[AppShortcuts addObject:newShortcut];
+}
+
+- (void)editSettingsAction:(id)sender {
+	NSLog(@"SETTINGS");
+	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
+	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	WidgetAppLauncherSettings *widgetAppLauncherSettings = [[WidgetAppLauncherSettings alloc] initWithWidget:self];
+	[navController pushViewController:widgetAppLauncherSettings animated:YES];
+	[tableViewController presentModalViewController:navController animated:YES];
+	[navController release];
+	[widgetAppLauncherSettings release];
+}
 
 - (void)dealloc {
     for(WidgetComponent_LongButton *WidgetComponent_LongButton in longButtonArray) {

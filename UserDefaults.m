@@ -67,7 +67,7 @@
 	[NSUserDefaults resetStandardUserDefaults];
 	userDefaults = [NSUserDefaults standardUserDefaults];
 	NSString* timeFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
-	NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
+	//NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
 	
 	[clockWidget setTimeFormat:timeFormat];
 	//[clockWidget setDateFormat:dateFormat];

@@ -32,4 +32,6 @@
 @property (nonatomic, copy) NSMutableArray *AppShortcuts;
 @property NSInteger numRows;
 
+-(void)addURL:(NSString*)url name:(NSString*)name;
+
 @end

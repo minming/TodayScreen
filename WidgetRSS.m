@@ -42,10 +42,13 @@
 	self.view.backgroundColor = [UIColor clearColor];
 	//self.NUM_OF_FEEDS = 3; //temp set for testing
 	if ([stories count] == 0 || stories == nil) {
-		//NSString * path = @"http://www.engadget.com/rss.xml";
 		[self parseXMLFileAtURL:rssFeed];
 	}
 	
+}
+
+-(void)resetStories {
+	[stories removeAllObjects];
 }
 
 - (void)showRSS {

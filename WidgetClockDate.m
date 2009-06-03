@@ -8,23 +8,12 @@
 
 #import "WidgetClockDate.h"
 #import "WidgetClockDateSettings.h"
-//#import "WidgetSettingsSuperClass.h"
 #import "WidgetSettingsNavigationController.h"
 
 @implementation WidgetClockDate
 
 //@synthesize dateFormat;
 @synthesize timeFormat;
-
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value {
 	if (self = [super init]) {
@@ -45,14 +34,8 @@
 	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] init];
 	[navController pushViewController:widgetClockDateSettings animated:YES];
-	[self presentModalViewController:navController animated:YES];
+	[tableViewController presentModalViewController:navController animated:YES];
 }
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {

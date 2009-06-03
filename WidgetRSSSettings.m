@@ -22,29 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"RSS Settings";
-	
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveAction:)];
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];	
-	self.navigationItem.rightBarButtonItem = saveButton;	
-	self.navigationItem.leftBarButtonItem = cancelButton;
-	[saveButton release];	
-}
-
-- (void)cancelAction:(id)sender
-{
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)saveAction:(id)sender {
 	[rssWidget setRssFeed:rssField.text];
-	[rssWidget setNUM_OF_FEEDS:numFeedsField.text.integerValue];
+	[rssWidget setNUM_OF_FEEDS:(NSInteger)numFeedsField.text];
+	[rssWidget resetStories];
 	[rssWidget viewDidLoad];
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+	
+	[super saveAction:sender];
 }
 
 
