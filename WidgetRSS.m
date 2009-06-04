@@ -32,7 +32,11 @@
 }
 
 - (int)getHeight {
-	return [self NUM_OF_FEEDS]*40+20;
+	if ([self NUM_OF_FEEDS] > 0 && [self NUM_OF_FEEDS] < 10) {
+		return [self NUM_OF_FEEDS]*40+20;
+	} else {
+		return 40;
+	}
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -44,6 +48,38 @@
 	if ([stories count] == 0 || stories == nil) {
 		[self parseXMLFileAtURL:rssFeed];
 	}
+	
+}
+
+-(void)changeSettingsAndReload:(NSString*)feedURL numFeeds:(int)num {
+	NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
+	if ([feedURL length] == 0) {
+		feedURL = @"http://www.engadget.com/rss.xml";
+	}
+	if (num == 0 || num > 10) {
+		num = 3;
+	}
+	NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
+	self.rssFeed = feedURL;
+	self.NUM_OF_FEEDS = num;
+	//[stories removeAllObjects];
+	/*
+	 for (int i=0; i<[singleRSSArray count];i++) {
+		WidgetComponent_SingleRSS *single = [stories objectAtIndex:i];
+		//[single.view retain];
+		[single.view removeFromSuperview];
+		//[single release];
+	}
+	*/
+	
+	//for (UIView *view in self.view.subviews) {
+	//	[self.view removeFromSuperview];
+	//}
+	[singleRSSArray removeAllObjects];
+	[stories removeAllObjects];
+	[self parseXMLFileAtURL:rssFeed];
+	[self.view setNeedsDisplay];
+	[tableViewController.tableView reloadData];
 	
 }
 
@@ -65,24 +101,14 @@
 				//[singleRSS.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
 				[self.view addSubview:singleRSS.view];
 				singleRSS.view.frame = CGRectMake(0.0, i*40.0+10.0, 320.0, 50.0);
-				
-				//NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];  
-				//NSDate *date = [formatter dateFromString:[[stories objectAtIndex: i] objectForKey: @"date"]];  
-				//[formatter setDateFormat:@"HH:mm"];
-				//NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];  
-				//[dateFormatter setDateFormat:@"dd MMM"];
-				
-				//[formatter setTimeStyle:NSDateFormatterShortStyle];  
-				//[timeLabel setText:[formatter stringFromDate:date]];  
-				
-				
+				NSLog(@"SHOWING RSS: %@", [[stories objectAtIndex: i] objectForKey: @"title"]);
 				singleRSS.titleLabel.text = [[stories objectAtIndex: i] objectForKey: @"title"];
 				//singleRSS.dateLabel.text = [dateFormatter stringFromDate:date];
 				//singleRSS.timeLabel.text = [formatter stringFromDate:date];
 				singleRSS.datetimeLabel.text = [[stories objectAtIndex: i] objectForKey: @"date"];
 				singleRSS.url = [[stories objectAtIndex:i] objectForKey:@"link"];
 				
-				[singleRSS.view setNeedsLayout];
+				[singleRSS.view setNeedsDisplay];
 				[singleRSSArray addObject:singleRSS];
 				[singleRSS release];
 			}
@@ -126,8 +152,9 @@
 
 - (void)parseXMLFileAtURL:(NSString *)URL
 {	
-	if (URL == "" || URL == nil) {
-		return;
+	NSLog(@"PARSING RSS: %@" , URL);
+	if ([URL length] == 0) {
+		URL = @"http://www.engadget.com/rss.xml";
 	}
 	
 	stories = [[NSMutableArray alloc] init];

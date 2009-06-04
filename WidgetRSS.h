@@ -35,6 +35,6 @@
 - (void)parseXMLFileAtURL:(NSString *)URL;
 -(id)initWithSuperTableController:(UITableViewController*)superViewController numFeeds:(NSInteger)num;
 
-
+-(void)changeSettingsAndReload:(NSString*)feedURL numFeeds:(int)num;
 - (void)reloadRSS;
 @end

@@ -39,15 +39,17 @@
 	if (self = [super initWithStyle:style]) {
 		settingsMode = NO;
 		widgetsArray = [[NSMutableArray alloc] init];
+		[self initWidgetsArray];
 		
 		userDefaults = [[UserDefaults alloc] init];
-		[self initWidgetsArray];
     }
     return self;
 }
 
 - (void)dealloc {
 	[widgetsArray release];
+	[userDefaults release];
+
 	//[bgImageView release];
     [super dealloc];
 }
@@ -71,10 +73,12 @@
 }
 
 -(void) initWidgetsArray {
+	NSLog(@"--- INIT WIDGETS ---");
+	
 	NSMutableArray* widgetsNameArray = [userDefaults getWidgetsArrayFromPrefs];
 	if([widgetsNameArray count] > 0) {
 		for(NSString* widgetName in widgetsNameArray) {
-			NSLog(@"Widget name: %@", widgetName);
+			NSLog(@"Init Stage - Widget name: %@", widgetName);
 			
 			if([widgetName rangeOfString:@"weatherWidget"].location != NSNotFound) {
 				[self addNewWidget:WIDGET_WEATHER];
@@ -97,6 +101,7 @@
 			} 
 		}
 	} else {	
+		NSLog(@"Init Stage - No widgets found from user preferences");
 		[self addNewWidget:WIDGET_FLIP_CLOCK];
 		[self addNewWidget:WIDGET_CLOCK];
 		[self addNewWidget:WIDGET_WEATHER];

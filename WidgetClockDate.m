@@ -32,7 +32,7 @@
 	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] init];
+	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] initWithWidget:self];
 	[navController pushViewController:widgetClockDateSettings animated:YES];
 	[tableViewController presentModalViewController:navController animated:YES];
 }
@@ -48,6 +48,8 @@
 - (void)runTimer {  
 	// This starts the timer which fires the showActivity  
 	// method every 0.5 seconds  
+	NSLog(@"RRRRRRRRRRRRR");
+
 	myTicker = [NSTimer scheduledTimerWithTimeInterval: 0.5  
 												target: self  
 											  selector: @selector(showActivity)  
@@ -79,6 +81,14 @@
 	[dateLabel setFont:[UIFont systemFontOfSize:FONT_SIZE]];
 	 */
 }  
+
+-(void)changeSettingsAndReload:(NSString*)format {
+	NSLog(@"CCCCCCCCCCCCCCCCC");
+	self.timeFormat = format;
+	//[myTicker release];
+	[self runTimer]; 
+	//[self.view setNeedsLayout];
+}
 
 -(void)reloadClock {
 	[myTicker release];

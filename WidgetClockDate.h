@@ -30,5 +30,6 @@
 -(id) initWithSuperTableController:(UITableViewController*)superViewController timeFormat:(NSString*) value;
 
 -(void)reloadClock;
+-(void)changeSettingsAndReload:(NSString*)format;
 
 @end

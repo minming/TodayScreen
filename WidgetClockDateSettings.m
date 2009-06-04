@@ -25,8 +25,16 @@
 }
 
 - (void)saveAction:(id)sender {
-	[clockDateWidget setTimeFormat:timeFormatTextField.text];
-	[clockDateWidget reloadClock];
+	
+	NSLog(@"saveaction");
+	[clockDateWidget changeSettingsAndReload:timeFormatTextField.text];
+	
+	//[clockDateWidget setTimeFormat:timeFormatTextField.text];
+	//[clockDateWidget reloadClock];
+	
+	//UserDefaults *userDefaults = [[UserDefaults alloc] init];
+	//[userDefaults writeClockWidgetPrefs:[@"clockDateWidget" stringByAppendingString:[NSString stringWithFormat:@"%d", i]] timeFormat:[(WidgetClockDate*) widget timeFormat] dateFormat:[(WidgetClockDate*) widget dateFormat]];
+	
 	[super saveAction:sender];
 }
 
