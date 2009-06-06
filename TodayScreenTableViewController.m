@@ -39,9 +39,9 @@
 	if (self = [super initWithStyle:style]) {
 		settingsMode = NO;
 		widgetsArray = [[NSMutableArray alloc] init];
-		[self initWidgetsArray];
-		
 		userDefaults = [[UserDefaults alloc] init];
+		
+		[self initWidgetsArray];
     }
     return self;
 }
@@ -49,7 +49,6 @@
 - (void)dealloc {
 	[widgetsArray release];
 	[userDefaults release];
-
 	//[bgImageView release];
     [super dealloc];
 }
@@ -64,8 +63,6 @@
 	//bgImageView.frame = CGRectMake(0, 0, 320.0, 480.0);
 	//bgImageView.image = [UIImage imageNamed:@"bg1.jpg"];
 	//[self.view addSubview:bgImageView];
-	
-	
 	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1.jpg"]];
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -98,9 +95,9 @@
 			} else if ([widgetName rangeOfString:@"flipClockDateWidget"].location != NSNotFound) {
 				[self addNewWidget:WIDGET_FLIP_CLOCK];
 				//[userDefaults loadFlipClockWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
-			} 
+			}
 		}
-	} else {	
+	} else {
 		NSLog(@"Init Stage - No widgets found from user preferences");
 		[self addNewWidget:WIDGET_FLIP_CLOCK];
 		[self addNewWidget:WIDGET_CLOCK];
@@ -156,6 +153,7 @@
 			NSLog(@"Add contact");
 			WidgetContact *contact = [[WidgetContact alloc] initWithSuperTableController:self];
 			[self.widgetsArray addObject:contact];
+			[contact release];
 			break;
 		}
 		default:
@@ -167,10 +165,8 @@
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+    [super didReceiveMemoryWarning]; 
 }
-
 
 #pragma mark Table view methods
 
@@ -194,37 +190,30 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
 		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-		//[cell setBackgroundView:UITableViewStylePlain];
 		[cell setShouldIndentWhileEditing:NO];
 		cell.clipsToBounds = YES;
 		cell.contentView.clipsToBounds = YES;
     }
 	
+	
 	cell.accessoryType = UITableViewCellAccessoryNone;
+	for (UIView *view in cell.contentView.subviews) {
+		[view removeFromSuperview];
+	}
+	
 	if(settingsMode == YES) {
 		NSLog(@"SETTINGS MODE");
 		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 		cell.contentView.alpha = 0.5;
 	} else if (cell.editing == YES) {
 		NSLog(@"EDITING MODE");
-		//cell.contentView.backgroundColor  = [[UIColor blackColor] colorWithAlphaComponent:0.5];
 		cell.contentView.alpha = 0.5;
-		//while( [cell.contentView.subviews count] ){
-		//	id subview = [cell.contentView.subviews objectAtIndex:0];
-		//	[subview removeFromSuperview];	
-		//}//while
-		//cell.text = @"EDIT MODE FOR...";
-		//tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-	}
-	//if (cell.tag != 10) {
-	else {
-		//cell.text = @"";
-		//cell.contentView.backgroundColor  = [UIColor clearColor];
-		cell.contentView.alpha = 1.0;
+	} else {
 		NSLog(@"ADDING MODE");
-		[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
-		//[cell setTag:10];
+		cell.contentView.alpha = 1.0;
 	}
+	
+	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
     return cell;
 }
 

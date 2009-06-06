@@ -10,12 +10,7 @@
 #import "WidgetComponent_LongButton.h"
 #import "AppShortcut.h"
 #import "WidgetViewControllerSuperClass.h"
-
-/*typedef struct AppShortcut {
-	NSString *title;
-	NSString *url;
-	NSString *image;
-} AppShortcut;*/
+#import "CachedImages.h"
 
 @interface WidgetAppLauncher : WidgetViewControllerSuperClass {
 	WidgetComponent_LongButton *longButton;
@@ -24,8 +19,9 @@
 	NSMutableArray *AppShortcuts;
 	
 	NSInteger numRows;
-	//AppShortcut AppShortcuts[8];
 	
+	NSOperationQueue *operationQueue;    
+    CachedImages *cachedImages;
 }
 
 @property (nonatomic, copy) NSMutableArray *longButtonArray;

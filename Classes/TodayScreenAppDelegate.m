@@ -27,7 +27,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	[[todayScreenView todayScreenTableViewController] saveUserPrefs];
+	//[[todayScreenView todayScreenTableViewController] saveUserPrefs];
 }
 
 - (void)dealloc {

@@ -18,7 +18,7 @@
 	}
 	NSURL *url = [NSURL URLWithString:path];
 	NSData *data = [NSData dataWithContentsOfURL:url];
-	UIImage *img = [[UIImage alloc] initWithData:data cache:NO];
+	UIImage *img = [[UIImage alloc] initWithData:data];
 	return img;
 }
 

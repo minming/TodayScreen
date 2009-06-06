@@ -16,11 +16,13 @@
 	bool settingsMode;
 	
 	UserDefaults* userDefaults;
+	
 	//UIImageView *bgImageView;
 }
 
 @property (nonatomic, copy) NSMutableArray *widgetsArray;
 @property (nonatomic) bool settingsMode;
+
 //@property (nonatomic, copy) UIImageView *bgImageView;
 
 -(void) addNewWidget:(NSInteger)widgetType;

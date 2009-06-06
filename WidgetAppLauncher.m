@@ -12,6 +12,8 @@
 #import "WidgetSettingsNavigationController.h"
 #import "WidgetAppLauncherSettings.h"
 
+#import "TodayScreenTableViewController.h"
+
 @implementation WidgetAppLauncher
 
 @synthesize longButtonArray;
@@ -23,6 +25,10 @@
 		tableViewController = superViewController;
 		[tableViewController retain];
 		
+		operationQueue = [[NSOperationQueue alloc] init];
+		[operationQueue setMaxConcurrentOperationCount:1];
+		cachedImages = [[CachedImages alloc] init];
+		
 		longButtonArray = [[NSMutableArray alloc] init];
 		AppShortcuts = [[NSMutableArray alloc] init];
 		
@@ -33,6 +39,7 @@
 		AppShortcut* shortcut5 = [[AppShortcut alloc] initWithTitle:@"eBay" url:@"http://www.ebay.com" image:@"http://www.ebay.com/favicon.ico"];
 		AppShortcut* shortcut6 = [[AppShortcut alloc] initWithTitle:@"Live" url:@"http://www.live.com" image:@"http://www.live.com/favicon.ico"];
 		AppShortcut* shortcut7 = [[AppShortcut alloc] initWithTitle:@"Reader" url:@"http://www.google.com/reader" image: @""];
+	
 		
 		[AppShortcuts addObject:shortcut1];
 		[AppShortcuts addObject:shortcut2];
@@ -41,6 +48,14 @@
 		[AppShortcuts addObject:shortcut5];
 		[AppShortcuts addObject:shortcut6];
 		[AppShortcuts addObject:shortcut7];
+		
+		[shortcut1 release];
+		[shortcut2 release];
+		[shortcut3 release];
+		[shortcut4 release];
+		[shortcut5 release];
+		[shortcut6 release];
+		[shortcut7 release];
 	}
     return self;
 }
@@ -68,12 +83,12 @@
 		longButton.button.tag = i;
 		[longButton.button setTitle:[[AppShortcuts objectAtIndex:i] title] forState:UIControlStateNormal];
 		if ([[AppShortcuts objectAtIndex:i] image] != nil) {
-			[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
+			NSString * imageUrl = (NSString*)[[AppShortcuts objectAtIndex:i] image];
+			UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
+			if(image != nil)
+				[longButton.button setImage:image forState:UIControlStateNormal];
+			//[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
 		}
-		//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
-		//NSURL *url = [NSURL URLWithString:path];
-		//NSData *data = [NSData dataWithContentsOfURL:url];
-		//UIImage *img = [[UIImage alloc] initWithData:data cache:NO];
 		
 		[longButton.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
 		
@@ -88,30 +103,27 @@
 		} 
 	}
 	
- //[self.parentViewController.view setNeedsLayout];	
     [super viewDidLoad];
 }
 
 - (void)buttonAction:(id)sender {
 	UIButton *b = (UIButton*)sender;
-	//NSLog(@"clicked");
 	NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
 	[[UIApplication sharedApplication] openURL:url];
-	//[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://email@minming.net"]];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+	[cachedImages clearCachedImages];
+    [super didReceiveMemoryWarning];
 }
 
 -(void)addURL:(NSString*)url name:(NSString*)name {
 	AppShortcut* newShortcut = [[AppShortcut alloc] initWithTitle:name url:url image: [url stringByAppendingString:@"/favicon.ico"]];
 	[AppShortcuts addObject:newShortcut];
+	[newShortcut release];
 }
 
 - (void)editSettingsAction:(id)sender {
-	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetAppLauncherSettings *widgetAppLauncherSettings = [[WidgetAppLauncherSettings alloc] initWithWidget:self];
@@ -122,10 +134,14 @@
 }
 
 - (void)dealloc {
-    for(WidgetComponent_LongButton *WidgetComponent_LongButton in longButtonArray) {
-        //[WidgetComponent_LongButton removeFromSuperview];
+	for(WidgetComponent_LongButton *WidgetComponent_LongButton in longButtonArray) {
+        [WidgetComponent_LongButton.view removeFromSuperview];
     }
-    [longButtonArray release];	
+    [longButtonArray release];
+	
+	[cachedImages release];
+    [operationQueue release];
+	
     [super dealloc];
 }
 

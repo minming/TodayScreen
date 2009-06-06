@@ -74,9 +74,9 @@
 
 
 -(void) controlEditingTable:(id)sender {
-	if([todayScreenTableViewController isEditing] == NO) {
+	if([todayScreenTableViewController isEditing] == NO && [todayScreenTableViewController settingsMode] == NO) {
 		[self startEditingTable:sender];
-	} else {
+	} else if([todayScreenTableViewController isEditing] == YES) {
 		[self stopEditingTable:sender];
 	}
 }
@@ -101,9 +101,9 @@
 }
 
 -(void) controlSettingsMode:(id)sender {
-	if([todayScreenTableViewController settingsMode] == NO) {
+	if([todayScreenTableViewController settingsMode] == NO && [todayScreenTableViewController isEditing] == NO) {
 		[self startSettingsMode:sender];
-	} else {
+	} else if([todayScreenTableViewController settingsMode] == YES) {
 		[self stopSettingsMode:sender];
 	}
 }

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface WidgetViewControllerSuperClass : UIViewController {
 	//int widgetHeight;
 	UITableViewController *tableViewController;	// Pointer to the table controller that this widget is contained in
