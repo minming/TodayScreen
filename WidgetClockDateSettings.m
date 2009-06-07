@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"Clock Date Settings";
+	timeFormatTextField.text = clockDateWidget.timeFormat;
 }
 
 - (void)saveAction:(id)sender {

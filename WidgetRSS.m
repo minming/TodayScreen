@@ -72,9 +72,9 @@
 	}
 	*/
 	
-	//for (UIView *view in self.view.subviews) {
-	//	[self.view removeFromSuperview];
-	//}
+	for (UIView *view in self.view.subviews) {
+		[self.view removeFromSuperview];
+	}
 	[singleRSSArray removeAllObjects];
 	[stories removeAllObjects];
 	[self parseXMLFileAtURL:rssFeed];

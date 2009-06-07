@@ -22,12 +22,17 @@
 	
 	NSOperationQueue *operationQueue;    
     CachedImages *cachedImages;
+	
+	BOOL deleteMode;
 }
 
 @property (nonatomic, retain) NSMutableArray *longButtonArray;
 @property (nonatomic, retain) NSMutableArray *AppShortcuts;
 @property NSInteger numRows;
+@property BOOL deleteMode;
 
 -(void)addURL:(NSString*)url name:(NSString*)name;
+- (void)initAndDisplayButtons;
+- (void)resetAll;
 
 @end

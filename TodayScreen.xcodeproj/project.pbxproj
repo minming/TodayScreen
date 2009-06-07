@@ -325,14 +325,14 @@
 				8E6B414E0FD2378C00EB77B2 /* WidgetSettingsSuperClass.m */,
 				8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */,
 				8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */,
+				4827CDA80FD5FB3B009E6C2A /* WidgetAppLauncherSettings.h */,
+				4827CDA90FD5FB3B009E6C2A /* WidgetAppLauncherSettings.m */,
 				8E6B41570FD2391A00EB77B2 /* WidgetClockDateSettings.h */,
 				8E6B41580FD2391A00EB77B2 /* WidgetClockDateSettings.m */,
 				4885653A0FD4F630003D9B53 /* WidgetWeatherSettings.h */,
 				4885653B0FD4F630003D9B53 /* WidgetWeatherSettings.m */,
 				4827CA670FD5D096009E6C2A /* WidgetRSSSettings.h */,
 				4827CA680FD5D096009E6C2A /* WidgetRSSSettings.m */,
-				4827CDA80FD5FB3B009E6C2A /* WidgetAppLauncherSettings.h */,
-				4827CDA90FD5FB3B009E6C2A /* WidgetAppLauncherSettings.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";

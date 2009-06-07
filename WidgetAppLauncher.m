@@ -14,11 +14,18 @@
 
 #import "TodayScreenTableViewController.h"
 
+@interface WidgetAppLauncher (internal) 
+
+WidgetAppLauncherSettings *widgetAppLauncherSettings;
+
+@end
+
 @implementation WidgetAppLauncher
 
 @synthesize longButtonArray;
 @synthesize AppShortcuts;
 @synthesize numRows;
+@synthesize deleteMode;
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController {
 	if (self = [super init]) {
@@ -31,6 +38,8 @@
 		
 		longButtonArray = [[NSMutableArray alloc] init];
 		AppShortcuts = [[NSMutableArray alloc] init];
+		
+		deleteMode = NO;
 		
 		AppShortcut* shortcut1 = [[AppShortcut alloc] initWithTitle:@"Google" url:@"http://www.google.com" image:@"http://www.google.com/favicon.ico"];
 		AppShortcut* shortcut2 = [[AppShortcut alloc] initWithTitle:@"Yahoo" url:@"http://www.yahoo.com" image:@"http://www.yahoo.com/favicon.ico"];
@@ -72,10 +81,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	NSLog(@"View did load called");
-	self.view.backgroundColor = [UIColor clearColor];
+	self.view.backgroundColor = [UIColor clearColor];	
+	[self initAndDisplayButtons];
+    [super viewDidLoad];
+}
+
+- (void)initAndDisplayButtons {
 	int rowFactor = 0;
 	int heightFactor = 0;
 	int buttonsPerRow = 4;
+	NSLog(@"INIT AND DISPLAY BUTTONS");
 	for (int i=0; i<[AppShortcuts count]; i++) {
 		longButton = [[WidgetComponent_LongButton alloc] init];
 		[self.view addSubview:longButton.view]; 
@@ -90,9 +105,7 @@
 			[longButton.button setImage:image forState:UIControlStateNormal];
 			//[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
 		}
-		
 		[longButton.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
-		
 		[longButton.view setNeedsLayout];
 		[self.longButtonArray addObject:longButton]; // this will keep the pointer to imageView intact for use later
 		
@@ -104,7 +117,13 @@
 		} 
 	}
 	
-    [super viewDidLoad];
+}
+
+- (void)resetAll {
+	for (UIView *view in self.view.subviews) {
+		[self.view removeFromSuperview];
+	}
+	[self.longButtonArray removeAllObjects];
 }
 
 /*-(void) imageCallbackFunction {
@@ -117,9 +136,29 @@
 }*/
 
 - (void)buttonAction:(id)sender {
-	UIButton *b = (UIButton*)sender;
-	NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
-	[[UIApplication sharedApplication] openURL:url];
+	if(deleteMode == NO) {
+		UIButton *b = (UIButton*)sender;
+		NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
+		[[UIApplication sharedApplication] openURL:url];
+	} else {
+		NSLog(@"In the delete clause");
+		WidgetComponent_LongButton *b = [self.longButtonArray objectAtIndex:[sender tag]];
+		[b.view removeFromSuperview];
+		[self.longButtonArray removeObjectAtIndex:[sender tag]];
+		
+		[AppShortcuts removeObjectAtIndex: [sender tag]];
+		[self resetAll];
+		[self initAndDisplayButtons];
+		[self.view setNeedsDisplay];
+		
+		for(UIView* view in widgetAppLauncherSettings.buttonListView.subviews) {
+			[view removeFromSuperview];
+		}
+	
+		[widgetAppLauncherSettings.buttonListView addSubview:self.view];
+		[widgetAppLauncherSettings.buttonListView setNeedsDisplay];
+		[widgetAppLauncherSettings.buttonListView setNeedsLayout];
+	}
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,14 +170,19 @@
 	AppShortcut* newShortcut = [[AppShortcut alloc] initWithTitle:name url:url image: [url stringByAppendingString:@"/favicon.ico"]];
 	[AppShortcuts addObject:newShortcut];
 	[newShortcut release];
+	[self resetAll];
+	[self initAndDisplayButtons];
+	[self.view setNeedsDisplay];
+	[self.tableViewController.tableView reloadData];
 }
 
 - (void)editSettingsAction:(id)sender {
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-	WidgetAppLauncherSettings *widgetAppLauncherSettings = [[WidgetAppLauncherSettings alloc] initWithWidget:self];
+	widgetAppLauncherSettings = [[WidgetAppLauncherSettings alloc] initWithWidget:self];
 	[navController pushViewController:widgetAppLauncherSettings animated:YES];
 	[tableViewController presentModalViewController:navController animated:YES];
+		
 	[navController release];
 	[widgetAppLauncherSettings release];
 }
@@ -157,6 +201,6 @@
 
 -(void) imageCallbackFunction {
 	NSLog(@"image callback called");
-	[self viewDidLoad];
+	//[self viewDidLoad];
 }
 @end

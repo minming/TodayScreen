@@ -177,7 +177,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [widgetsArray count];
+    return [widgetsArray count]+1;
 }
 
 
@@ -196,25 +196,30 @@
     }
 	
 	
-	cell.accessoryType = UITableViewCellAccessoryNone;
-	for (UIView *view in cell.contentView.subviews) {
-		[view removeFromSuperview];
-	}
+	if (indexPath.row < [self.widgetsArray count]) {
 	
-	if(settingsMode == YES) {
-		NSLog(@"SETTINGS MODE");
-		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-		cell.contentView.alpha = 0.5;
-	} else if (cell.editing == YES) {
-		NSLog(@"EDITING MODE");
-		cell.contentView.alpha = 0.5;
-	} else {
-		NSLog(@"ADDING MODE");
-		cell.contentView.alpha = 1.0;
-	}
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		for (UIView *view in cell.contentView.subviews) {
+			[view removeFromSuperview];
+		}
+		
+		if(settingsMode == YES) {
+			NSLog(@"SETTINGS MODE");
+			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+			cell.contentView.alpha = 0.5;
+		} else if (cell.editing == YES) {
+			NSLog(@"EDITING MODE");
+			cell.contentView.alpha = 0.5;
+		} else {
+			NSLog(@"ADDING MODE");
+			cell.contentView.alpha = 1.0;
+		}
+		
+		[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
+		
 	
-	[cell.contentView addSubview:[[widgetsArray objectAtIndex:indexPath.row] view]];
-    return cell;
+	}
+	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
@@ -253,8 +258,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
 {  
-    WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
-	return [temp getHeight];
+	
+	if (indexPath.row < [self.widgetsArray count]) {
+		WidgetViewControllerSuperClass *temp = [widgetsArray objectAtIndex:indexPath.row];
+	
+		return [temp getHeight];
+	} else {
+		return 20;
+	}
 }  
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {

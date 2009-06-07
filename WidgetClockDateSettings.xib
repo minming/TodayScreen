@@ -76,6 +76,61 @@
 						<float key="IBUIMinimumFontSize">1.700000e+01</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits"/>
 					</object>
+					<object class="IBUITextView" id="427137185">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 93}, {280, 298}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
+						<bool key="IBUIDelaysContentTouches">NO</bool>
+						<bool key="IBUICanCancelContentTouches">NO</bool>
+						<bool key="IBUIBouncesZoom">NO</bool>
+						<string type="base64-UTF8" key="IBUIText">IGE6CUFNL1BNCiBBOgkwfjg2Mzk5OTk5IChNaWxsaXNlY29uZCBvZiBEYXkpCiAKIGMvY2M6CTF+NyAo
+RGF5IG9mIFdlZWspCiBjY2M6CVN1bi9Nb24vVHVlL1dlZC9UaHUvRnJpL1NhdAogY2NjYzoJU3VuZGF5
+L01vbmRheS9UdWVzZGF5L1dlZG5lc2RheS9UaHVyc2RheS9GcmlkYXkvU2F0dXJkYXkKIAogZDoJMX4z
+MSAoMCBwYWRkZWQgRGF5IG9mIE1vbnRoKQogRDoJMX4zNjYgKDAgcGFkZGVkIERheSBvZiBZZWFyKQog
+CiBlOgkxfjcgKDAgcGFkZGVkIERheSBvZiBXZWVrKQogRX5FRUU6CVN1bi9Nb24vVHVlL1dlZC9UaHUv
+RnJpL1NhdAogRUVFRToJU3VuZGF5L01vbmRheS9UdWVzZGF5L1dlZG5lc2RheS9UaHVyc2RheS9Gcmlk
+YXkvU2F0dXJkYXkKIAogRjoJMX41ICgwIHBhZGRlZCBXZWVrIG9mIE1vbnRoLCBmaXJzdCBkYXkgb2Yg
+d2VlayA9IE1vbmRheSkKIAogZzoJSnVsaWFuIERheSBOdW1iZXIgKG51bWJlciBvZiBkYXlzIHNpbmNl
+IDQ3MTMgQkMgSmFudWFyeSAxKQogR35HR0c6CUJDL0FEIChFcmEgRGVzaWduYXRvciBBYmJyZXZpYXRl
+ZCkKIEdHR0c6CUJlZm9yZSBDaHJpc3QvQW5ubyBEb21pbmkKIAogaDoJMX4xMiAoMCBwYWRkZWQgSG91
+ciAoMTJocikpCiBIOgkwfjIzICgwIHBhZGRlZCBIb3VyICgyNGhyKSkKIAogazoJMX4yNCAoMCBwYWRk
+ZWQgSG91ciAoMjRocikKIEs6CTB+MTEgKDAgcGFkZGVkIEhvdXIgKDEyaHIpKQogCiBML0xMOgkxfjEy
+ICgwIHBhZGRlZCBNb250aCkKIExMTDoJSmFuL0ZlYi9NYXIvQXByL01heS9KdW4vSnVsL0F1Zy9TZXAv
+T2N0L05vdi9EZWMKIExMTEw6CUphbnVhcnkvRmVicnVhcnkvTWFyY2gvQXByaWwvTWF5L0p1bmUvSnVs
+eS9BdWd1c3QvU2VwdGVtYmVyL09jdG9iZXIvTm92ZW1iZXIvRGVjZW1iZXIKIAogbToJMH41OSAoMCBw
+YWRkZWQgTWludXRlKQogTS9NTToJMX4xMiAoMCBwYWRkZWQgTW9udGgpCiBNTU06CUphbi9GZWIvTWFy
+L0Fwci9NYXkvSnVuL0p1bC9BdWcvU2VwL09jdC9Ob3YvRGVjCiBNTU1NOglKYW51YXJ5L0ZlYnJ1YXJ5
+L01hcmNoL0FwcmlsL01heS9KdW5lL0p1bHkvQXVndXN0L1NlcHRlbWJlci9PY3RvYmVyL05vdmVtYmVy
+L0RlY2VtYmVyCiAKIHEvcXE6CTF+NCAoMCBwYWRkZWQgUXVhcnRlcikKIHFxcToJUTEvUTIvUTMvUTQK
+IHFxcXE6CTFzdCBxdWFydGVyLzJuZCBxdWFydGVyLzNyZCBxdWFydGVyLzR0aCBxdWFydGVyCiBRL1FR
+OgkxfjQgKDAgcGFkZGVkIFF1YXJ0ZXIpCiBRUVE6CVExL1EyL1EzL1E0CiBRUVFROgkxc3QgcXVhcnRl
+ci8ybmQgcXVhcnRlci8zcmQgcXVhcnRlci80dGggcXVhcnRlcgogCiBzOgkwfjU5ICgwIHBhZGRlZCBT
+ZWNvbmQpCiBTOgkocm91bmRlZCBTdWItU2Vjb25kKQogCiB1OgkoMCBwYWRkZWQgWWVhcikKIAogdn52
+dnY6CShHZW5lcmFsIEdNVCBUaW1lem9uZSBBYmJyZXZpYXRpb24pCiB2dnZ2OgkoR2VuZXJhbCBHTVQg
+VGltZXpvbmUgTmFtZSkKIAogdzoJMX41MyAoMCBwYWRkZWQgV2VlayBvZiBZZWFyLCAxc3QgZGF5IG9m
+IHdlZWsgPSBTdW5kYXksIE5COiAxc3Qgd2VlayBvZiB5ZWFyIHN0YXJ0cyBmcm9tIHRoZSBsYXN0IFN1
+bmRheSBvZiBsYXN0IHllYXIpCiBXOgkxfjUgKDAgcGFkZGVkIFdlZWsgb2YgTW9udGgsIDFzdCBkYXkg
+b2Ygd2VlayA9IFN1bmRheSkKIAogeS95eXl5OgkoRnVsbCBZZWFyKQogeXkveXl5OgkoMiBEaWdpdHMg
+WWVhcikKIFkvWVlZWToJKEZ1bGwgWWVhciwgc3RhcnRpbmcgZnJvbSB0aGUgU3VuZGF5IG9mIHRoZSAx
+c3Qgd2VlayBvZiB5ZWFyKQogWVkvWVlZOgkoMiBEaWdpdHMgWWVhciwgc3RhcnRpbmcgZnJvbSB0aGUg
+U3VuZGF5IG9mIHRoZSAxc3Qgd2VlayBvZiB5ZWFyKQogCiB6fnp6ejoJKFNwZWNpZmljIEdNVCBUaW1l
+em9uZSBBYmJyZXZpYXRpb24pCiB6enp6OgkoU3BlY2lmaWMgR01UIFRpbWV6b25lIE5hbWUpCiBaOgkr
+MDAwMCAoUkZDIDgyMiBUaW1lem9uZSk</string>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC44MDAwMDAwMSAwLjgwMDAwMDAxIDAuODAwMDAwMDEAA</bytes>
+						</object>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">1.400000e+01</double>
+							<int key="NSfFlags">16</int>
+						</object>
+					</object>
 				</object>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
@@ -123,6 +178,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="762885630"/>
 							<reference ref="682984358"/>
+							<reference ref="427137185"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -147,6 +203,11 @@
 						<reference key="object" ref="682984358"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">18</int>
+						<reference key="object" ref="427137185"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -157,6 +218,7 @@
 					<string>-2.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
+					<string>18.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 				</object>
@@ -164,7 +226,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>WidgetClockDateSettings</string>
 					<string>UIResponder</string>
-					<string>{{871, 376}, {320, 480}}</string>
+					<string>{{758, 376}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -190,7 +253,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">17</int>
+			<int key="maxID">18</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

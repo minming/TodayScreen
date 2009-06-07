@@ -15,8 +15,12 @@
 	IBOutlet UITextField* nameField;
 	
 	WidgetAppLauncher* appLauncherWidget;
+	
+	IBOutlet UIView* buttonListView;
 }
 
 - (id)initWithWidget:(WidgetAppLauncher*)widget;
+
+@property (nonatomic, retain) UIView* buttonListView;
 
 @end

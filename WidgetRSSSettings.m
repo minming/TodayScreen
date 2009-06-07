@@ -21,6 +21,10 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	rssField.text = rssWidget.rssFeed;
+	numFeedsField.text = [NSString stringWithFormat:@"%d", rssWidget.NUM_OF_FEEDS];
+	
 	self.title = @"RSS Settings";
 }
 
