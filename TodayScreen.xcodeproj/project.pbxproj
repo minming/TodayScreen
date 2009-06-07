@@ -374,7 +374,6 @@
 				8E6B346C0FC4B63E00EB77B2 /* WidgetAppLauncher.xib */,
 				8E6B3B060FC9522300EB77B2 /* WidgetContact.xib */,
 				8E6B37D40FC87A9200EB77B2 /* WidgetClockDate.xib */,
-				8E5DC1940FD67525003E0584 /* footertoobaricon_widgetsettings.png */,
 				8E6B38720FC889AD00EB77B2 /* WidgetRSS.xib */,
 				488564040FD4D864003D9B53 /* WidgetWeather.xib */,
 				8E6B3B100FC9525A00EB77B2 /* WidgetComponent_Contact.xib */,
@@ -398,6 +397,7 @@
 		48FD48DB0FCE7662004045B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DC1940FD67525003E0584 /* footertoobaricon_widgetsettings.png */,
 				8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */,
 				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
 				8E5DC04A0FD345E7003E0584 /* visittodayscreen.png */,

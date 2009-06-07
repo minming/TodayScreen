@@ -10,7 +10,7 @@
 
 // Simple class to encapsulate the information for the AppShortcuts in the WidgetAppLauncher. Better than using a C style struct
 
-@interface AppShortcut : NSObject {
+@interface AppShortcut : NSObject<NSCoding> {
 	NSString* title;
 	NSString* url;
 	NSString* image;

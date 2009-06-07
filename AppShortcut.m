@@ -24,4 +24,29 @@
     return self;
 }
 
+-(void)encodeWithCoder:(NSCoder *)encoder
+{
+	[encoder encodeObject:title forKey:@"Title"];
+	[encoder encodeObject:url forKey:@"URL"];
+	[encoder encodeObject:image forKey:@"Image"];
+}
+
+-(id)initWithCoder:(NSCoder *)decoder
+{
+	title = [decoder decodeObjectForKey:@"Title"];
+	url = [decoder decodeObjectForKey:@"URL"];
+	image = [decoder decodeObjectForKey:@"Image"];
+	
+	[title retain];
+	[url retain];
+	[image retain];
+	return self;
+}
+
+-(void)dealloc {
+	[title release];
+	[url release];
+	[image release];
+	[super dealloc];
+}
 @end

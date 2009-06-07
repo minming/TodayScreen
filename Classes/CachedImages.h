@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ImageLoadingOperation.h"
+#import "WidgetViewControllerSuperClass.h"
 
 @interface CachedImages : NSObject {
 	NSMutableDictionary *cachedImages;
+	WidgetViewControllerSuperClass* callbackWidget;
 }
 
--(id)init;
+-(id)initWithResponder:(WidgetViewControllerSuperClass*) callback;
 - (UIImage *)cachedImageForURL:(NSString *)url OperationQueue:(NSOperationQueue *)operationQueue;
 - (void)didFinishLoadingImageWithResult:(NSDictionary *)result;
 -(void)clearCachedImages;

@@ -54,4 +54,7 @@
 - (void)editSettingsAction:(id)sender{
 }
 
+-(void)imageCallbackFunction{
+}
+
 @end

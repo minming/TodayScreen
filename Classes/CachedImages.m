@@ -15,10 +15,11 @@ NSString *const LoadingPlaceholder = @"Loading";
 #pragma mark -
 #pragma mark Cached Image Loading
 
--(id)init{
+-(id)initWithResponder:(WidgetViewControllerSuperClass*)callback{
 	self = [super init];
     if (self) {
 		cachedImages = [[NSMutableDictionary alloc] init];
+		callbackWidget = callback;
 	}
 	return self;
 }
@@ -43,9 +44,12 @@ NSString *const LoadingPlaceholder = @"Loading";
 {
     NSString *url = [result objectForKey:@"url"];
     UIImage *image = [result objectForKey:@"image"];
-	
-	if(image != nil)
-    [cachedImages setObject:image forKey:url];   
+	NSLog(@"did finish loading image");
+	if(image != nil) {
+		NSLog(@"image not null");
+		[cachedImages setObject:image forKey:url];   
+		[callbackWidget imageCallbackFunction];
+	}
 }
 
 -(void)clearCachedImages {

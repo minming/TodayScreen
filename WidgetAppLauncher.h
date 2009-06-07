@@ -24,8 +24,8 @@
     CachedImages *cachedImages;
 }
 
-@property (nonatomic, copy) NSMutableArray *longButtonArray;
-@property (nonatomic, copy) NSMutableArray *AppShortcuts;
+@property (nonatomic, retain) NSMutableArray *longButtonArray;
+@property (nonatomic, retain) NSMutableArray *AppShortcuts;
 @property NSInteger numRows;
 
 -(void)addURL:(NSString*)url name:(NSString*)name;

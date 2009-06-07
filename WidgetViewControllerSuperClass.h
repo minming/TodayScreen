@@ -22,4 +22,6 @@
 
 -(id) initWithSuperTableController:(UITableViewController*)superViewController;
 - (void)editSettingsAction:(id)sender;
+
+-(void)imageCallbackFunction;
 @end

@@ -27,7 +27,7 @@
 		
 		operationQueue = [[NSOperationQueue alloc] init];
 		[operationQueue setMaxConcurrentOperationCount:1];
-		cachedImages = [[CachedImages alloc] init];
+		cachedImages = [[CachedImages alloc] initWithResponder:self];
 		
 		longButtonArray = [[NSMutableArray alloc] init];
 		AppShortcuts = [[NSMutableArray alloc] init];
@@ -39,7 +39,6 @@
 		AppShortcut* shortcut5 = [[AppShortcut alloc] initWithTitle:@"eBay" url:@"http://www.ebay.com" image:@"http://www.ebay.com/favicon.ico"];
 		AppShortcut* shortcut6 = [[AppShortcut alloc] initWithTitle:@"Live" url:@"http://www.live.com" image:@"http://www.live.com/favicon.ico"];
 		AppShortcut* shortcut7 = [[AppShortcut alloc] initWithTitle:@"Reader" url:@"http://www.google.com/reader" image: @""];
-	
 		
 		[AppShortcuts addObject:shortcut1];
 		[AppShortcuts addObject:shortcut2];
@@ -72,6 +71,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	NSLog(@"View did load called");
 	self.view.backgroundColor = [UIColor clearColor];
 	int rowFactor = 0;
 	int heightFactor = 0;
@@ -82,11 +82,12 @@
 		longButton.view.frame = CGRectMake(rowFactor*75.0+10.0, heightFactor*30.0+10.0, 60.0, 40.0);
 		longButton.button.tag = i;
 		[longButton.button setTitle:[[AppShortcuts objectAtIndex:i] title] forState:UIControlStateNormal];
-		if ([[AppShortcuts objectAtIndex:i] image] != nil) {
+		if ([[AppShortcuts objectAtIndex:i] image] != nil && [[AppShortcuts objectAtIndex:i] image] != @"") {
 			NSString * imageUrl = (NSString*)[[AppShortcuts objectAtIndex:i] image];
+			NSLog(@"Image url %@\n", imageUrl);
 			UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
-			if(image != nil)
-				[longButton.button setImage:image forState:UIControlStateNormal];
+			NSLog(@"Image: %@\n", image);
+			[longButton.button setImage:image forState:UIControlStateNormal];
 			//[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
 		}
 		
@@ -105,6 +106,15 @@
 	
     [super viewDidLoad];
 }
+
+/*-(void) imageCallbackFunction {
+	[super imageCallbackFunction];
+	for (int i=0; i<[AppShortcuts count]; i++) {
+		UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
+		[longbutton_button
+		[longButton.button setImage:image forState:UIControlStateNormal];
+	}
+}*/
 
 - (void)buttonAction:(id)sender {
 	UIButton *b = (UIButton*)sender;
@@ -145,5 +155,8 @@
     [super dealloc];
 }
 
-
+-(void) imageCallbackFunction {
+	NSLog(@"image callback called");
+	[self viewDidLoad];
+}
 @end

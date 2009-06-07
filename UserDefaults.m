@@ -108,11 +108,29 @@
 	//[NSUserDefaults resetStandardUserDefaults];
 	//userDefaults = [NSUserDefaults standardUserDefaults];
 	
-	NSMutableArray* appShortcuts = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
+	NSLog(@"loading app launcher prefs");
+	NSData *appShortcutsData = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
+	NSArray *temp = [NSKeyedUnarchiver unarchiveObjectWithData:appShortcutsData];
+	
 	NSInteger numRows = [userDefaults integerForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
 	
+	
+	
+	NSMutableArray* appShortcuts = [[NSMutableArray alloc] init];
+	//NSLog(@"app shortcuts: %@", [[temp objectAtIndex:0] title]);
+	//for(int i = 0; i < [temp count]; i++) {
+		//[appShortcut retain];
+		//[appShortcuts addObject:appShortcut];
+		//NSLog(@"App shortcut title: %@", [[temp objectAtIndex:i] title]);
+		//NSLog(@"App shortcut url: %@", [[temp objectAtIndex:i] url]);
+		//NSLog(@"App shortcut image: %@", [[temp objectAtIndex:i] image]);
+	//}
+	[appShortcuts addObjectsFromArray:temp];
+	//[appShortcuts retain];
 	[appLauncherWidget setAppShortcuts:appShortcuts];
 	[appLauncherWidget setNumRows:numRows];
+	
+	NSLog(@"Num rows: %d" , numRows);
 }
 
 -(void)loadContactWidgetFromPrefs:(NSString*)widgetName widget:(WidgetContact*)contactWidget {
@@ -154,38 +172,37 @@
 }
 
 -(void)writeWeatherWidgetPrefs:(NSString*)widgetName zipCode:(NSString*)zipCode {
-	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:zipCode forKey:[widgetName stringByAppendingString: WIDGET_WEATHER_ZIP_CODE_CONSTANT]];
-	//[userDefaults synchronize];
 }
 
 -(void)writeClockWidgetPrefs:(NSString*)widgetName timeFormat:(NSString*)timeFormat dateFormat:(NSString*)dateFormat {
-	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:timeFormat forKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
 	[userDefaults setObject:dateFormat forKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
-	//[userDefaults synchronize];
 }
 
 //-(void)writeRSSWidgetPrefs:(NSString*)widgetName rssArray:(NSArray*)rssArray numFeeds:(NSInteger)numFeeds {
 -(void)writeRSSWidgetPrefs:(NSString*)widgetName rssFeed:(NSString*)rssFeed numFeeds:(NSInteger)numFeeds {
-	//userDefaults = [NSUserDefaults standardUserDefaults];
-	//[userDefaults setObject:rssArray forKey:[widgetName stringByAppendingString: WIDGET_RSS_ARRAY_CONSTANT]];
 	[userDefaults setObject:rssFeed forKey:[widgetName stringByAppendingString: WIDGET_RSS_FEED_CONSTANT]];
 	[userDefaults setInteger:numFeeds forKey:[widgetName stringByAppendingString: WIDGET_RSS_NUM_FEEDS_CONSTANT]];
-	//[userDefaults synchronize];
 }
 
--(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows {
-	//userDefaults = [NSUserDefaults standardUserDefaults];
-	[userDefaults setObject:appShortcuts forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
+-(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows {//
+	NSLog(@"saving app launcher prefs");
+
+	NSData *appShortcutsData = [NSKeyedArchiver archivedDataWithRootObject:appShortcuts];
+	
+	NSArray *temp = [NSKeyedUnarchiver unarchiveObjectWithData:appShortcutsData];
+	
+	for(AppShortcut* appShortcut in temp) {
+		NSLog(@"App Shortcut: %@ %@ %@", appShortcut.title, appShortcut.url, appShortcut.image);
+	}
+	
+	[userDefaults setObject:appShortcutsData forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	[userDefaults setInteger:appNumRows forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_NUM_ROWS_CONSTANT]];
-	//[userDefaults synchronize];
 }
 
 -(void)writeContactWidgetPrefs:(NSString*)widgetName contacts:(NSArray*)contacts {
-	//userDefaults = [NSUserDefaults standardUserDefaults];
 	[userDefaults setObject:contacts forKey:[widgetName stringByAppendingString: WIDGET_CONTACTS_ARRAY_CONSTANT]];
-	//[userDefaults synchronize];
 }
 
 - (void) dealloc {
