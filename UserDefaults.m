@@ -84,7 +84,7 @@
 	//userDefaults = [NSUserDefaults standardUserDefaults];
 	NSString* timeFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_TIME_FORMAT_CONSTANT]];
 	//NSString* dateFormat = [userDefaults objectForKey:[widgetName stringByAppendingString: WIDGET_CLOCK_DATE_FORMAT_CONSTANT]];
-	NSLog(@"TIME FORMAT: %@", timeFormat);
+	//////NSLog(@"TIME FORMAT: %@", timeFormat);
 	[clockWidget setTimeFormat:timeFormat];
 	[clockWidget reloadClock];
 	//[clockWidget setDateFormat:dateFormat];
@@ -108,7 +108,7 @@
 	//[NSUserDefaults resetStandardUserDefaults];
 	//userDefaults = [NSUserDefaults standardUserDefaults];
 	
-	NSLog(@"loading app launcher prefs");
+	//////NSLog(@"loading app launcher prefs");
 	NSData *appShortcutsData = [userDefaults objectForKey:[widgetName stringByAppendingString:WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];
 	NSArray *temp = [NSKeyedUnarchiver unarchiveObjectWithData:appShortcutsData];
 	
@@ -117,20 +117,20 @@
 	
 	
 	NSMutableArray* appShortcuts = [[NSMutableArray alloc] init];
-	//NSLog(@"app shortcuts: %@", [[temp objectAtIndex:0] title]);
+	//////NSLog(@"app shortcuts: %@", [[temp objectAtIndex:0] title]);
 	//for(int i = 0; i < [temp count]; i++) {
 		//[appShortcut retain];
 		//[appShortcuts addObject:appShortcut];
-		//NSLog(@"App shortcut title: %@", [[temp objectAtIndex:i] title]);
-		//NSLog(@"App shortcut url: %@", [[temp objectAtIndex:i] url]);
-		//NSLog(@"App shortcut image: %@", [[temp objectAtIndex:i] image]);
+		//////NSLog(@"App shortcut title: %@", [[temp objectAtIndex:i] title]);
+		//////NSLog(@"App shortcut url: %@", [[temp objectAtIndex:i] url]);
+		//////NSLog(@"App shortcut image: %@", [[temp objectAtIndex:i] image]);
 	//}
 	[appShortcuts addObjectsFromArray:temp];
 	//[appShortcuts retain];
 	[appLauncherWidget setAppShortcuts:appShortcuts];
 	[appLauncherWidget setNumRows:numRows];
 	
-	NSLog(@"Num rows: %d" , numRows);
+	//////NSLog(@"Num rows: %d" , numRows);
 }
 
 -(void)loadContactWidgetFromPrefs:(NSString*)widgetName widget:(WidgetContact*)contactWidget {
@@ -165,7 +165,7 @@
 		}
 		i++;
 	}
-	NSLog(@"Widgets Name Array: %@", widgetsNameArray);
+	////NSLog(@"Widgets Name Array: %@", widgetsNameArray);
 	[userDefaults setObject:widgetsNameArray forKey:@"widgetsNameArray"];
 	[userDefaults synchronize];
 	[widgetsNameArray release];
@@ -187,14 +187,14 @@
 }
 
 -(void)writeAppLauncherWidgetPrefs:(NSString*)widgetName appArray:(NSArray*)appShortcuts appNumRows:(NSInteger)appNumRows {//
-	NSLog(@"saving app launcher prefs");
+	////NSLog(@"saving app launcher prefs");
 
 	NSData *appShortcutsData = [NSKeyedArchiver archivedDataWithRootObject:appShortcuts];
 	
 	NSArray *temp = [NSKeyedUnarchiver unarchiveObjectWithData:appShortcutsData];
 	
 	for(AppShortcut* appShortcut in temp) {
-		NSLog(@"App Shortcut: %@ %@ %@", appShortcut.title, appShortcut.url, appShortcut.image);
+		//////NSLog(@"App Shortcut: %@ %@ %@", appShortcut.title, appShortcut.url, appShortcut.image);
 	}
 	
 	[userDefaults setObject:appShortcutsData forKey:[widgetName stringByAppendingString: WIDGET_APPLAUNCHER_ARRAY_CONSTANT]];

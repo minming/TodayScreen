@@ -37,9 +37,9 @@
         //[self.view pushViewController:personViewController animated:YES];
         [personViewController release];
 
-		NSLog(@"%@",firstName);
-		NSLog(@"%@",lastName);
-		NSLog(@"%@",email);
+		////NSLog(@"%@",firstName);
+		////NSLog(@"%@",lastName);
+		//////NSLog(@"%@",email);
 	}
 	CFRelease(addressBook);
 }

@@ -42,7 +42,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"NUM FEEDS: %d", NUM_OF_FEEDS);
+	////NSLog(@"NUM FEEDS: %d", NUM_OF_FEEDS);
 	self.view.backgroundColor = [UIColor clearColor];
 	//self.NUM_OF_FEEDS = 3; //temp set for testing
 	if ([stories count] == 0 || stories == nil) {
@@ -52,14 +52,14 @@
 }
 
 -(void)changeSettingsAndReload:(NSString*)feedURL numFeeds:(int)num {
-	NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
+	//NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
 	if ([feedURL length] == 0) {
 		feedURL = @"http://www.engadget.com/rss.xml";
 	}
 	if (num == 0 || num > 10) {
 		num = 3;
 	}
-	NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
+	//NSLog(@"CHANING RSS SETTINGS: %@ | %d", feedURL, num);
 	self.rssFeed = feedURL;
 	self.NUM_OF_FEEDS = num;
 	//[stories removeAllObjects];
@@ -101,7 +101,7 @@
 				//[singleRSS.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
 				[self.view addSubview:singleRSS.view];
 				singleRSS.view.frame = CGRectMake(0.0, i*40.0+10.0, 320.0, 50.0);
-				NSLog(@"SHOWING RSS: %@", [[stories objectAtIndex: i] objectForKey: @"title"]);
+				//NSLog(@"SHOWING RSS: %@", [[stories objectAtIndex: i] objectForKey: @"title"]);
 				singleRSS.titleLabel.text = [[stories objectAtIndex: i] objectForKey: @"title"];
 				//singleRSS.dateLabel.text = [dateFormatter stringFromDate:date];
 				//singleRSS.timeLabel.text = [formatter stringFromDate:date];
@@ -117,7 +117,6 @@
 }
 
 - (void)buttonAction:(id)sender {
-	NSLog(@"CLICKED");
 	UIButton *b = (UIButton*)sender;
 	[[UIApplication sharedApplication] openURL:[[stories objectAtIndex:b.tag] objectForKey:@"link"]];
 }
@@ -135,7 +134,6 @@
 
 
 - (void)editSettingsAction:(id)sender {
-	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetRSSSettings *widgetRSSSettings = [[WidgetRSSSettings alloc] initWithWidget:self];
@@ -146,13 +144,12 @@
 }
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser{	
-	//NSLog(@"found file and started parsing");
+	////NSLog(@"found file and started parsing");
 	
 }
 
 - (void)parseXMLFileAtURL:(NSString *)URL
 {	
-	NSLog(@"PARSING RSS: %@" , URL);
 	if ([URL length] == 0) {
 		URL = @"http://www.engadget.com/rss.xml";
 	}
@@ -181,14 +178,14 @@
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
 	NSString * errorString = [NSString stringWithFormat:@"Unable to download story feed from web site (Error code %i )", [parseError code]];
-	//NSLog(@"error parsing XML: %@", errorString);
+	////NSLog(@"error parsing XML: %@", errorString);
 	
 	UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 	[errorAlert show];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{			
-    //NSLog(@"found this element: %@", elementName);
+    ////NSLog(@"found this element: %@", elementName);
 	currentElement = [elementName copy];
 	if ([elementName isEqualToString:@"item"]) {
 		// clear out our story item caches...
@@ -202,7 +199,7 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{     
-	//NSLog(@"ended element: %@", elementName);
+	////NSLog(@"ended element: %@", elementName);
 	if ([elementName isEqualToString:@"item"]) {
 		// save values to an item, then store that item into the array...
 		[item setObject:currentTitle forKey:@"title"];
@@ -211,13 +208,13 @@
 		[item setObject:currentDate forKey:@"date"];
 		
 		[stories addObject:[item copy]];
-		//NSLog(@"adding story: %@", currentTitle);
+		////NSLog(@"adding story: %@", currentTitle);
 	}
 	
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-	//NSLog(@"found characters: %@", string);
+	////NSLog(@"found characters: %@", string);
 	// save the characters for the current item...
 	if ([currentElement isEqualToString:@"title"]) {
 		[currentTitle appendString:string];
@@ -236,8 +233,8 @@
 	[activityIndicator stopAnimating];
 	[activityIndicator removeFromSuperview];
 	
-	//NSLog(@"all done!");
-	//NSLog(@"stories array has %d items", [stories count]);
+	////NSLog(@"all done!");
+	//////NSLog(@"stories array has %d items", [stories count]);
 	[self showRSS];
 	//[newsTable reloadData];
 }

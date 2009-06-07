@@ -80,7 +80,7 @@ WidgetAppLauncherSettings *widgetAppLauncherSettings;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	NSLog(@"View did load called");
+	//NSLog(@"View did load called");
 	self.view.backgroundColor = [UIColor clearColor];	
 	[self initAndDisplayButtons];
     [super viewDidLoad];
@@ -90,21 +90,23 @@ WidgetAppLauncherSettings *widgetAppLauncherSettings;
 	int rowFactor = 0;
 	int heightFactor = 0;
 	int buttonsPerRow = 4;
-	NSLog(@"INIT AND DISPLAY BUTTONS");
+	//NSLog(@"INIT AND DISPLAY BUTTONS");
 	for (int i=0; i<[AppShortcuts count]; i++) {
 		longButton = [[WidgetComponent_LongButton alloc] init];
 		[self.view addSubview:longButton.view]; 
 		longButton.view.frame = CGRectMake(rowFactor*75.0+10.0, heightFactor*30.0+10.0, 60.0, 40.0);
 		longButton.button.tag = i;
 		[longButton.button setTitle:[[AppShortcuts objectAtIndex:i] title] forState:UIControlStateNormal];
+		
 		if ([[AppShortcuts objectAtIndex:i] image] != nil && [[AppShortcuts objectAtIndex:i] image] != @"") {
-			NSString * imageUrl = (NSString*)[[AppShortcuts objectAtIndex:i] image];
-			NSLog(@"Image url %@\n", imageUrl);
-			UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
-			NSLog(@"Image: %@\n", image);
-			[longButton.button setImage:image forState:UIControlStateNormal];
+			//NSString * imageUrl = (NSString*)[[AppShortcuts objectAtIndex:i] image];
+			////NSLog(@"Image url %@\n", imageUrl);
+			//UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
+			////NSLog(@"Image: %@\n", image);
+			//[longButton.button setImage:image forState:UIControlStateNormal];
 			//[longButton.button setImage:[GlobalFunctions getImageFromUrl:(NSString*)[[AppShortcuts objectAtIndex:i] image]] forState:UIControlStateNormal];
 		}
+		 
 		[longButton.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
 		[longButton.view setNeedsLayout];
 		[self.longButtonArray addObject:longButton]; // this will keep the pointer to imageView intact for use later
@@ -126,22 +128,13 @@ WidgetAppLauncherSettings *widgetAppLauncherSettings;
 	[self.longButtonArray removeAllObjects];
 }
 
-/*-(void) imageCallbackFunction {
-	[super imageCallbackFunction];
-	for (int i=0; i<[AppShortcuts count]; i++) {
-		UIImage* image = [cachedImages cachedImageForURL:imageUrl OperationQueue: operationQueue];
-		[longbutton_button
-		[longButton.button setImage:image forState:UIControlStateNormal];
-	}
-}*/
-
 - (void)buttonAction:(id)sender {
 	if(deleteMode == NO) {
 		UIButton *b = (UIButton*)sender;
 		NSURL *url = [NSURL URLWithString:[[AppShortcuts objectAtIndex:b.tag] url]];
 		[[UIApplication sharedApplication] openURL:url];
 	} else {
-		NSLog(@"In the delete clause");
+		////NSLog(@"In the delete clause");
 		WidgetComponent_LongButton *b = [self.longButtonArray objectAtIndex:[sender tag]];
 		[b.view removeFromSuperview];
 		[self.longButtonArray removeObjectAtIndex:[sender tag]];
@@ -199,8 +192,4 @@ WidgetAppLauncherSettings *widgetAppLauncherSettings;
     [super dealloc];
 }
 
--(void) imageCallbackFunction {
-	NSLog(@"image callback called");
-	//[self viewDidLoad];
-}
 @end

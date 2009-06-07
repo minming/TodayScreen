@@ -59,6 +59,7 @@
 	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1.jpg"]];
 	self.tableView.separatorColor = [UIColor clearColor];
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.tableView.frame = CGRectMake(0, 0, 320, 454);
 	
 	//bgImageView.frame = CGRectMake(0, 0, 320.0, 480.0);
 	//bgImageView.image = [UIImage imageNamed:@"bg1.jpg"];
@@ -70,12 +71,12 @@
 }
 
 -(void) initWidgetsArray {
-	NSLog(@"--- INIT WIDGETS ---");
+	////NSLog(@"--- INIT WIDGETS ---");
 	
 	NSMutableArray* widgetsNameArray = [userDefaults getWidgetsArrayFromPrefs];
 	if([widgetsNameArray count] > 0) {
 		for(NSString* widgetName in widgetsNameArray) {
-			NSLog(@"Init Stage - Widget name: %@", widgetName);
+			////NSLog(@"Init Stage - Widget name: %@", widgetName);
 			
 			if([widgetName rangeOfString:@"weatherWidget"].location != NSNotFound) {
 				[self addNewWidget:WIDGET_WEATHER];
@@ -98,7 +99,7 @@
 			}
 		}
 	} else {
-		NSLog(@"Init Stage - No widgets found from user preferences");
+		////NSLog(@"Init Stage - No widgets found from user preferences");
 		[self addNewWidget:WIDGET_FLIP_CLOCK];
 		[self addNewWidget:WIDGET_CLOCK];
 		[self addNewWidget:WIDGET_WEATHER];
@@ -113,7 +114,7 @@
 -(void) addNewWidget:(NSInteger)widgetType {
 	switch (widgetType) {
 		case WIDGET_FLIP_CLOCK: {
-			NSLog(@"Add flip clock");
+			////NSLog(@"Add flip clock");
 			WidgetFlipClockDate *flipClockDate = [[WidgetFlipClockDate alloc] init];
 			self.view.tag = 1;
 			[self.widgetsArray addObject:flipClockDate];
@@ -121,7 +122,7 @@
 			break; 
 		}
 		case WIDGET_CLOCK: {
-			NSLog(@"Add widget clock");
+			////NSLog(@"Add widget clock");
 			WidgetClockDate *clockDate = [[WidgetClockDate alloc] initWithSuperTableController:self timeFormat:@"h:mm a   EEE dd MMM"];
 			self.view.tag = 1;
 			[self.widgetsArray addObject:clockDate];
@@ -129,28 +130,28 @@
 			break;
 		}
 		case WIDGET_RSS: {
-			NSLog(@"Add rss");
+			////NSLog(@"Add rss");
 			WidgetRSS *RSS = [[WidgetRSS alloc] initWithSuperTableController:self numFeeds:3];
 			[self.widgetsArray addObject:RSS];
 			[RSS release];
 			break;
 		}
 		case WIDGET_WEATHER: {
-			NSLog(@"Add weather");
+			////NSLog(@"Add weather");
 			WidgetWeather *weather = [[WidgetWeather alloc] initWithSuperTableController:self zipCode:DEFAULT_ZIP_CODE];
 			[self.widgetsArray addObject:weather];
 			[weather release];
 			break;
 		}
 		case WIDGET_APPLAUNCHER: {
-			NSLog(@"Add app launcher");
+			////NSLog(@"Add app launcher");
 			WidgetAppLauncher *appLauncher = [[WidgetAppLauncher alloc] initWithSuperTableController:self];
 			[self.widgetsArray addObject:appLauncher];
 			[appLauncher release];
 			break;
 		}
 		case WIDGET_CONTACT: {
-			NSLog(@"Add contact");
+			////NSLog(@"Add contact");
 			WidgetContact *contact = [[WidgetContact alloc] initWithSuperTableController:self];
 			[self.widgetsArray addObject:contact];
 			[contact release];
@@ -161,7 +162,7 @@
 	}
 	[self.tableView reloadData];
 	
-	NSLog(@"Number of widgets: %d", [self.widgetsArray count]);
+	////NSLog(@"Number of widgets: %d", [self.widgetsArray count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -177,7 +178,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [widgetsArray count]+1;
+    return [widgetsArray count];//+1;
 }
 
 
@@ -204,14 +205,14 @@
 		}
 		
 		if(settingsMode == YES) {
-			NSLog(@"SETTINGS MODE");
+			////NSLog(@"SETTINGS MODE");
 			cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 			cell.contentView.alpha = 0.5;
 		} else if (cell.editing == YES) {
-			NSLog(@"EDITING MODE");
+			////NSLog(@"EDITING MODE");
 			cell.contentView.alpha = 0.5;
 		} else {
-			NSLog(@"ADDING MODE");
+			////NSLog(@"ADDING MODE");
 			cell.contentView.alpha = 1.0;
 		}
 		
@@ -280,7 +281,7 @@
 #pragma mark user defaults methods
 
 -(void)saveUserPrefs {
-	NSLog(@"called save");
+	////NSLog(@"called save");
 	
 	NSInteger i = 0;
 	for(WidgetViewControllerSuperClass* widget in widgetsArray) {
@@ -299,7 +300,7 @@
 		i++;
 	}
 	[userDefaults writeWidgetArrayPrefs:widgetsArray];
-	NSLog(@"User defaults: %@", userDefaults);
+	//////NSLog(@"User defaults: %@", userDefaults);
 }
 
 @end

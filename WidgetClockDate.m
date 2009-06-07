@@ -29,7 +29,6 @@
 }
 
 - (void)editSettingsAction:(id)sender {
-	NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	//navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetClockDateSettings *widgetClockDateSettings = [[WidgetClockDateSettings alloc] initWithWidget:self];
@@ -48,8 +47,6 @@
 - (void)runTimer {  
 	// This starts the timer which fires the showActivity  
 	// method every 0.5 seconds  
-	NSLog(@"RRRRRRRRRRRRR");
-
 	myTicker = [NSTimer scheduledTimerWithTimeInterval: 0.5  
 												target: self  
 											  selector: @selector(showActivity)  
@@ -83,7 +80,7 @@
 }  
 
 -(void)changeSettingsAndReload:(NSString*)format {
-	NSLog(@"CCCCCCCCCCCCCCCCC");
+	////NSLog(@"CCCCCCCCCCCCCCCCC");
 	self.timeFormat = format;
 	//[myTicker release];
 	[self runTimer]; 

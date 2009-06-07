@@ -31,11 +31,8 @@
 
 - (void)saveAction:(id)sender {
 	if ([urlField.text length] > 0 && [nameField.text length] > 0) {
-		NSLog(@"adds");
 		[appLauncherWidget addURL:urlField.text name:nameField.text];
 	}
-	//[appLauncherWidget.view setNeedsLayout];
-	//[appLauncherWidget.view setNeedsDisplay];
 	[appLauncherWidget setDeleteMode:NO];
 	[super saveAction:sender];
 }

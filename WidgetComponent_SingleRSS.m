@@ -20,8 +20,6 @@
 @synthesize button;
 
 - (void)launchURL:(id)sender {
-	//NSLog(@"CLICKED");
-	//UIButton *b = (UIButton*)sender;
 	NSURL *nsurl = [NSURL URLWithString:[self url]];
 	[[UIApplication sharedApplication] openURL:nsurl];
 }

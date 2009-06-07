@@ -38,13 +38,13 @@
 }
 
 - (int)getHeight {
-	return 90;
+	return 95;
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"Zip code: %@", zipCode);
+	////NSLog(@"Zip code: %@", zipCode);
 	[self getWeatherForZipCode:zipCode];
 }
 
@@ -62,7 +62,7 @@
 	Weather forecast1 = [weatherAPI getWeather:1];
 	Weather forecast2 = [weatherAPI getWeather:2];
 	
-	NSLog(@"City %@", now.city);
+	////NSLog(@"City %@", now.city);
 	cityTextLabel.text = now.city;
 	nowTextLabel.text = now.text;
 	nowTempLabel.text = [NSString stringWithFormat:@"%@˚",now.temp];
@@ -73,7 +73,7 @@
 	nowSunriseLabel.text = now.sunrise;
 	nowSunsetLabel.text = now.sunset;
 	
-	//NSLog(forecast1.text);
+	////NSLog(forecast1.text);
 	forecast1TextLabel.text = forecast1.text;
 	forecast1DayLabel.text = forecast1.day;
 	forecast1TempLabel.text = [NSString stringWithFormat:@"%@˚ - %@˚",forecast1.low,forecast1.high];
@@ -89,7 +89,7 @@
 }
 
 - (void)editSettingsAction:(id)sender {
-	NSLog(@"SETTINGS");
+	//////NSLog(@"SETTINGS");
 	WidgetSettingsNavigationController *navController = [[WidgetSettingsNavigationController alloc] init];
 	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	WidgetWeatherSettings *widgetWeatherSettings = [[WidgetWeatherSettings alloc] initWithWidget:self];

@@ -29,16 +29,7 @@
 }
 
 - (void)saveAction:(id)sender {
-	NSLog(@"FROM SETTINGS TEXT FIELD: %@ | %@", rssField.text, numFeedsField.text);
 	[rssWidget changeSettingsAndReload:rssField.text numFeeds:[numFeedsField.text intValue]];
-	/*
-	[rssWidget setRssFeed:rssField.text];
-	[rssWidget setNUM_OF_FEEDS:(int)numFeedsField.text];
-	[rssWidget resetStories];
-	[rssWidget reloadRSS];
-	 */
-	//[rssWidget viewDidLoad];
-	
 	[super saveAction:sender];
 }
 

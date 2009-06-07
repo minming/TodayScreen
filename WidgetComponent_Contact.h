@@ -20,8 +20,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *name;
 @property (nonatomic, retain) IBOutlet UIButton *button;
 
-
-- (void)getContactInfo:(NSString*)fullName;
+- (ABRecordRef)getContactInfo:(NSString*)fullName;
+//- (void)getContactInfo:(NSString*)fullName;
 //- (IBAction)launchContact:(id)sender;
 - (void)launchContact:(id)sender;
 - (void)setContact:(NSString*)fullName;

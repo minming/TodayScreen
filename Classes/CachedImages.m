@@ -44,9 +44,7 @@ NSString *const LoadingPlaceholder = @"Loading";
 {
     NSString *url = [result objectForKey:@"url"];
     UIImage *image = [result objectForKey:@"image"];
-	NSLog(@"did finish loading image");
 	if(image != nil) {
-		NSLog(@"image not null");
 		[cachedImages setObject:image forKey:url];   
 		[callbackWidget imageCallbackFunction];
 	}

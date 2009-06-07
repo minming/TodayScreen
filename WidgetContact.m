@@ -19,10 +19,11 @@
 		[tableViewController retain];
 		
 		contactsArray = [[NSMutableArray alloc] init];
-		contacts[0].name = @"MING";
-		contacts[1].name = @"THE";
-		contacts[2].name = @"MING";
-		contacts[3].name = @"MING";
+		contacts[0].name = @"min ming";
+		contacts[1].name = @"shravan";
+		contacts[2].name = @"steve";
+		contacts[3].name = @"james";
+		contacts[4].name = @"george";
 	}
     return self;
 }
@@ -32,26 +33,29 @@
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor clearColor];
 	for (int i=0; i<5; i++) {
-		contact = [[WidgetComponent_Contact alloc] init];
-		[self.view addSubview:contact.view]; 
-		contact.view.frame = CGRectMake(i*60.0+10.0, 10.0, 60.0, 50.0);
-		contact.button.tag = i;
-		[contact setContact:contacts[i].name];
-		//[contact.button setTitle:contacts[i].name forState:UIControlStateNormal];
-		//if (contacts[i].image != nil) {
-		//	[contact.button setImage:[self getImageFromUrl:contacts[i].image] forState:UIControlStateNormal];
-		//}
-		//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
-		//NSURL *url = [NSURL URLWithString:path];
-		//NSData *data = [NSData dataWithContentsOfURL:url];
-		//UIImage *img = [[UIImage alloc] initWithData:data cache:NO];
-		
-		//[contact.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
-		
-		[contact.view setNeedsLayout];
-		[self.contactsArray addObject:contact]; // this will keep the pointer to imageView intact for use later
-		
-		[contact release];
+		if ([contacts[i].name length] > 0) {
+			contact = [[WidgetComponent_Contact alloc] init];
+			[self.view addSubview:contact.view]; 
+			contact.view.frame = CGRectMake(i*60.0+10.0, 10.0, 60.0, 50.0);
+			contact.button.tag = i;
+			//[contact setContact:contacts[i].name];
+			
+			//[contact.button setTitle:contacts[i].name forState:UIControlStateNormal];
+			//if (contacts[i].image != nil) {
+			//	[contact.button setImage:[self getImageFromUrl:contacts[i].image] forState:UIControlStateNormal];
+			//}
+			//id path = @"http://merrimusings.mu.nu/archives/images/groundhog2.jpg";
+			//NSURL *url = [NSURL URLWithString:path];
+			//NSData *data = [NSData dataWithContentsOfURL:url];
+			//UIImage *img = [[UIImage alloc] initWithData:data cache:NO];
+			
+			//[contact.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
+			
+			[contact.view setNeedsLayout];
+			[self.contactsArray addObject:contact]; // this will keep the pointer to imageView intact for use later
+			
+			[contact release];
+		}
 	}
 		
 }

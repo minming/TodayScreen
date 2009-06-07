@@ -25,7 +25,7 @@
 
 
 - (void)setContact:(NSString*)fullName {
-	if (fullName != @"" || fullName != nil) {
+	if ([fullName length] > 0) {
 		[self getContactInfo:fullName];	
 		[self.button addTarget:self action:@selector(launchContact:) forControlEvents:UIControlEventTouchDown];
 	}
@@ -33,7 +33,7 @@
 
 - (void)launchContact:(id)sender {
 	//[self getContactInfo:@"THE"];
-	//NSLog(@"contact");
+	//////NSLog(@"contact");
 	
 	//ABRecordRef person = 
 	
@@ -90,9 +90,6 @@
 			//[self.button setImage:img forState:UIControlStateNormal];
 		}
 		
-		NSLog(@"%@",firstName);
-		NSLog(@"%@",lastName);
-		NSLog(@"%@",email);
 	}
 	CFRelease(addressBook);
 	return person;
