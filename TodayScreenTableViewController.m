@@ -92,7 +92,7 @@
 				[userDefaults loadAppLauncherWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
 			} else if ([widgetName rangeOfString:@"contactWidget"].location != NSNotFound) {
 				[self addNewWidget:WIDGET_CONTACT];
-				[userDefaults loadContactWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
+				//[userDefaults loadContactWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
 			} else if ([widgetName rangeOfString:@"flipClockDateWidget"].location != NSNotFound) {
 				[self addNewWidget:WIDGET_FLIP_CLOCK];
 				//[userDefaults loadFlipClockWidgetFromPrefs:widgetName widget:[widgetsArray objectAtIndex:([widgetsArray count] - 1)]];
