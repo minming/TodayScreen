@@ -91,6 +91,7 @@
 		8E6B421A0FD2418200EB77B2 /* WidgetWeatherSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B42190FD2418200EB77B2 /* WidgetWeatherSettings.xib */; };
 		8E6B421F0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */; };
 		8E6B42250FD242DC00EB77B2 /* WidgetSettingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */; };
+		8ED912AA0FDBAA6F00580B2C /* comingsoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED912A90FDBAA6F00580B2C /* comingsoon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +213,7 @@
 		8E6B421E0FD241DE00EB77B2 /* WidgetAppLauncherSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetAppLauncherSettings.xib; sourceTree = "<group>"; };
 		8E6B42230FD242DC00EB77B2 /* WidgetSettingsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSettingsNavigationController.h; sourceTree = "<group>"; };
 		8E6B42240FD242DC00EB77B2 /* WidgetSettingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSettingsNavigationController.m; sourceTree = "<group>"; };
+		8ED912A90FDBAA6F00580B2C /* comingsoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comingsoon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +399,7 @@
 		48FD48DB0FCE7662004045B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8ED912A90FDBAA6F00580B2C /* comingsoon.png */,
 				8E5DC1940FD67525003E0584 /* footertoobaricon_widgetsettings.png */,
 				8E5DC0ED0FD3BF22003E0584 /* addicon_digitaltimedate.png */,
 				8E5DC0490FD345E7003E0584 /* todayscreenlogo.png */,
@@ -516,6 +519,7 @@
 				8E5DC0EE0FD3BF22003E0584 /* addicon_digitaltimedate.png in Resources */,
 				488564050FD4D864003D9B53 /* WidgetWeather.xib in Resources */,
 				8E5DC1950FD67525003E0584 /* footertoobaricon_widgetsettings.png in Resources */,
+				8ED912AA0FDBAA6F00580B2C /* comingsoon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
