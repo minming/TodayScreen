@@ -2,7 +2,7 @@ TodayScreen was created as a way to bring extensible widgets akin to Windows 7 l
 
 The iPhone lacks "glance-able" information that allows users on the move to quickly pull out their phone and check things that are important to them. A user who wants to check new messages/emails will have to click on the messaging and email apps; to check news, will have to launch the news app; to check weather, will have to see the weather app; etc. TodayScreen attempts to solve the problem of having to launch different apps to check different things. The app allows user to add most common widgets on a screen so that user can quickly be informed of the latest information.
 
-![Alt TodayScreen](TodayScreen.png "TodayScreen")
+![Alt TodayScreen](/TodayScreen.png "TodayScreen")
 
 TodayScreen is licensed under the MIT license. Feel free to do anything you would like with the code in open-source, commercial projects or what have you. If you do end up using the code, we would appreciate a line at shravan [at] cs [dot] stanford [dot] edu
 
